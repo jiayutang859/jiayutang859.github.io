@@ -132,6 +132,13 @@ sup {
   gap: 0.15rem;
 }
 
+/* Cross-link out of the research side into the studio */
+.sidebar-nav .nav-cross {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--sidebar-border);
+}
+
 .nav-link {
   display: flex;
   align-items: center;

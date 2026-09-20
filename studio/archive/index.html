@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archive — Jiayu Tang Studio</title>
+<meta name="description" content="Photographs by Jiayu Tang. Earlier work.">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="canonical" href="/studio/archive/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Archive — Jiayu Tang Studio">
+<meta property="og:description" content="Photographs by Jiayu Tang. Earlier work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400&family=Bodoni+Moda:opsz,wght@6..96,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/studio.css">
+</head>
+<body data-gallery="archive" data-base="..">
+
+<header class="masthead">
+  <div class="identity">
+    <a class="wordmark" href="/studio/">Jiayu Tang</a>
+    <span class="tagline">Studio</span>
+  </div>
+  <nav class="nav" aria-label="Galleries">
+    <a href="/studio/">2026</a>
+    <a href="/studio/2025/">2025</a>
+    <a href="/studio/archive/" aria-current="page">Archive</a>
+  </nav>
+</header>
+
+<main class="gallery">
+  <div class="gallery-head">
+    <h1>Archive</h1>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="rows" id="rows"></div>
+</main>
+
+<footer class="colophon">
+  <div>
+    <span class="label">Contact</span>
+    <a href="mailto:tang7j1yu@gmail.com">tang7j1yu@gmail.com</a>
+  </div>
+  <div>
+    <span class="label">Elsewhere</span>
+    <a href="https://jiayutang859.github.io/">Research</a>
+  </div>
+  <div class="rights">© <span id="year">2026</span> Jiayu Tang</div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full frame">
+  <div class="stage"><img id="lbimg" alt=""></div>
+  <div class="lbbar">
+    <div class="lbcaption">
+      <span class="pos" id="lbpos"></span>
+      <span class="text" id="lbtext"></span>
+      <div class="lbmeta" id="lbmeta"></div>
+    </div>
+    <div class="lbnav">
+      <button type="button" id="lbinfo" aria-pressed="false" aria-label="Toggle camera details">Info</button>
+      <button type="button" id="lbprev" aria-label="Previous frame">Prev</button>
+      <button type="button" id="lbnext" aria-label="Next frame">Next</button>
+      <button type="button" id="lbclose" aria-label="Close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="../data/frames.js"></script>
+<script src="../assets/studio.js"></script>
+</body>
+</html>

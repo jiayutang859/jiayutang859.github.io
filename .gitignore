@@ -2,3 +2,6 @@
 .claude/
 www.glebgordeev.com_.png
 GITHUB_SETUP_GUIDE.md
+
+# macOS cruft
+.DS_Store

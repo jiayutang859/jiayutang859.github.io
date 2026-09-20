@@ -1,0 +1,5 @@
+.DS_Store
+Thumbs.db
+
+# Full-resolution originals — keep these out of git.
+_originals/

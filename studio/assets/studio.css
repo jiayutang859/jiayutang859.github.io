@@ -1,0 +1,292 @@
+/* ==========================================================================
+   Jiayu Tang — Studio
+   Near-black warm ground. No accent colour anywhere; the photographs supply
+   all the colour. Layout is justified rows, sized from each file's true ratio.
+   ========================================================================== */
+
+:root{
+  --ink:#0B0B0C;          /* page ground */
+  --ink-lift:#141416;     /* hover ground */
+  --well:#1B1B1E;         /* image placeholder while loading */
+  --chalk:#EDEBE6;        /* primary text */
+  --ash:#86847E;          /* secondary text */
+  --dust:#2C2C2F;         /* hairlines */
+  --gutter:clamp(16px,4vw,56px);
+  --tile-gap:6px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--chalk);
+  font-family:Archivo,system-ui,-apple-system,sans-serif;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--chalk);outline-offset:3px}
+img{display:block}
+
+/* ---------------------------------------------------------------- masthead */
+
+.masthead{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  padding:clamp(24px,5vw,56px) var(--gutter) clamp(20px,3vw,32px);
+  border-bottom:1px solid var(--dust);
+}
+.identity{display:flex;flex-direction:column;gap:6px;min-width:0}
+.wordmark{
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-size:clamp(22px,3vw,32px);
+  line-height:1;
+  letter-spacing:.01em;
+}
+.tagline{
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ash);
+}
+
+.nav{
+  display:flex;
+  gap:clamp(14px,2.4vw,28px);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ash);
+  padding-bottom:2px;
+  flex-wrap:wrap;
+}
+.nav a{padding-bottom:3px;border-bottom:1px solid transparent}
+.nav a:hover{color:var(--chalk)}
+.nav a[aria-current="page"]{color:var(--chalk);border-bottom-color:var(--chalk)}
+
+/* ----------------------------------------------------------------- gallery */
+
+.gallery{padding:clamp(24px,4vw,44px) var(--gutter) clamp(60px,8vw,110px)}
+
+.gallery-head{
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  margin-bottom:clamp(20px,3vw,34px);
+}
+.gallery-head h1{
+  font-family:'Bodoni Moda',Georgia,serif;
+  font-weight:400;
+  font-size:clamp(30px,4.4vw,52px);
+  line-height:1;
+  margin:0;
+  letter-spacing:-.01em;
+}
+.gallery-head .count{
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ash);
+}
+
+/* Justified rows. Each row is a flex line; every tile carries a flex-grow
+   equal to its aspect ratio, so a row fills the width at a common height. */
+/* Rows need more air than tiles do, because a caption strip sits between them. */
+.rows{display:flex;flex-direction:column;gap:clamp(20px,2.2vw,34px)}
+.row{display:flex;gap:var(--tile-gap);align-items:flex-start}
+/* Trailing row that never filled: sits at the target height, left-aligned,
+   rather than stretching one frame across the whole page. */
+.row.partial{justify-content:flex-start}
+.tile{
+  margin:0;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+/* The well holds the image and carries the aspect ratio, so tiles in a row
+   share an image height and their caption strips line up underneath. */
+.tile .well{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:var(--well);
+  cursor:zoom-in;
+  overflow:hidden;
+  position:relative;
+}
+.tile .well img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .5s ease, transform .5s ease;
+}
+.tile .well img.ready{opacity:1}
+.tile:hover .well img.ready{transform:scale(1.012)}
+
+/* Caption strip under each frame. */
+.tag{
+  padding:9px 1px 2px;
+  font-size:10px;
+  line-height:1.5;
+  letter-spacing:.09em;
+  color:var(--ash);
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.tag .desc{
+  color:var(--chalk);
+  font-size:11px;
+  letter-spacing:.03em;
+}
+.tag .spec{
+  text-transform:uppercase;
+  font-size:9.5px;
+  letter-spacing:.11em;
+  color:#6E6C67;
+  /* One line; a narrow tile truncates rather than pushing the row taller. */
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.tile:hover .tag .spec{color:var(--ash)}
+
+.empty{
+  padding:80px 0;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ash);
+  border-top:1px solid var(--dust);
+}
+
+/* ------------------------------------------------------------------ footer */
+
+.colophon{
+  border-top:1px solid var(--dust);
+  padding:clamp(32px,5vw,56px) var(--gutter) clamp(40px,6vw,72px);
+  display:flex;
+  flex-wrap:wrap;
+  gap:clamp(20px,5vw,64px);
+  font-size:12px;
+  letter-spacing:.06em;
+  color:var(--ash);
+}
+.colophon a:hover{color:var(--chalk)}
+.colophon .label{
+  display:block;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--dust);
+  margin-bottom:7px;
+}
+.colophon .rights{margin-left:auto;align-self:flex-end;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------------------------------------------------------------- lightbox */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:90;
+  display:none;
+  background:#050506;
+}
+.lightbox[open]{
+  display:grid;
+  grid-template-rows:1fr auto;
+  padding:clamp(12px,2.5vw,32px);
+}
+.stage{
+  position:relative;
+  min-height:0;
+  display:grid;
+  place-items:center;
+}
+.stage img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+
+.lbbar{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+  padding-top:14px;
+  border-top:1px solid var(--dust);
+  margin-top:12px;
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--ash);
+}
+.lbcaption{flex:1;min-width:0;line-height:1.6;letter-spacing:.02em}
+.lbcaption .pos{
+  display:block;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--dust);
+  margin-bottom:5px;
+}
+.lbcaption .text{color:var(--chalk)}
+
+.lbmeta{
+  display:none;
+  flex-wrap:wrap;
+  gap:4px 18px;
+  margin-top:10px;
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ash);
+}
+.lbmeta.open{display:flex}
+
+.lbnav{display:flex;gap:2px;flex-shrink:0}
+.lbbar button{
+  background:none;
+  border:0;
+  color:var(--ash);
+  font:inherit;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:6px 10px;
+  cursor:pointer;
+}
+.lbbar button:hover:not(:disabled){color:var(--chalk)}
+.lbbar button:disabled{opacity:.3;cursor:default}
+.lbbar button[aria-pressed="true"]{color:var(--chalk)}
+
+/* ------------------------------------------------------------- responsive */
+
+@media (max-width:760px){
+  .masthead{flex-direction:column;align-items:flex-start;gap:16px}
+  .nav{gap:14px}
+  /* Justified rows get too thin on a phone; stack to one image per line.
+     The well already carries its own aspect ratio, so nothing else is needed. */
+  .row{flex-direction:column;gap:clamp(18px,4vw,28px)}
+  .rows{gap:clamp(18px,4vw,28px)}
+  .tag .spec{white-space:normal;overflow:visible}
+  .lbbar{flex-wrap:wrap}
+  .lbnav{width:100%;justify-content:space-between}
+  .lbbar button{padding:8px 12px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .tile img{transition:none}
+  .tile:hover img.ready{transform:none}
+}
+
+@media print{
+  .masthead,.colophon,.lightbox{display:none}
+}
