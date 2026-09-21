@@ -5,3 +5,6 @@ GITHUB_SETUP_GUIDE.md
 
 # macOS cruft
 .DS_Store
+
+# CV/Resume source project — private working files, never publish
+Local_Agents/
