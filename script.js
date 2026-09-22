@@ -1,78 +1,77 @@
 /* ============================================================
    Jiayu Tang – Personal Website Script
+   Shared by every page; each block no-ops when its element is absent.
    ============================================================ */
 
-// --- Sidebar toggle (mobile) ---
-const sidebar        = document.getElementById('sidebar');
-const menuBtn        = document.getElementById('menuBtn');
-const sidebarOverlay = document.getElementById('sidebarOverlay');
+// --- Old single-page anchors → new pages (keeps shared links working) ---
+(function redirectLegacyAnchors() {
+  const isHome = /(^\/$|\/index\.html$)/.test(location.pathname);
+  if (!isHome || !location.hash) return;
+  const map = {
+    '#about':        'about.html',
+    '#background':   'cv.html#research',
+    '#publications': 'cv.html#publications',
+    '#experience':   'cv.html#skills',
+    '#contact':      'contact.html',
+  };
+  const target = map[location.hash];
+  if (target) location.replace(target);
+})();
 
-function openSidebar() {
-  sidebar.classList.add('open');
-  sidebarOverlay.classList.add('visible');
-  menuBtn.setAttribute('aria-expanded', 'true');
-  menuBtn.innerHTML = '<i class="fas fa-xmark"></i>';
-  document.body.style.overflow = 'hidden';
+// --- Mobile nav toggle ---
+const navToggle = document.getElementById('navToggle');
+const siteNav   = document.getElementById('siteNav');
+
+if (navToggle && siteNav) {
+  const setOpen = open => {
+    siteNav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.innerHTML = open ? '<i class="fas fa-xmark"></i>' : '<i class="fas fa-bars"></i>';
+  };
+
+  navToggle.addEventListener('click', () => setOpen(!siteNav.classList.contains('open')));
+  siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) setOpen(false); }, { passive: true });
 }
-
-function closeSidebar() {
-  sidebar.classList.remove('open');
-  sidebarOverlay.classList.remove('visible');
-  menuBtn.setAttribute('aria-expanded', 'false');
-  menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-  document.body.style.overflow = '';
-}
-
-menuBtn.addEventListener('click', () => {
-  sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
-});
-
-sidebarOverlay.addEventListener('click', closeSidebar);
-
-// Close sidebar when a nav link is clicked (mobile)
-sidebar.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth < 900) closeSidebar();
-  });
-});
-
-// --- Active nav link on scroll ---
-const sections = Array.from(document.querySelectorAll('section[id]'));
-const navLinks  = Array.from(document.querySelectorAll('.nav-link'));
-
-const activateLink = id => {
-  navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-  });
-};
-
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      activateLink(entry.target.getAttribute('id'));
-    }
-  });
-}, { rootMargin: '0px 0px -55% 0px' });
-
-sections.forEach(s => sectionObserver.observe(s));
 
 // --- Back to top button ---
 const backTop = document.getElementById('backTop');
 
-window.addEventListener('scroll', () => {
-  backTop.classList.toggle('visible', window.scrollY > 400);
-}, { passive: true });
+if (backTop) {
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
 
-backTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// --- CV page: highlight the current section in the sticky index ---
+const cvLinks = Array.from(document.querySelectorAll('.cv-toc a'));
+
+if (cvLinks.length && 'IntersectionObserver' in window) {
+  const byId = id => cvLinks.find(a => a.getAttribute('href') === '#' + id);
+  const tocObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      cvLinks.forEach(a => a.classList.remove('active'));
+      const link = byId(entry.target.id);
+      if (link) {
+        link.classList.add('active');
+        link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  document.querySelectorAll('.cv-section[id]').forEach(s => tocObserver.observe(s));
+}
 
 // --- Scroll reveal (subtle fade-in) ---
 const revealEls = document.querySelectorAll(
-  '.edu-card, .exp-card, .contact-card, .award-card, .teach-card, .tool-group, .skill-feature'
+  '.reveal, .edu-card, .exp-card, .award-card, .teach-card, .tool-group, .skill-feature, .project, .stop'
 );
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if ('IntersectionObserver' in window) {
+if ('IntersectionObserver' in window && !reduceMotion) {
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -81,17 +80,17 @@ if ('IntersectionObserver' in window) {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0.06 });
 
   revealEls.forEach(el => {
     el.style.opacity    = '0';
     el.style.transform  = 'translateY(18px)';
-    el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s, border-color 0.2s';
     revealObserver.observe(el);
   });
 }
 
-// --- Hero: rotating 3D antibody (human IgG1, PDB 1HZH) ---
+// --- Home hero: rotating 3D antibody (human IgG1, PDB 1HZH) ---
 (function initMolecule() {
   const el     = document.getElementById('molViewer');
   const figure = el && el.closest('.hero-mol');
@@ -123,8 +122,7 @@ if ('IntersectionObserver' in window) {
       viewer.zoom(0.95);
       viewer.render();
 
-      const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!still) viewer.spin('y', 0.5);
+      if (!reduceMotion) viewer.spin('y', 0.5);
 
       window.addEventListener('resize', () => viewer.resize(), { passive: true });
     })

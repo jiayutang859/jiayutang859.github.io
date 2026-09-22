@@ -1,131 +1,66 @@
 # Jiayu Tang – Personal Website
 
-A clean, academic personal website built with plain HTML, CSS, and JavaScript.
-No frameworks, no build tools — works by opening `index.html` in a browser.
+A personal research website: narrative first, CV second. Plain HTML, CSS, and
+JavaScript with no build step, served by GitHub Pages from the `main` branch.
+
+Live at <https://jiayutang859.github.io>.
 
 ---
 
-## Files
+## Pages
 
-| File | Description |
-|------|-------------|
-| `index.html` | All page content |
-| `style.css` | Styling (colors, layout, responsive) |
-| `script.js` | Mobile nav, scroll effects, 3D antibody viewer in the hero |
-| `Resume_Jiayu_Tang.pdf` | Resume linked from "Download Resume" |
-| `headshot.jpg` | Profile photo (About section) |
+| File | Purpose |
+|------|---------|
+| `index.html` | Home: identity, short story, what I'm exploring, who I'd like to meet, featured projects, notes preview |
+| `about.html` | The longer story: food science → nutrition → gut microbiome → clinical trials → AI for science → antibody engineering |
+| `research.html` | Projects framed as question / why it matters / approach / tools / status / what I'm learning |
+| `notes.html` | Essays and research notes (currently draft titles) |
+| `cv.html` | Full CV: education, research, publications, presentations, awards, skills, teaching, service, certifications |
+| `contact.html` | Email, LinkedIn, GitHub, publications, resume |
+| `studio/` | Photography site (separate design, see `studio/README.md`) |
+
+## Shared files
+
+| File | Purpose |
+|------|---------|
+| `style.css` | All styles. Colours and fonts are CSS variables at the top (`--accent`, `--warm`, `--paper`, …) |
+| `script.js` | Mobile menu, scroll reveal, CV section highlighting, back-to-top, the 3D antibody on Home, and redirects from old single-page links (`/#publications` → `cv.html#publications`) |
+| `Resume_Jiayu_Tang.pdf` / `CV_Jiayu_Tang.pdf` | Downloadable resume and full CV |
+| `headshot.jpg` | Portrait (About page, social previews) |
 | `assets/logos/` | Institution, journal, and tool logos (Wikimedia Commons, Simple Icons, official sites) |
 | `assets/data/1hzh-backbone.pdb` | Backbone-only human IgG1 structure (PDB 1HZH) rendered with 3Dmol.js |
 
-------|-------------|
-| `index.html` | All page content |
-| `style.css` | Styling (colors, layout, responsive) |
-| `script.js` | Mobile nav, scroll effects |
-| `CV_Jiayu_Tang.pdf` | CV download link **(you must add this file)** |
-| `photo.jpg` | Profile photo **(you must add this file, optional)** |
+The header and footer are repeated in every page. If you change the navigation,
+change it in all six pages (and `notes/_template.html`).
 
 ---
 
-## Add Your Profile Photo
+## Publishing a note
 
-1. Save your photo as **`photo.jpg`** in this folder
-2. Open `index.html` and find this block (around line 65):
-   ```html
-   <!-- <img src="photo.jpg" alt="Jiayu Tang" class="avatar-img"> -->
-   <div class="avatar-placeholder" ...>JT</div>
-   ```
-3. Delete the `<div class="avatar-placeholder">` line
-4. Uncomment the `<img>` line (remove `<!--` and `-->`)
+1. Copy `notes/_template.html` to `notes/<slug>.html` (drop the leading underscore:
+   GitHub Pages does not publish files that start with `_`).
+2. Fill in the `[BRACKETED]` placeholders.
+3. In `notes.html`, change the matching `<article class="card note" …>` to
+   `<a class="card note" href="notes/<slug>.html">` (and its closing tag to `</a>`),
+   and replace the "In draft" label with the date.
+4. Optionally do the same for the two note cards on `index.html`.
 
----
+## Previewing locally
 
-## Add Your Google Scholar Link
-
-1. Go to [scholar.google.com](https://scholar.google.com) and search your name
-2. Click your profile — copy the URL from your browser
-3. Open `index.html` and find:
-   ```html
-   <a href="#" class="chip chip-outline" ...>Google Scholar</a>
-   ```
-4. Replace `#` with your Google Scholar URL
-
----
-
-## Deploy to GitHub Pages (Free Hosting)
-
-### Step 1 — Create a GitHub account
-Visit [github.com](https://github.com) and sign up (free).
-
-### Step 2 — Create a repository
-- Click **New repository**
-- Name it **exactly**: `[your-username].github.io`
-  *(e.g. if your username is `jiayutang`, name it `jiayutang.github.io`)*
-- Set visibility to **Public**
-- Click **Create repository**
-
-### Step 3 — Upload your files
-In the repository, click **"Add file" → "Upload files"** and upload:
-- `index.html`
-- `style.css`
-- `script.js`
-- `CV_Jiayu_Tang.pdf`
-- `photo.jpg` (if you have one)
-
-Click **Commit changes**.
-
-### Step 4 — Enable GitHub Pages
-- Go to your repository **Settings** tab
-- Scroll down to **Pages** (left sidebar)
-- Under "Source", select **Deploy from a branch**
-- Set branch to `main`, folder to `/ (root)`
-- Click **Save**
-
-### Step 5 — Your site is live!
-Within 1–2 minutes, your website will be available at:
-```
-https://[your-username].github.io
+```bash
+python3 -m http.server 8765
 ```
 
----
+Then open <http://localhost:8765>. Opening the files directly (`file://`) mostly
+works, but the 3D antibody needs a local server to load its structure file.
 
-## Get Indexed on Google
+## Preview mode (hidden from search engines)
 
-After your site is live:
+Every page currently carries `<meta name="robots" content="noindex, nofollow">`,
+so search engines won't list the site. Anyone with the link can still open it,
+and this repository is public. To go public, change that tag to
+`index, follow` in all six pages (and `notes/_template.html`).
 
-1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Click **"Add property"** → enter your URL (`https://[username].github.io`)
-3. Verify ownership (Google provides a few methods — the HTML file method is easiest)
-4. Click **"Request Indexing"** on your URL
+## Deploying
 
-Google will crawl and index your site within days to a few weeks.
-The site already includes SEO meta tags and structured data (JSON-LD) to help Google understand your page.
-
----
-
-## Updating the Website
-
-To update any content, edit `index.html` locally, then:
-1. Go to your GitHub repository
-2. Click the `index.html` file → click the **pencil icon** (Edit)
-3. Paste your updated content and click **Commit changes**
-
-Changes go live automatically within ~30 seconds.
-
----
-
-## Customize Colors
-
-Open `style.css` and edit the CSS variables at the top:
-
-```css
-:root {
-  --navy:  #1e3a5f;   /* main dark color (navbar, headings) */
-  --blue:  #2563eb;   /* accent color (links, badges, borders) */
-  ...
-}
-```
-
-Change `#2563eb` to any color you prefer — for example:
-- Green: `#16a34a`
-- Teal: `#0f766e`
-- Purple: `#7c3aed`
+Commit and push to `main`; GitHub Pages republishes within a minute or two.
