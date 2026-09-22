@@ -69,7 +69,7 @@ backTop.addEventListener('click', () => {
 
 // --- Scroll reveal (subtle fade-in) ---
 const revealEls = document.querySelectorAll(
-  '.edu-card, .exp-card, .contact-card, .skill-box'
+  '.edu-card, .exp-card, .contact-card, .award-card, .teach-card, .tool-group, .skill-feature'
 );
 
 if ('IntersectionObserver' in window) {
@@ -90,3 +90,43 @@ if ('IntersectionObserver' in window) {
     revealObserver.observe(el);
   });
 }
+
+// --- Hero: rotating 3D antibody (human IgG1, PDB 1HZH) ---
+(function initMolecule() {
+  const el     = document.getElementById('molViewer');
+  const figure = el && el.closest('.hero-mol');
+  if (!el) return;
+
+  const fail = () => {
+    figure.classList.add('failed');
+    figure.parentElement.classList.add('no-mol');
+  };
+
+  if (!window.$3Dmol) { fail(); return; }
+
+  let viewer;
+  try {
+    viewer = $3Dmol.createViewer(el, { backgroundAlpha: 0, antialias: true, nomouse: true });
+  } catch (e) { fail(); return; }
+  if (!viewer) { fail(); return; }
+
+  fetch('assets/data/1hzh-backbone.pdb')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(pdb => {
+      viewer.addModel(pdb, 'pdb');
+      // Heavy chains blue, light chains amber
+      viewer.setStyle({ chain: 'H' }, { cartoon: { color: '#2563eb' } });
+      viewer.setStyle({ chain: 'K' }, { cartoon: { color: '#3b82f6' } });
+      viewer.setStyle({ chain: 'L' }, { cartoon: { color: '#f59e0b' } });
+      viewer.setStyle({ chain: 'M' }, { cartoon: { color: '#fbbf24' } });
+      viewer.zoomTo();
+      viewer.zoom(0.95);
+      viewer.render();
+
+      const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!still) viewer.spin('y', 0.5);
+
+      window.addEventListener('resize', () => viewer.resize(), { passive: true });
+    })
+    .catch(fail);
+})();

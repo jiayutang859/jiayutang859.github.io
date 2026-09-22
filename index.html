@@ -73,12 +73,9 @@
       <ul>
         <li><a href="#hero"         class="nav-link"><i class="fas fa-house"></i><span>Home</span></a></li>
         <li><a href="#about"        class="nav-link"><i class="fas fa-user"></i><span>About</span></a></li>
-        <li><a href="#education"    class="nav-link"><i class="fas fa-graduation-cap"></i><span>Education</span></a></li>
-        <li><a href="#research"     class="nav-link"><i class="fas fa-flask"></i><span>Research</span></a></li>
-        <li><a href="#publications" class="nav-link"><i class="fas fa-book-open"></i><span>Publications</span></a></li>
-        <li><a href="#experience"   class="nav-link"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
-        <li><a href="#awards"       class="nav-link"><i class="fas fa-trophy"></i><span>Awards</span></a></li>
-        <li><a href="#skills"       class="nav-link"><i class="fas fa-code"></i><span>Skills</span></a></li>
+        <li><a href="#background"   class="nav-link"><i class="fas fa-flask"></i><span>Education &amp; Research</span></a></li>
+        <li><a href="#publications" class="nav-link"><i class="fas fa-book-open"></i><span>Publications &amp; Awards</span></a></li>
+        <li><a href="#experience"   class="nav-link"><i class="fas fa-briefcase"></i><span>Experience &amp; Skills</span></a></li>
         <li><a href="#contact"      class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
         <li class="nav-cross"><a href="/studio/" class="nav-link"><i class="fas fa-camera-retro"></i><span>Studio</span></a></li>
       </ul>
@@ -88,7 +85,7 @@
       <div class="sidebar-social">
         <a href="mailto:jasper.tang859@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/jiayu-tang-04597628a/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-        <a href="CV_Jiayu_Tang.pdf" title="Download CV" target="_blank"><i class="fas fa-file-pdf"></i></a>
+        <a href="Resume_Jiayu_Tang.pdf" title="Download Resume" target="_blank"><i class="fas fa-file-pdf"></i></a>
       </div>
     </div>
   </aside>
@@ -103,52 +100,50 @@
 
     <!-- ===== HERO ===== -->
     <section id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb-a"></span>
+        <span class="orb orb-b"></span>
+        <span class="orb orb-c"></span>
+      </div>
       <div class="hero-inner">
         <div class="hero-text">
-          <div class="hero-badge">
+          <div class="hero-badge rise" style="--d:0">
             <span class="badge-dot"></span>
             Available for Collaboration
           </div>
-          <h1 class="hero-heading">
-            Computational design<br>of
-            <span class="text-accent">antibody frameworks</span><br>
-            for epitope-directed<br>
-            engineering
+          <h1 class="hero-heading rise" style="--d:1">
+            Computational design of
+            <span class="text-accent">antibody frameworks</span>
+            for epitope-directed engineering
           </h1>
-          <p class="hero-sub">
-            Research Assistant in the Wang Lab (Dept. of Infectious Diseases and Immunology, University of Florida), building computational pipelines — combining AlphaFold 3 structure prediction with generative protein design — to study how antibody framework architecture interacts with epitope geometry, under Dr. Yiquan Wang. Background in food science and clinical nutrition research at UNL.
+          <p class="hero-sub rise" style="--d:2">
+            Research Assistant in the Wang Lab at the University of Florida, combining AlphaFold 3 structure prediction with generative protein design to study how antibody framework architecture interacts with epitope geometry.
           </p>
-          <div class="hero-cta">
+          <div class="hero-cta rise" style="--d:3">
             <a href="mailto:jasper.tang859@gmail.com" class="btn btn-solid">
-              <i class="fas fa-envelope"></i> Get in Touch
+              <i class="fas fa-envelope"></i> Reach Out to Me
             </a>
-            <a href="CV_Jiayu_Tang.pdf" class="btn btn-outline" target="_blank">
-              <i class="fas fa-file-pdf"></i> Download CV
+            <a href="Resume_Jiayu_Tang.pdf" class="btn btn-outline" target="_blank">
+              <i class="fas fa-file-arrow-down"></i> Download Resume
             </a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-num">4.0</span>
-              <span class="stat-lbl">GPA</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">5</span>
-              <span class="stat-lbl">Publications</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">2</span>
-              <span class="stat-lbl">Research Labs</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">7</span>
-              <span class="stat-lbl">Conferences</span>
-            </div>
+          <div class="hero-affil rise" style="--d:4">
+            <img src="assets/logos/uf.svg" alt="University of Florida" class="affil-logo">
+            <span>Wang Lab · Dept. of Infectious Diseases &amp; Immunology<br>Advisor: Dr. Yiquan Wang</span>
           </div>
         </div>
-        <div class="hero-photo">
-          <img src="headshot.jpg" alt="Jiayu Tang">
-        </div>
+
+        <figure class="hero-mol rise" style="--d:2">
+          <div class="mol-glow" aria-hidden="true"></div>
+          <div id="molViewer" class="mol-viewer" role="img" aria-label="Rotating 3D model of a human IgG1 antibody"></div>
+          <figcaption class="mol-caption">
+            <span><i class="swatch swatch-heavy"></i>Heavy chains</span>
+            <span><i class="swatch swatch-light"></i>Light chains</span>
+            <span class="mol-src">Human IgG1 · PDB 1HZH</span>
+          </figcaption>
+        </figure>
       </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About"><i class="fas fa-chevron-down"></i></a>
     </section>
 
     <main>
@@ -161,402 +156,479 @@
             <h2 class="sec-title">Who I Am</h2>
           </div>
           <div class="about-grid">
+            <div class="about-photo">
+              <img src="headshot.jpg" alt="Jiayu Tang">
+              <p class="about-loc"><i class="fas fa-location-dot"></i> Gainesville, FL</p>
+            </div>
             <div class="about-bio">
               <p>I am currently a Research Assistant in the <strong>Wang Lab</strong>, Department of Infectious Diseases and Immunology at the <strong>University of Florida</strong>, working with <strong>Dr. Yiquan Wang</strong>. My work develops computational pipelines — combining AlphaFold 3 structure prediction with generative protein design — to study how antibody framework architecture interacts with epitope geometry.</p>
-              <p>I also hold an M.Sc. in Food Science and Technology from the University of Nebraska–Lincoln, where I worked with <strong>Dr. Edward Deehan</strong> on a clinical trial and systematic review exploring the effects of dietary pulses on human health and the gut microbiome. I earned dual Bachelor's degrees from Northwest A&amp;F University (NWAFU) and the University of Nebraska–Lincoln (UNL) through a 3+1 dual-degree program. Beyond research, I am also drawn to philosophy, photography, and cooking.</p>
-            </div>
-            <aside class="about-topics">
-              <h3>Research Topics</h3>
-              <ul class="topic-tags">
-                <li>Antibody Engineering</li>
-                <li>Structure Prediction</li>
-                <li>Generative Protein Design</li>
-                <li>Computational Immunology</li>
-                <li>Clinical Trials</li>
-                <li>Systematic Reviews</li>
-                <li>Gut Microbiome</li>
-                <li>Dietary Pulses</li>
-                <li>Cardiometabolic Health</li>
-                <li>Precision Nutrition</li>
+              <p>I also hold an M.Sc. in Food Science and Technology from the University of Nebraska–Lincoln, where I worked with <strong>Dr. Edward Deehan</strong> on a clinical trial and systematic review exploring the effects of dietary pulses on human health and the gut microbiome. I earned dual Bachelor's degrees from Northwest A&amp;F University (NWAFU) and the University of Nebraska–Lincoln (UNL) through a 3+1 dual-degree program.</p>
+
+              <div class="affil-row" aria-label="Institutions">
+                <img src="assets/logos/uf.svg" alt="University of Florida">
+                <img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln">
+                <img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal">
+              </div>
+
+              <p class="interest-lbl">Beyond research</p>
+              <ul class="interests">
+                <li><i class="fas fa-book"></i> Philosophy</li>
+                <li><a href="/studio/"><i class="fas fa-camera-retro"></i> Photography <i class="fas fa-arrow-right arrow"></i></a></li>
+                <li><i class="fas fa-utensils"></i> Cooking</li>
               </ul>
-            </aside>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== EDUCATION ===== -->
-      <section id="education" class="alt">
+      <!-- ===== EDUCATION & RESEARCH ===== -->
+      <section id="background" class="alt">
         <div class="container">
           <div class="sec-hd">
-            <span class="sec-tag">Education</span>
-            <h2 class="sec-title">Academic Background</h2>
+            <span class="sec-tag">Education &amp; Research</span>
+            <h2 class="sec-title">Academic &amp; Research Background</h2>
           </div>
-          <div class="edu-list">
+
+          <h3 class="sec-sub"><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="edu-grid">
 
             <div class="edu-card">
-              <div class="edu-badge">M.Sc.</div>
-              <div class="edu-body">
-                <h3>M.Sc., Food Science and Technology <em>(Minor: Statistics)</em></h3>
-                <p class="edu-inst">University of Nebraska–Lincoln · Lincoln, NE, USA</p>
-                <p class="edu-date">August 2024 – July 2026 <span class="edu-gpa">GPA: 4.00 / 4.00</span></p>
-                <p class="edu-thesis">Thesis: <em>Exploring the Impact of Different Dietary Pulse Market Classes on Human Gut Microbiota and Health</em></p>
-              </div>
+              <div class="edu-logos"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <span class="edu-badge">M.Sc.</span>
+              <h4>Food Science and Technology <em>(Minor: Statistics)</em></h4>
+              <p class="edu-inst">University of Nebraska–Lincoln · Lincoln, NE</p>
+              <p class="edu-date">Aug 2024 – Jul 2026 <span class="edu-gpa">GPA 4.00 / 4.00</span></p>
+              <p class="edu-thesis">Thesis: <em>Exploring the Impact of Different Dietary Pulse Market Classes on Human Gut Microbiota and Health</em></p>
             </div>
 
             <div class="edu-card">
-              <div class="edu-badge">Dual B.Sc. / B.Eng.</div>
-              <div class="edu-body">
-                <h3>B.Sc. (Dual Degree), Food Science and Technology</h3>
-                <p class="edu-inst">University of Nebraska–Lincoln, USA <span class="edu-gpa">GPA (2023–2024): 3.33 / 4.00</span></p>
-                <h3>B.Eng. (Dual Degree), Food Science and Engineering</h3>
-                <p class="edu-inst">Northwest A&amp;F University, China <span class="edu-gpa">GPA (2020–2023): 3.57 / 4.00</span></p>
-                <p class="edu-date">September 2020 – June 2024 <span class="edu-gpa">Overall GPA: 3.52 / 4.00</span></p>
-                <p class="edu-thesis">Thesis: <em>Effects of Three Lactic Acid Bacteria Fermentations on Phenolic Profile and In Vitro Digestive Properties of Proso Millet</em></p>
+              <div class="edu-logos">
+                <img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln">
+                <span class="plus">+</span>
+                <img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal">
               </div>
+              <span class="edu-badge">Dual B.Sc. / B.Eng. · 3+1</span>
+              <h4>B.Sc. Food Science and Technology</h4>
+              <p class="edu-inst">University of Nebraska–Lincoln <span class="edu-gpa">GPA 3.33</span></p>
+              <h4>B.Eng. Food Science and Engineering</h4>
+              <p class="edu-inst">Northwest A&amp;F University, China <span class="edu-gpa">GPA 3.57</span></p>
+              <p class="edu-date">Sep 2020 – Jun 2024 <span class="edu-gpa">Overall 3.52 / 4.00</span></p>
+              <p class="edu-thesis">Thesis: <em>Effects of Three Lactic Acid Bacteria Fermentations on Phenolic Profile and In Vitro Digestive Properties of Proso Millet</em></p>
             </div>
+
+          </div>
+
+          <h3 class="sec-sub"><i class="fas fa-flask"></i> Research Experience</h3>
+          <div class="timeline">
+
+            <article class="exp-card current">
+              <div class="exp-logo"><img src="assets/logos/uf.svg" alt="University of Florida"></div>
+              <div class="exp-main">
+                <header class="exp-hd">
+                  <div>
+                    <h3>Research Assistant <span class="now-pill">Current</span></h3>
+                    <p class="exp-where">Wang Lab · Dept. of Infectious Diseases and Immunology · University of Florida</p>
+                    <p class="exp-advisor">Advisor: Dr. Yiquan Wang</p>
+                  </div>
+                  <time class="exp-when">Aug 2026 – Present</time>
+                </header>
+                <ul>
+                  <li>Developing a computational pipeline evaluating how paired human antibody VH–VL framework architecture interacts with epitope geometry, combining AlphaFold 3 structure prediction with generative protein design (RFdiffusion/RFantibody, Germinal).</li>
+                  <li>Built a reproducible dataset of paired human antibody frameworks, parent antibody structures, and epitope definitions, with full computational provenance tracking.</li>
+                  <li>Running large-scale structure-prediction and protein-design experiments on the HiPerGator high-performance computing cluster.</li>
+                </ul>
+                <ul class="tool-strip" aria-label="Tools">
+                  <li><img src="assets/logos/deepmind.svg" alt="">AlphaFold 3</li>
+                  <li><i class="fas fa-dna"></i>RFdiffusion / RFantibody</li>
+                  <li><i class="fas fa-wand-magic-sparkles"></i>Germinal</li>
+                  <li><i class="fas fa-server"></i>HiPerGator</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="exp-card">
+              <div class="exp-logo"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <div class="exp-main">
+                <header class="exp-hd">
+                  <div>
+                    <h3>Graduate Research Assistant</h3>
+                    <p class="exp-where">Dept. of Food Science and Technology · University of Nebraska–Lincoln</p>
+                    <p class="exp-advisor">Advisor: Dr. Edward Deehan</p>
+                  </div>
+                  <time class="exp-when">Jul 2024 – Jul 2026</time>
+                </header>
+                <div class="exp-cols">
+                  <div>
+                    <h4><i class="fas fa-user-doctor"></i> Human Clinical Trials</h4>
+                    <ul>
+                      <li>Coordinated a 12-week randomized crossover clinical trial investigating dry bean market-class–specific effects on gut microbiota and cardiometabolic health markers (IRB Approved; ClinicalTrials.gov Registered).</li>
+                      <li>Co-developed NIH-style study protocol, informed consent form, and recruitment materials with the PI; authored 4 SOPs and 2 clinical trial workflows for the Deehan Lab.</li>
+                      <li>Coordinated a human biobank study to collect and store blood and stool samples from volunteers along with their health information (IRB Approved).</li>
+                      <li>Led 200+ clinic visits; managed participant recruitment, scheduling, documentation, and study supplies.</li>
+                      <li>Collected and processed stool, blood, 24-hr blood pressure, and dietary data; applied data formatting, cleaning, and statistical analysis with Python and R.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4><i class="fas fa-magnifying-glass-chart"></i> Systematic Review</h4>
+                    <ul>
+                      <li>Conducted a systematic review to identify effects of distinct dietary pulse market classes on gut microbiome and surrogate health outcomes in humans.</li>
+                      <li>Developed a PICOS-based research proposal, conducted systematic literature searching, and applied machine learning-based tools (ASReview, TERA-Tool) for 1,800+ reference data extraction.</li>
+                      <li>Applied a large language model (Gemini 3) to assist with preliminary data extraction and formatting, and validated model performance against human reviewers.</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="tool-strip" aria-label="Tools">
+                  <li><img src="assets/logos/clinicaltrials.png" alt="ClinicalTrials.gov" class="wide"></li>
+                  <li><img src="assets/logos/python.svg" alt="">Python</li>
+                  <li><img src="assets/logos/r.svg" alt="">R</li>
+                  <li><img src="assets/logos/asreview.svg" alt="ASReview" class="wide"></li>
+                  <li><img src="assets/logos/gemini.svg" alt="">Gemini 3</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="exp-card">
+              <div class="exp-logo"><img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal"></div>
+              <div class="exp-main">
+                <header class="exp-hd">
+                  <div>
+                    <h3>Undergraduate Research Assistant</h3>
+                    <p class="exp-where">College of Food Science and Engineering · Northwest A&amp;F University</p>
+                    <p class="exp-advisor">Advisor: Dr. Chunxia Xiao</p>
+                  </div>
+                  <time class="exp-when">Apr 2022 – Jun 2023</time>
+                </header>
+                <ul>
+                  <li>Conducted in vitro fermentation experiments evaluating how three lactic acid bacteria species improve phenolic content, antioxidant activity, and starch digestibility of proso millet powder.</li>
+                  <li>Performed spectrophotometric analyses to quantify color characteristics of gluten-free proso millet bran cake crumb and crust.</li>
+                  <li>Reviewed 50+ articles on coarse grain consumption; contributed to a review article on the relationship between coarse grain consumption and Type 2 diabetes.</li>
+                </ul>
+              </div>
+            </article>
 
           </div>
         </div>
       </section>
 
-      <!-- ===== RESEARCH EXPERIENCE ===== -->
-      <section id="research">
+      <!-- ===== PUBLICATIONS & AWARDS ===== -->
+      <section id="publications">
         <div class="container">
           <div class="sec-hd">
-            <span class="sec-tag">Research</span>
-            <h2 class="sec-title">Research Experience</h2>
+            <span class="sec-tag">Publications &amp; Awards</span>
+            <h2 class="sec-title">Research Output &amp; Recognition</h2>
           </div>
 
-          <article class="exp-card">
-            <header class="exp-hd">
+          <h3 class="sec-sub"><i class="fas fa-book-open"></i> Published</h3>
+          <div class="pub-list">
+            <article class="pub-item">
+              <div class="logo-slot"><img src="assets/logos/mdpi.png" alt="MDPI"></div>
               <div>
-                <h3>Research Assistant</h3>
-                <p class="exp-where">Wang Lab · Department of Infectious Diseases and Immunology · University of Florida</p>
-                <p class="exp-advisor">Advisor: Dr. Yiquan Wang</p>
+                <p>Xiao J, Li Y, Niu L, Chen R, <span class="me">Tang J</span>, Tong Z, Xiao C*. Effect of adding fermented proso millet bran dietary fiber on micro-structural, physicochemical, and digestive properties of gluten-free proso millet-based dough and cake.</p>
+                <p class="pub-venue"><cite>Foods</cite> · 2023; 12(15): 2964</p>
               </div>
-              <time class="exp-when">Aug 2026 – Present</time>
-            </header>
-            <div class="exp-body">
-              <ul>
-                <li>Developing a computational pipeline evaluating how paired human antibody VH–VL framework architecture interacts with epitope geometry, combining AlphaFold 3 structure prediction with generative protein design (RFdiffusion/RFantibody, Germinal).</li>
-                <li>Built a reproducible dataset of paired human antibody frameworks, parent antibody structures, and epitope definitions, with full computational provenance tracking.</li>
-                <li>Running large-scale structure-prediction and protein-design experiments on the HiPerGator high-performance computing cluster.</li>
-              </ul>
-            </div>
-          </article>
-
-          <h3 class="sec-sub">Previous Research</h3>
-
-          <article class="exp-card">
-            <header class="exp-hd">
+            </article>
+            <article class="pub-item">
+              <div class="logo-slot"><img src="assets/logos/wiley.svg" alt="Wiley"></div>
               <div>
-                <h3>Graduate Research Assistant</h3>
-                <p class="exp-where">Department of Food Science and Technology · University of Nebraska–Lincoln</p>
-                <p class="exp-advisor">Advisor: Dr. Edward Deehan</p>
+                <p>Deng X, Niu L, Xiao J, Guo Q, Liang J, <span class="me">Tang J</span>, Liu X, Xiao C*. Involvement of intestinal flora and miRNA into the mechanism of coarse grains improving type 2 diabetes: an overview.</p>
+                <p class="pub-venue"><cite>Journal of the Science of Food and Agriculture</cite> · 2023; 103(9): 4257–4267</p>
               </div>
-              <time class="exp-when">Jul 2024 – Jul 2026</time>
-            </header>
-            <div class="exp-body">
-              <h4>Human Clinical Trials</h4>
-              <ul>
-                <li>Coordinated a 12-week randomized crossover clinical trial investigating dry bean market-class–specific effects on gut microbiota and cardiometabolic health markers (IRB Approved; ClinicalTrials.gov Registered).</li>
-                <li>Co-developed NIH-style study protocol, informed consent form, and recruitment materials with the PI; authored 4 Standard Operating Procedures (SOPs) and 2 clinical trial workflows for the Deehan Lab.</li>
-                <li>Coordinated a human biobank study to collect and store blood and stool samples from volunteers along with their health information (IRB Approved).</li>
-                <li>Led 200+ clinic visits; managed participant recruitment, scheduling, documentation, and study supplies.</li>
-                <li>Collected and processed stool samples, blood samples, 24-hr blood pressure data, and dietary information; applied data formatting, cleaning, and statistical analysis with Python and R.</li>
-              </ul>
-              <h4>Systematic Review</h4>
-              <ul>
-                <li>Conducted a systematic review to identify effects of distinct dietary pulse market classes on gut microbiome and surrogate health outcomes in humans.</li>
-                <li>Developed a PICOS-based research proposal, conducted systematic literature searching, and applied machine learning-based tools (ASReview, TERA-Tool) for 1,800+ reference data extraction.</li>
-                <li>Applied a large language model (Gemini 3) to assist with preliminary data extraction and formatting, and validated model performance against human reviewers.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="exp-card">
-            <header class="exp-hd">
-              <div>
-                <h3>Undergraduate Research Assistant</h3>
-                <p class="exp-where">College of Food Science and Engineering · Northwest A&amp;F University</p>
-                <p class="exp-advisor">Advisor: Dr. Chunxia Xiao</p>
-              </div>
-              <time class="exp-when">Apr 2022 – Jun 2023</time>
-            </header>
-            <ul>
-              <li>Conducted in vitro fermentation experiments evaluating how three lactic acid bacteria species improve phenolic content, antioxidant activity, and starch digestibility of proso millet powder.</li>
-              <li>Performed spectrophotometric analyses to quantify color characteristics of gluten-free proso millet bran cake crumb and crust.</li>
-              <li>Reviewed 50+ articles on coarse grain consumption; contributed to a review article on the relationship between coarse grain consumption and Type 2 diabetes.</li>
-            </ul>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ===== PUBLICATIONS ===== -->
-      <section id="publications" class="alt">
-        <div class="container">
-          <div class="sec-hd">
-            <span class="sec-tag">Publications</span>
-            <h2 class="sec-title">Research Output</h2>
+            </article>
           </div>
 
-          <h3 class="pub-heading">In Preparation</h3>
-          <ol class="pub-list">
-            <li><span class="me">Tang J</span><sup>‡</sup>, Adinchezor C<sup>‡</sup>, Grimaldo C, Zhang Y, Iwuamadi I, Rasmussen C, Rose D, Majumder K, Deehan E*. Exploring the Impact of Different Dietary Pulse Market Classes on Human Gut Microbiota and Health.</li>
-            <li><span class="me">Tang J</span><sup>‡</sup>, Rasmussen C<sup>‡</sup>, Deehan E*. Effect of distinct dietary pulse market classes on gut microbiome and health markers: A systematic review of intervention trials.</li>
-            <li>Grimaldo C, <span class="me">Tang J</span>, Whisenhunt L, Chai W, Deehan E*. Evaluating interrelationships between body composition and immunometabolic dysfunction using bioelectrical impedance analysis: An observational study.</li>
-          </ol>
-
-          <h3 class="pub-heading">Published</h3>
-          <ol class="pub-list">
-            <li>Xiao J, Li Y, Niu L, Chen R, <span class="me">Tang J</span>, Tong Z, Xiao C*. Effect of adding fermented proso millet bran dietary fiber on micro-structural, physicochemical, and digestive properties of gluten-free proso millet-based dough and cake. <cite>Foods.</cite> 2023; 12(15): 2964.</li>
-            <li>Deng X, Niu L, Xiao J, Guo Q, Liang J, <span class="me">Tang J</span>, Liu X, Xiao C*. Involvement of intestinal flora and miRNA into the mechanism of coarse grains improving type 2 diabetes: an overview. <cite>Journal of the Science of Food and Agriculture.</cite> 2023; 103(9): 4257–4267.</li>
-          </ol>
+          <h3 class="sec-sub"><i class="fas fa-pen-nib"></i> In Preparation</h3>
+          <div class="pub-list">
+            <article class="pub-item">
+              <div class="logo-slot icon"><i class="fas fa-file-pen"></i></div>
+              <p><span class="me">Tang J</span><sup>‡</sup>, Adinchezor C<sup>‡</sup>, Grimaldo C, Zhang Y, Iwuamadi I, Rasmussen C, Rose D, Majumder K, Deehan E*. Exploring the Impact of Different Dietary Pulse Market Classes on Human Gut Microbiota and Health.</p>
+            </article>
+            <article class="pub-item">
+              <div class="logo-slot icon"><i class="fas fa-file-pen"></i></div>
+              <p><span class="me">Tang J</span><sup>‡</sup>, Rasmussen C<sup>‡</sup>, Deehan E*. Effect of distinct dietary pulse market classes on gut microbiome and health markers: A systematic review of intervention trials.</p>
+            </article>
+            <article class="pub-item">
+              <div class="logo-slot icon"><i class="fas fa-file-pen"></i></div>
+              <p>Grimaldo C, <span class="me">Tang J</span>, Whisenhunt L, Chai W, Deehan E*. Evaluating interrelationships between body composition and immunometabolic dysfunction using bioelectrical impedance analysis: An observational study.</p>
+            </article>
+          </div>
           <p class="pub-note"><sup>‡</sup> co-first authors &emsp;|&emsp; * corresponding author</p>
 
-          <h3 class="pub-heading">Conference Presentations</h3>
+          <h3 class="sec-sub"><i class="fas fa-person-chalkboard"></i> Conference Presentations</h3>
           <ul class="conf-list">
-            <li><span class="me">Tang J</span>. Exploring the Impact of Different Dietary Pulse Market Classes on Human Gut Microbiota and Health. <cite>Nebraska Food Innovation Center</cite>. May 2026. (Public Presentation)</li>
-            <li>Rassmussen C, <span class="me">Tang J</span>, Grimaldo C, Benson A, Rose D, Mukhopadhyay I, Majumder K, Deehan E. Effect of Different Nebraska-Dry Bean Market Classes on Human Health and the Gut Microbiota: A Preliminary Analysis. <cite>Nebraska Research Days</cite>, University of Nebraska–Lincoln, Lincoln, NE. April 2026. (Poster)</li>
-            <li>Rasmussen C, <span class="me">Tang J</span>, Deehan E. Dietary Pulse Market Class Specific Effects on Gut Microbiota, Metabolites, and Human Health: A Systematic Review. <cite>Nebraska Research Days</cite>, University of Nebraska–Lincoln, Lincoln, NE. April 2026. (Poster)</li>
-            <li><span class="me">Tang J</span>, Grimaldo C, Whisenhunt L, Rasmussen C, Majumder K, Rose D, Deehan E. Effect of Different Nebraska Dry Bean Market Classes on Human Health and the Gut Microbiota: A 3-Phase Randomized Crossover Clinical Trial. <cite>Missouri Valley Branch ASM Annual Meeting</cite>. March 2026. (Poster)</li>
-            <li><span class="me">Tang J</span>, Whisenhunt L, Rose D, Majumder K, Deehan E. Exploring the Impact of Different Dietary Pulses Market Classes on Host Metabolic Health and Gut Microbiome. <cite>Food Science and Technology Symposium</cite>, University of Nebraska–Lincoln, Lincoln, NE. April 21, 2025. (Poster)</li>
-            <li><span class="me">Tang J</span>, Whisenhunt L, Rose D, Majumder K, Deehan E. Exploring the Impact of Different Dietary Pulses Market Classes on Host Metabolic Health and Gut Microbiome. <cite>Nebraska Research Days</cite>, University of Nebraska–Lincoln, Lincoln, NE. April 16, 2025. (Poster)</li>
-            <li><span class="me">Tang J</span>, Whisenhunt L, Rose D, Majumder K, Deehan E. Exploring the Impact of Different Dietary Pulses Market Classes on Host Metabolic Health and Gut Microbiome. <cite>NPOD 16th Annual Spring Retreat</cite>, University of Nebraska–Lincoln, Lincoln, NE. April 9, 2025. (Poster)</li>
+            <li>
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <div>
+                <p><span class="me">Tang J</span>. Exploring the Impact of Different Dietary Pulse Market Classes on Human Gut Microbiota and Health.</p>
+                <p class="conf-meta"><span class="pill">Public Presentation</span><cite>Nebraska Food Innovation Center</cite> · May 2026</p>
+              </div>
+            </li>
+            <li>
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <div>
+                <p>Rassmussen C, <span class="me">Tang J</span>, Grimaldo C, Benson A, Rose D, Mukhopadhyay I, Majumder K, Deehan E. Effect of Different Nebraska-Dry Bean Market Classes on Human Health and the Gut Microbiota: A Preliminary Analysis.</p>
+                <p class="conf-meta"><span class="pill">Poster</span><cite>Nebraska Research Days</cite>, UNL · Apr 2026</p>
+              </div>
+            </li>
+            <li>
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <div>
+                <p>Rasmussen C, <span class="me">Tang J</span>, Deehan E. Dietary Pulse Market Class Specific Effects on Gut Microbiota, Metabolites, and Human Health: A Systematic Review.</p>
+                <p class="conf-meta"><span class="pill">Poster</span><cite>Nebraska Research Days</cite>, UNL · Apr 2026</p>
+              </div>
+            </li>
+            <li>
+              <div class="logo-slot"><img src="assets/logos/asm.svg" alt="American Society for Microbiology"></div>
+              <div>
+                <p><span class="me">Tang J</span>, Grimaldo C, Whisenhunt L, Rasmussen C, Majumder K, Rose D, Deehan E. Effect of Different Nebraska Dry Bean Market Classes on Human Health and the Gut Microbiota: A 3-Phase Randomized Crossover Clinical Trial.</p>
+                <p class="conf-meta"><span class="pill">Poster</span><cite>Missouri Valley Branch ASM Annual Meeting</cite> · Mar 2026</p>
+              </div>
+            </li>
+            <li>
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <div>
+                <p><span class="me">Tang J</span>, Whisenhunt L, Rose D, Majumder K, Deehan E. Exploring the Impact of Different Dietary Pulses Market Classes on Host Metabolic Health and Gut Microbiome.</p>
+                <p class="conf-meta"><span class="pill">Poster ×3</span>UNL, Lincoln, NE · Apr 2025</p>
+                <ul class="venue-chips">
+                  <li><cite>Food Science and Technology Symposium</cite> · Apr 21</li>
+                  <li><cite>Nebraska Research Days</cite> · Apr 16</li>
+                  <li><cite>NPOD 16th Annual Spring Retreat</cite> · Apr 9</li>
+                </ul>
+              </div>
+            </li>
           </ul>
+
+          <h3 class="sec-sub"><i class="fas fa-trophy"></i> Scholarships &amp; Funding</h3>
+          <div class="award-grid">
+            <div class="award-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <p class="award-name">Departmental Graduate Research Assistantship</p>
+              <p class="award-meta"><span>2025–2026</span><strong>$25,500</strong></p>
+            </div>
+            <div class="award-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <p class="award-name">Chancellor's Graduate Research Grant</p>
+              <p class="award-meta"><span>2025</span><strong>$400</strong></p>
+            </div>
+            <div class="award-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <p class="award-name">Departmental Graduate Research Assistantship</p>
+              <p class="award-meta"><span>2024–2025</span><strong>$24,500</strong></p>
+            </div>
+            <div class="award-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
+              <p class="award-name">Mary and Charles C. Cooper / Emma I. Sharpless Fellowship</p>
+              <p class="award-meta"><span>2024</span><strong>$3,000</strong></p>
+            </div>
+            <div class="award-card">
+              <div class="logo-slot icon medal"><i class="fas fa-medal"></i></div>
+              <p class="award-name">National Undergraduate Life Sciences Research – Silver Prize · China</p>
+              <p class="award-meta"><span>2023</span><strong>¥3,000</strong></p>
+            </div>
+            <div class="award-card">
+              <div class="logo-slot"><img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University"></div>
+              <p class="award-name">Undergraduate Merit Scholarship (3 consecutive years)</p>
+              <p class="award-meta"><span>2020–2023</span><strong>¥1,500 / yr</strong></p>
+            </div>
+          </div>
 
         </div>
       </section>
 
-      <!-- ===== TEACHING, MENTORSHIP, LEADERSHIP ===== -->
-      <section id="experience">
+      <!-- ===== EXPERIENCE & SKILLS ===== -->
+      <section id="experience" class="alt">
         <div class="container">
           <div class="sec-hd">
-            <span class="sec-tag">Experience</span>
-            <h2 class="sec-title">Teaching &amp; Leadership</h2>
+            <span class="sec-tag">Experience &amp; Skills</span>
+            <h2 class="sec-title">Teaching, Leadership &amp; Expertise</h2>
           </div>
 
-          <h3 class="sec-sub">Teaching</h3>
+          <h3 class="sec-sub"><i class="fas fa-screwdriver-wrench"></i> Technical Skills</h3>
 
-          <article class="exp-card compact">
-            <header class="exp-hd">
+          <div class="skill-feature">
+            <div class="skill-feature-hd">
+              <img src="assets/logos/deepmind.svg" alt="">
               <div>
-                <h3>Teaching Assistant – FDST 458 (Lab Sessions)</h3>
-                <p class="exp-where">Department of Food Science and Technology · University of Nebraska–Lincoln</p>
+                <h4>Computational Antibody Engineering</h4>
+                <p>VH–VL framework panels · fixed-CDR framework swaps · framework grafting · epitope masks</p>
               </div>
-              <time class="exp-when">Jan – May 2026</time>
-            </header>
-            <p>Prepared experimental materials for FDST 458-153 and led lab sessions; graded assignments for FDST 458; participated in proctoring and marking exams for 35 students.</p>
-          </article>
+            </div>
+            <ul class="chip-row">
+              <li><img src="assets/logos/deepmind.svg" alt="">AlphaFold 3</li>
+              <li><i class="fas fa-wand-magic-sparkles"></i>Germinal</li>
+              <li><i class="fas fa-dna"></i>RFantibody</li>
+            </ul>
+            <p class="skill-eval"><strong>Structural evaluation:</strong> AF3 confidence metrics · pose RMSD · CDR RMSD · epitope recovery · contact analysis · VH–VL orientation</p>
+          </div>
 
-          <article class="exp-card compact">
-            <header class="exp-hd">
+          <div class="tool-groups">
+            <div class="tool-group">
+              <h4>AI Tools</h4>
+              <ul class="tool-grid">
+                <li><img src="assets/logos/claude.svg" alt=""><span>Claude Code</span></li>
+                <li><img src="assets/logos/cursor.svg" alt=""><span>Cursor</span></li>
+                <li><img src="assets/logos/gemini.svg" alt=""><span>Gemini</span></li>
+              </ul>
+            </div>
+            <div class="tool-group">
+              <h4>Programming</h4>
+              <ul class="tool-grid">
+                <li><img src="assets/logos/python.svg" alt=""><span>Python</span></li>
+                <li><img src="assets/logos/r.svg" alt=""><span>R</span></li>
+                <li><img src="assets/logos/sas.png" alt="" class="wide"><span>SAS</span></li>
+              </ul>
+            </div>
+            <div class="tool-group">
+              <h4>Research Tools</h4>
+              <ul class="tool-grid">
+                <li><img src="assets/logos/redcap.svg" alt="" class="wide"><span>REDCap</span></li>
+                <li><img src="assets/logos/endnote.png" alt="" class="wide"><span>EndNote</span></li>
+                <li><img src="assets/logos/notion.svg" alt=""><span>Notion</span></li>
+                <li><img src="assets/logos/asreview.svg" alt="" class="wide"><span>ASReview</span></li>
+              </ul>
+            </div>
+            <div class="tool-group">
+              <h4>Design &amp; Visualization</h4>
+              <ul class="tool-grid">
+                <li><img src="assets/logos/biorender.svg" alt="" class="wide"><span>BioRender</span></li>
+                <li><img src="assets/logos/illustrator.svg" alt=""><span>Illustrator</span></li>
+                <li><img src="assets/logos/canva.svg" alt=""><span>Canva</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini-box">
+              <i class="fas fa-chart-line"></i>
+              <div><h4>Statistical Methods</h4><p>Experimental Design · Multiple Regression · Multivariate Analysis</p></div>
+            </div>
+            <div class="mini-box">
+              <i class="fas fa-language"></i>
+              <div><h4>Languages</h4><p>Mandarin (native) · English (fluent)</p></div>
+            </div>
+          </div>
+
+          <h3 class="sec-sub"><i class="fas fa-chalkboard-user"></i> Teaching</h3>
+          <div class="teach-grid">
+            <article class="teach-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
               <div>
-                <h3>Guest Lecturer – FDST 498 (Undergraduate Research Experience)</h3>
-                <p class="exp-where">Department of Food Science and Technology · University of Nebraska–Lincoln</p>
+                <h4>Teaching Assistant – FDST 458 (Lab Sessions)</h4>
+                <time>Jan – May 2026</time>
+                <p>Prepared experimental materials for FDST 458-153 and led lab sessions; graded assignments; proctored and marked exams for 35 students.</p>
               </div>
-              <time class="exp-when">Feb – Apr 2025</time>
-            </header>
-            <p>Delivered 3 lectures on systematic reviews, covering database search strategies, PICOS-based study design, and the application of AI/ML tools to accelerate literature screening and data extraction.</p>
-          </article>
-
-          <article class="exp-card compact">
-            <header class="exp-hd">
+            </article>
+            <article class="teach-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
               <div>
-                <h3>Undergraduate Teaching Assistant – FDST 412, FDST 429, NUTR 250</h3>
-                <p class="exp-where">Department of Food Science and Technology · University of Nebraska–Lincoln</p>
+                <h4>Guest Lecturer – FDST 498 (Undergraduate Research Experience)</h4>
+                <time>Feb – Apr 2025</time>
+                <p>Delivered 3 lectures on systematic reviews: database search strategies, PICOS-based study design, and AI/ML tools for literature screening and data extraction.</p>
               </div>
-              <time class="exp-when">Aug 2023 – May 2024</time>
-            </header>
-            <p>Graded assignments for Cereal Technology (FDST 412) and Dairy Products Technology (FDST 429); proctored and marked exams for Human Nutrition and Metabolism (NUTR 250) for 55 students.</p>
-          </article>
-
-          <article class="exp-card compact">
-            <header class="exp-hd">
+            </article>
+            <article class="teach-card">
+              <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
               <div>
-                <h3>Teaching Assistant (Internship) – IELTS Preparation</h3>
-                <p class="exp-where">Xi'An New Oriental Education &amp; Technology Group</p>
+                <h4>Undergraduate TA – FDST 412, FDST 429, NUTR 250</h4>
+                <time>Aug 2023 – May 2024</time>
+                <p>Graded assignments for Cereal Technology (FDST 412) and Dairy Products Technology (FDST 429); proctored and marked exams for Human Nutrition and Metabolism (NUTR 250) for 55 students.</p>
               </div>
-              <time class="exp-when">Sep 2022 – Mar 2023</time>
-            </header>
-            <p>Organized and proctored an IELTS practice exam for 71 students; supported academic planning and language exam preparation for 4 students; recognized as "Excellent Staff of the Month."</p>
-          </article>
+            </article>
+            <article class="teach-card">
+              <div class="logo-slot"><img src="assets/logos/neworiental.svg" alt="New Oriental"></div>
+              <div>
+                <h4>Teaching Assistant (Internship) – IELTS Preparation</h4>
+                <time>Sep 2022 – Mar 2023</time>
+                <p>Xi'An New Oriental Education &amp; Technology Group. Organized and proctored an IELTS practice exam for 71 students; supported exam preparation for 4 students; recognized as "Excellent Staff of the Month."</p>
+              </div>
+            </article>
+          </div>
 
-          <h3 class="sec-sub">Mentorship</h3>
-          <ul class="bullet-list">
-            <li><strong>Mentor &amp; Co-supervisor</strong>, UNL (Aug 2025 – May 2026): Co-supervised undergraduate researcher C Rasmussen on systematic review, clinical trial data entry, and research ethics.</li>
-            <li><strong>Mentor</strong>, UNL (May 2025 – May 2026): Guided master's student L Lin through academic and social aspects of graduate life.</li>
-            <li><strong>Mentor</strong>, UNL (Feb – May 2025): Mentored undergraduate student Y Yang on literature search and review.</li>
-            <li><strong>Mentor</strong>, Northwest A&amp;F University (Jan – Jun 2023): Mentored 2 undergraduate students (Y Zhao, J Liu) on lab techniques.</li>
+          <div class="two-col">
+            <div>
+              <h3 class="sec-sub"><i class="fas fa-hands-holding-child"></i> Mentorship</h3>
+              <ul class="role-list">
+                <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Mentor &amp; Co-supervisor</strong> <time>Aug 2025 – May 2026</time><p>Co-supervised undergraduate researcher C Rasmussen on systematic review, clinical trial data entry, and research ethics.</p></div></li>
+                <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Mentor</strong> <time>May 2025 – May 2026</time><p>Guided master's student L Lin through academic and social aspects of graduate life.</p></div></li>
+                <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Mentor</strong> <time>Feb – May 2025</time><p>Mentored undergraduate student Y Yang on literature search and review.</p></div></li>
+                <li><img src="assets/logos/nwafu.png" alt="NWAFU" class="seal"><div><strong>Mentor</strong> <time>Jan – Jun 2023</time><p>Mentored 2 undergraduate students (Y Zhao, J Liu) on lab techniques.</p></div></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="sec-sub"><i class="fas fa-id-card-clip"></i> Memberships &amp; Review</h3>
+              <ul class="role-list">
+                <li><img src="assets/logos/asm.svg" alt="ASM"><div><strong>American Society for Microbiology</strong> <time>2024 – 2026</time><p>Also ASM Branch Membership – Missouri Valley (2025 – 2026).</p></div></li>
+                <li><img src="assets/logos/asn.jpg" alt="ASN"><div><strong>American Society for Nutrition</strong> <time>2024 – 2026</time></div></li>
+                <li><img src="assets/logos/isapp.svg" alt="ISAPP"><div><strong>ISAPP – Students and Fellows Association</strong> <time>2023 – 2025</time><p>International Scientific Association of Probiotics and Prebiotics.</p></div></li>
+                <li><img src="assets/logos/elsevier.svg" alt="Elsevier" class="seal"><div><strong>Junior Reviewer, <cite>Clinical Nutrition</cite></strong> <time>Nov 2024</time></div></li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="sec-sub"><i class="fas fa-people-group"></i> Leadership &amp; Service</h3>
+          <ul class="role-list role-grid">
+            <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Graduate Representative, Graduate Student Assembly</strong> <time>Sep 2025 – Jun 2026</time><p>Attend monthly meetings, advocating for FDST graduate students on academic affairs.</p></div></li>
+            <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Graduate Student Advisory Board Member, FDST</strong> <time>Aug 2024 – Aug 2025</time><p>Organized the Graduate Student Mentoring Program; met monthly with the Departmental Graduate Chair.</p></div></li>
+            <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Graduate Representative, CASNR</strong> <time>Aug 2024 – May 2025</time><p>Planned three professional development workshops (professorship, academic job market, CV/resume writing).</p></div></li>
+            <li><img src="assets/logos/unl.svg" alt="UNL"><div><strong>Volunteer, Nebraska Food for Health Center</strong> <time>Aug 2025</time><p>Hosted outreach session at the Ice Cream Social event.</p></div></li>
+            <li><img src="assets/logos/nwafu.png" alt="NWAFU" class="seal"><div><strong>Communications Lead, College of Food Science and Engineering</strong> <time>Sep 2020 – Jun 2022</time><p>Led a team of 13 to produce weekly promotional newsletters and video content.</p></div></li>
+            <li><img src="assets/logos/nwafu.png" alt="NWAFU" class="seal"><div><strong>Academic Advisor, College of Food Science and Engineering</strong> <time>Aug 2023 – May 2024</time><p>Advised 19 freshmen on academic planning, research opportunities, and career development.</p></div></li>
+            <li><img src="assets/logos/nwafu.png" alt="NWAFU" class="seal"><div><strong>Academic Coordinator, College of Food Science and Engineering</strong> <time>Oct 2021 – Aug 2023</time><p>Facilitated communication between 59 undergraduates and the college; supported "3+1" program events and advising sessions.</p></div></li>
+            <li><img src="assets/logos/nwafu.png" alt="NWAFU" class="seal"><div><strong>Volunteer, Office of Undergraduate Studies</strong> <time>Aug 2022</time><p>Assisted with student orientation and organized outreach activities to promote student engagement.</p></div></li>
+            <li><img src="assets/logos/nwafu.png" alt="NWAFU" class="seal"><div><strong>Volunteer, Rural Voluntary Activities for Poverty Alleviation</strong> <time>Jun 2022</time><p>Delivered food-safety outreach and educational programs for rural school children and families.</p></div></li>
           </ul>
 
-          <h3 class="sec-sub">Leadership &amp; Service</h3>
-          <ul class="bullet-list">
-            <li><strong>Graduate Representative</strong>, Graduate Student Assembly, UNL (Sep 2025 – Jun 2026): Attend monthly meetings, advocating for FDST graduate students on academic affairs.</li>
-            <li><strong>Graduate Student Advisory Board Member</strong>, Dept. of Food Science and Technology, UNL (Aug 2024 – Aug 2025): Organized the Graduate Student Mentoring Program; met monthly with Departmental Graduate Chair.</li>
-            <li><strong>Graduate Representative</strong>, College of Agricultural Sciences and Natural Resources, UNL (Aug 2024 – May 2025): Planned and organized three professional development workshops (professorship, academic job market, CV/resume writing).</li>
-            <li><strong>Communications Lead</strong>, College of Food Science and Engineering, Northwest A&amp;F University (Sep 2020 – Jun 2022): Led a team of 13 to produce weekly promotional newsletters and video content.</li>
-            <li><strong>Junior Reviewer</strong>, <cite>Clinical Nutrition</cite> (Nov 2024)</li>
-            <li><strong>Volunteer</strong>, Nebraska Food for Health Center, UNL (Aug 2025): Hosted outreach session at the Ice Cream Social event.</li>
-            <li><strong>Academic Advisor</strong>, College of Food Science and Engineering, Northwest A&amp;F University (Aug 2023 – May 2024): Advised 19 freshmen on academic planning, research opportunities, and career development.</li>
-            <li><strong>Academic Coordinator</strong>, College of Food Science and Engineering, Northwest A&amp;F University (Oct 2021 – Aug 2023): Facilitated communication between 59 undergraduate students and the college on academic and student life concerns; supported "3+1" program events and advising sessions.</li>
-            <li><strong>Volunteer</strong>, Office of Undergraduate Studies, Northwest A&amp;F University (Aug 2022): Assisted with student orientation and organized outreach activities to promote student engagement.</li>
-            <li><strong>Volunteer</strong>, College of Food Science and Engineering, Northwest A&amp;F University (Jun 2022): Participated in Undergraduate Rural Voluntary Activities for Poverty Alleviation, delivering outreach and educational programs on food safety for rural school children and families.</li>
-          </ul>
-
-        </div>
-      </section>
-
-      <!-- ===== AWARDS ===== -->
-      <section id="awards" class="alt">
-        <div class="container">
-          <div class="sec-hd">
-            <span class="sec-tag">Awards</span>
-            <h2 class="sec-title">Scholarships &amp; Funding</h2>
-          </div>
-          <table class="awards-table" aria-label="Awards and scholarships">
-            <thead>
-              <tr><th>Year</th><th>Award</th><th>Amount</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2025</td>
-                <td>Chancellor's Graduate Research Grant · University of Nebraska–Lincoln</td>
-                <td>$400</td>
-              </tr>
-              <tr>
-                <td>2025–2026</td>
-                <td>Departmental Graduate Research Assistantship · University of Nebraska–Lincoln</td>
-                <td>$25,500</td>
-              </tr>
-              <tr>
-                <td>2024</td>
-                <td>Mary and Charles C. Cooper / Emma I. Sharpless Fellowship · University of Nebraska–Lincoln</td>
-                <td>$3,000</td>
-              </tr>
-              <tr>
-                <td>2024–2025</td>
-                <td>Departmental Graduate Research Assistantship · University of Nebraska–Lincoln</td>
-                <td>$24,500</td>
-              </tr>
-              <tr>
-                <td>2023</td>
-                <td>National Undergraduate Life Sciences Research – Silver Prize · China</td>
-                <td>¥3,000</td>
-              </tr>
-              <tr>
-                <td>2020–2023</td>
-                <td>Undergraduate Merit Scholarship (3 consecutive years) · Northwest A&amp;F University</td>
-                <td>¥1,500 / yr</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- ===== SKILLS & CERTIFICATIONS ===== -->
-      <section id="skills">
-        <div class="container">
-          <div class="sec-hd">
-            <span class="sec-tag">Skills</span>
-            <h2 class="sec-title">Technical Expertise</h2>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-box">
-              <h3>Computational Antibody Engineering</h3>
-              <ul class="inline-tags"><li>AlphaFold 3</li><li>Germinal</li><li>RFantibody</li></ul>
-              <p>VH–VL framework panels · fixed-CDR framework swaps · framework grafting · epitope masks</p>
-            </div>
-            <div class="skill-box">
-              <h3>Structural Evaluation</h3>
-              <p>AF3 confidence metrics · pose RMSD · CDR RMSD · epitope recovery · contact analysis · VH–VL orientation</p>
-            </div>
-            <div class="skill-box">
-              <h3>Languages</h3>
-              <p>Mandarin (native) · English (fluent)</p>
-            </div>
-            <div class="skill-box">
-              <h3>Statistical Methods</h3>
-              <p>Experimental Design · Multiple Regression · Multivariate Analysis</p>
-            </div>
-            <div class="skill-box">
-              <h3>Programming &amp; AI Tools</h3>
-              <ul class="inline-tags"><li>R</li><li>Python</li><li>SAS</li><li>Gemini</li><li>Claude Code</li><li>Cursor</li></ul>
-            </div>
-            <div class="skill-box">
-              <h3>Research Tools</h3>
-              <ul class="inline-tags"><li>REDCap</li><li>EndNote</li><li>Notion</li><li>ASReview</li></ul>
-            </div>
-            <div class="skill-box">
-              <h3>Design &amp; Visualization</h3>
-              <ul class="inline-tags"><li>BioRender</li><li>Adobe Illustrator</li><li>Canva</li></ul>
-            </div>
-          </div>
-
-          <h3 class="sec-sub">Certifications</h3>
-          <table class="cert-table" aria-label="Certifications">
-            <tbody>
-              <tr><td>Oct 2025</td><td>Python for Data Science, AI &amp; Development</td><td>Coursera</td></tr>
-              <tr><td>May 2025</td><td>Data Science: R Basics</td><td>HarvardX</td></tr>
-              <tr><td>Feb 2025</td><td>Alberta Food Safety Basics</td><td>University of Alberta Health Service</td></tr>
-              <tr><td>Dec 2024</td><td>GCP for Clinical Trials with Investigational Drugs and Biologics (ICH Focus)</td><td>CITI Program</td></tr>
-              <tr><td>Jan 2024</td><td>Biomedical Responsible Conduct of Research</td><td>CITI Program</td></tr>
-              <tr><td>Dec 2023</td><td>Conflicts of Interest</td><td>CITI Program</td></tr>
-              <tr><td>Dec 2023</td><td>Biomedical Investigators and Key Personnel</td><td>CITI Program</td></tr>
-            </tbody>
-          </table>
-
-          <h3 class="sec-sub">Professional Memberships</h3>
-          <ul class="bullet-list">
-            <li>ASM Branch Membership – Missouri Valley (2025 – 2026)</li>
-            <li>American Society for Nutrition (2024 – 2026)</li>
-            <li>American Society for Microbiology (2024 – 2026)</li>
-            <li>International Scientific Association of Probiotics and Prebiotics – Students and Fellows Association (ISAPP-SFA) (2023 – 2025)</li>
+          <h3 class="sec-sub"><i class="fas fa-certificate"></i> Certifications</h3>
+          <ul class="cert-list">
+            <li><div class="logo-slot"><img src="assets/logos/coursera.png" alt="Coursera" class="square"></div><div><strong>Python for Data Science, AI &amp; Development</strong><span>Coursera · Oct 2025</span></div></li>
+            <li><div class="logo-slot"><img src="assets/logos/harvard.svg" alt="HarvardX"></div><div><strong>Data Science: R Basics</strong><span>HarvardX · May 2025</span></div></li>
+            <li><div class="logo-slot icon"><i class="fas fa-shield-heart"></i></div><div><strong>Alberta Food Safety Basics</strong><span>University of Alberta Health Service · Feb 2025</span></div></li>
+            <li><div class="logo-slot"><img src="assets/logos/citi.svg" alt="CITI Program"></div><div><strong>GCP for Clinical Trials with Investigational Drugs and Biologics (ICH Focus)</strong><span>CITI Program · Dec 2024</span></div></li>
+            <li><div class="logo-slot"><img src="assets/logos/citi.svg" alt="CITI Program"></div><div><strong>Biomedical Responsible Conduct of Research</strong><span>CITI Program · Jan 2024</span></div></li>
+            <li><div class="logo-slot"><img src="assets/logos/citi.svg" alt="CITI Program"></div><div><strong>Conflicts of Interest</strong><span>CITI Program · Dec 2023</span></div></li>
+            <li><div class="logo-slot"><img src="assets/logos/citi.svg" alt="CITI Program"></div><div><strong>Biomedical Investigators and Key Personnel</strong><span>CITI Program · Dec 2023</span></div></li>
           </ul>
 
         </div>
       </section>
 
       <!-- ===== CONTACT ===== -->
-      <section id="contact" class="alt">
+      <section id="contact">
         <div class="container">
           <div class="sec-hd">
             <span class="sec-tag">Contact</span>
-            <h2 class="sec-title">Get in Touch</h2>
+            <h2 class="sec-title">Reach Out to Me</h2>
           </div>
           <div class="contact-grid">
-            <div class="contact-card">
+            <a class="contact-card" href="mailto:jasper.tang859@gmail.com">
               <span class="contact-icon"><i class="fas fa-envelope"></i></span>
               <div>
                 <p class="contact-lbl">Email</p>
-                <a href="mailto:jasper.tang859@gmail.com">jasper.tang859@gmail.com</a>
+                <p class="contact-val">jasper.tang859@gmail.com</p>
               </div>
-            </div>
+            </a>
             <div class="contact-card">
-              <span class="contact-icon"><i class="fas fa-building-columns"></i></span>
+              <span class="contact-icon logo"><img src="assets/logos/uf.svg" alt="University of Florida"></span>
               <div>
                 <p class="contact-lbl">Institution</p>
-                <p>University of Florida</p>
+                <p class="contact-val">University of Florida</p>
                 <p class="contact-sub">Wang Lab · Dept. of Infectious Diseases and Immunology</p>
-                <p class="contact-sub">Previously: University of Nebraska–Lincoln, Dept. of Food Science &amp; Technology</p>
               </div>
             </div>
-            <div class="contact-card">
-              <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
+            <a class="contact-card" href="https://www.linkedin.com/in/jiayu-tang-04597628a/" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon linkedin"><i class="fab fa-linkedin-in"></i></span>
               <div>
                 <p class="contact-lbl">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/jiayu-tang-04597628a/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jiayu-tang-04597628a</a>
+                <p class="contact-val">linkedin.com/in/jiayu-tang-04597628a</p>
               </div>
-            </div>
-            <div class="contact-card">
-              <span class="contact-icon"><i class="fas fa-file-pdf"></i></span>
+            </a>
+            <a class="contact-card" href="Resume_Jiayu_Tang.pdf" target="_blank">
+              <span class="contact-icon"><i class="fas fa-file-arrow-down"></i></span>
               <div>
-                <p class="contact-lbl">Curriculum Vitae</p>
-                <a href="CV_Jiayu_Tang.pdf" target="_blank">Download PDF</a>
+                <p class="contact-lbl">Resume</p>
+                <p class="contact-val">Download Resume (PDF)</p>
                 <p class="contact-sub">Updated September 2026</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -576,6 +648,7 @@
 
   </div><!-- /.page-wrapper -->
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

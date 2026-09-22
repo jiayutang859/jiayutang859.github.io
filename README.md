@@ -11,6 +11,15 @@ No frameworks, no build tools — works by opening `index.html` in a browser.
 |------|-------------|
 | `index.html` | All page content |
 | `style.css` | Styling (colors, layout, responsive) |
+| `script.js` | Mobile nav, scroll effects, 3D antibody viewer in the hero |
+| `Resume_Jiayu_Tang.pdf` | Resume linked from "Download Resume" |
+| `headshot.jpg` | Profile photo (About section) |
+| `assets/logos/` | Institution, journal, and tool logos (Wikimedia Commons, Simple Icons, official sites) |
+| `assets/data/1hzh-backbone.pdb` | Backbone-only human IgG1 structure (PDB 1HZH) rendered with 3Dmol.js |
+
+------|-------------|
+| `index.html` | All page content |
+| `style.css` | Styling (colors, layout, responsive) |
 | `script.js` | Mobile nav, scroll effects |
 | `CV_Jiayu_Tang.pdf` | CV download link **(you must add this file)** |
 | `photo.jpg` | Profile photo **(you must add this file, optional)** |
