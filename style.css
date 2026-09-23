@@ -278,6 +278,8 @@ a.card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: v
 
 .hero-sub { font-size: clamp(1.08rem, 1.45vw, 1.25rem); color: var(--muted); max-width: 580px; margin-bottom: 2rem; line-height: 1.65; }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
+.hero-sub a, .prose a { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent-bd); text-underline-offset: 3px; }
+.hero-sub a:hover, .prose a:hover { text-decoration-color: currentColor; }
 .hero .btn-row { margin-bottom: 2.25rem; }
 
 .hero-affil {
