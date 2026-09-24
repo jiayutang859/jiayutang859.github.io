@@ -1,7 +1,8 @@
 # Jiayu Tang – Personal Website
 
-A personal research website. Home answers who / what / accomplishments / where
-this is heading; About carries the intellectual development and research mindset.
+A personal research website. Home has exactly four sections (Who I am · My
+Research Vision · Selected Work · Contact); About carries the intellectual
+development, the closed research loop, and the research mindset.
 All diagrams are inline SVG animated with CSS and respect `prefers-reduced-motion`. Plain HTML, CSS, and
 JavaScript with no build step, served by GitHub Pages from the `main` branch.
 The positioning and page-by-page rationale are in `WEBSITE_REDESIGN_PLAN.md`.
@@ -14,9 +15,9 @@ Live at <https://jiayutang859.github.io>.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home: identity + animated biological-interactions visual, current focus, selected work (3D antibody and bean→gut→microbiome panels), research outputs, closed research loop (vision), three-sentence bio |
-| `about.html` | T-shaped development (past breadth → current depth → future loop), what each stage taught, mindset orbit |
-| `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations |
+| `index.html` | Home: two-column hero with portrait, five-stage research-vision workflow (observe → understand → model & predict → validate → modulate/engineer), three project cards (3D antibody, animated crossover-trial diagram, systematic-review diagram), contact actions |
+| `about.html` | Short bio, T-shaped development (past breadth → current depth → future loop), the full closed loop, what each stage taught, mindset orbit |
+| `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations (project anchors used by the Home cards), output counts |
 | `notes.html` | Working notes on evidence and methods (currently draft titles) |
 | `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |
 | `contact.html` | Email, LinkedIn, GitHub, publications, resume |
@@ -29,7 +30,7 @@ Live at <https://jiayutang859.github.io>.
 | `style.css` | All styles. Colours and fonts are CSS variables at the top (`--accent`, `--warm`, `--paper`, …) |
 | `script.js` | Mobile menu, scroll reveal, CV section highlighting, back-to-top, the 3D antibody inside any `.mol-panel`, and redirects from old single-page links (`/#publications` → `cv.html#publications`) |
 | `Resume_Jiayu_Tang.pdf` / `CV_Jiayu_Tang.pdf` | Downloadable resume and full CV |
-| `headshot.jpg` | Portrait (About page, social previews) |
+| `headshot.jpg` | Portrait (Home hero, About page, social previews) |
 | `assets/logos/` | Institution, journal, and tool logos (Wikimedia Commons, Simple Icons, official sites) |
 | `assets/data/1hzh-backbone.pdb` | Backbone-only human IgG1 structure (PDB 1HZH) rendered with 3Dmol.js |
 
@@ -52,10 +53,10 @@ linked from the footer and the About page, not the main nav.
 ## Previewing locally
 
 ```bash
-python3 -m http.server 8765
+python3 -m http.server 8767
 ```
 
-Then open <http://localhost:8765>. Opening the files directly (`file://`) mostly
+Then open <http://localhost:8767>. Opening the files directly (`file://`) mostly
 works, but the 3D antibody needs a local server to load its structure file.
 
 ## Preview mode (hidden from search engines)
