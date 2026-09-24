@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260927">
+  <link rel="stylesheet" href="style.css?v=20260928">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -369,7 +369,7 @@
           <!-- 3. Systematic review: search → screen → extract (restrained) -->
           <a class="card work reveal" href="research.html#systematic-review" style="--c:var(--s2);--c-lt:var(--s2-lt)">
             <div class="proj-viz">
-              <svg class="sr" viewBox="0 0 400 300" role="img" aria-label="Diagram: records from three databases are screened by two reviewers, then extracted by a language-model agent and verified by two human reviewers into a final dataset">
+              <svg class="sr" viewBox="0 0 400 300" role="img" aria-label="Diagram: records from three databases are read by a language-model agent that extracts structured data, which two human reviewers verify into a final dataset">
                 <path class="funnel" d="M20 60 L120 60 L150 120 L250 120 L280 150 L380 150 L380 240 L280 240 L250 210 L150 210 L120 250 L20 250 Z" opacity="0"/>
                 <!-- search: three database stacks -->
                 <g class="doc-stack">
@@ -387,11 +387,10 @@
                 <path class="arrow" d="M128 156 l7 4 l-7 4 z"/>
 
                 <!-- screening: reviewers + ML over a grid of records -->
-                <g class="reviewer">
-                  <circle cx="192" cy="60" r="5"/><path d="M184 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
-                  <circle cx="216" cy="60" r="5"/><path d="M208 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
-                </g>
-                <text x="204" y="94" text-anchor="middle">2 reviewers</text>
+                <rect class="agent" x="190" y="54" width="28" height="22" rx="5"/>
+                <circle class="agent-eye" cx="199" cy="65" r="2.4"/><circle class="agent-eye" cx="209" cy="65" r="2.4"/>
+                <line class="agent-ant" x1="204" y1="54" x2="204" y2="47"/><circle class="agent-eye" cx="204" cy="45.5" r="1.8"/>
+                <text x="204" y="94" text-anchor="middle">llm agent</text>
                 <g class="records">
                   <rect class="d" style="--k:0" x="150" y="104" width="12" height="15" rx="2"/><rect class="d in" style="--k:0" x="166" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="182" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="198" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="214" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="230" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="246" y="104" width="12" height="15" rx="2"/>
                   <rect class="d" style="--k:1" x="150" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="166" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="182" y="123" width="12" height="15" rx="2"/><rect class="d in" style="--k:1" x="198" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="214" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="230" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="246" y="123" width="12" height="15" rx="2"/>
@@ -400,28 +399,25 @@
                   <rect class="d" style="--k:4" x="150" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="166" y="180" width="12" height="15" rx="2"/><rect class="d in" style="--k:4" x="182" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="198" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="214" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="230" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="246" y="180" width="12" height="15" rx="2"/>
                   <rect class="d" style="--k:5" x="150" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="166" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="182" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="198" y="199" width="12" height="15" rx="2"/><rect class="d in" style="--k:5" x="214" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="230" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="246" y="199" width="12" height="15" rx="2"/>
                 </g>
-                <text x="204" y="236" text-anchor="middle">title · abstract · full text</text>
-                <text x="204" y="280" text-anchor="middle">screen</text>
+                <text x="204" y="236" text-anchor="middle" class="lc">structured fields per study</text>
+                <text x="204" y="280" text-anchor="middle">extract</text>
                 <path class="link" d="M264 160 H298"/>
                 <path class="arrow" d="M298 156 l7 4 l-7 4 z"/>
 
-                <!-- extraction: table + verification check + dataset bars -->
-                <rect class="agent" x="332" y="52" width="28" height="22" rx="5"/>
-                <circle class="agent-eye" cx="341" cy="63" r="2.4"/><circle class="agent-eye" cx="351" cy="63" r="2.4"/>
-                <line class="agent-ant" x1="346" y1="52" x2="346" y2="45"/><circle class="agent-eye" cx="346" cy="43.5" r="1.8"/>
-                <text x="346" y="90" text-anchor="middle">llm agent</text>
+                <!-- verification: two human reviewers check every extracted value → dataset -->
+                <g class="reviewer">
+                  <circle cx="334" cy="60" r="5"/><path d="M326 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
+                  <circle cx="358" cy="60" r="5"/><path d="M350 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
+                </g>
+                <text x="346" y="94" text-anchor="middle">2 reviewers</text>
                 <rect class="table" x="312" y="118" width="68" height="52" rx="4"/>
                 <path class="grid" d="M312 132 H380 M312 146 H380 M312 158 H380 M335 118 V170 M358 118 V170"/>
-                <text x="346" y="104" text-anchor="middle">extract</text>
-                <g class="reviewer">
-                  <circle cx="334" cy="192" r="4.5"/><path d="M327 208 v-5 a7 7 0 0 1 14 0 v5 z"/>
-                  <circle cx="358" cy="192" r="4.5"/><path d="M351 208 v-5 a7 7 0 0 1 14 0 v5 z"/>
-                </g>
-                <circle class="chk-bg" cx="374" cy="190" r="9"/>
-                <path class="chk" d="M369.5 190 l3.2 3.2 l6 -6.5"/>
-                <text x="340" y="224" text-anchor="middle">2 reviewers verify</text>
-                <rect class="bar" x="318" y="238" width="10" height="20"/><rect class="bar" x="334" y="230" width="10" height="28"/><rect class="bar" x="350" y="243" width="10" height="15"/><rect class="bar" x="366" y="235" width="10" height="23"/>
-                <line class="grid" x1="312" y1="258" x2="382" y2="258"/>
+                <circle class="chk-bg" cx="378" cy="118" r="10"/>
+                <path class="chk" d="M373 118 l3.5 3.5 l6.5 -7"/>
+                <text x="346" y="108" text-anchor="middle">verify</text>
+                <text x="346" y="188" text-anchor="middle" class="lc">every value checked</text>
+                <rect class="bar" x="318" y="220" width="10" height="26"/><rect class="bar" x="334" y="210" width="10" height="36"/><rect class="bar" x="350" y="226" width="10" height="20"/><rect class="bar" x="366" y="216" width="10" height="30"/>
+                <line class="grid" x1="312" y1="246" x2="382" y2="246"/>
                 <text x="346" y="280" text-anchor="middle">dataset</text>
               </svg>
               <span class="viz-tag">Systematic review · 1,800+ records · LLM-agent extraction</span>
@@ -429,7 +425,7 @@
             <div class="work-body">
               <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Systematic review · M.Sc.</span></div>
               <h3>Dietary pulses and human nutrition: a systematic review</h3>
-              <p>Intervention trials of pulse market classes, screened from 1,800+ records by two reviewers, with data extracted by a language-model agent we built and verified by two human reviewers.</p>
+              <p>Intervention trials of pulse market classes from 1,800+ records across three databases, with data extracted by a language-model agent we built and every value verified by two human reviewers.</p>
               <div class="stage-dots" aria-label="Stages exercised: understand"><i></i><i class="on"></i><i></i><i></i><i></i><span>understand</span></div>
               <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
             </div>
@@ -507,6 +503,6 @@
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js" defer></script>
-  <script src="script.js?v=20260927" defer></script>
+  <script src="script.js?v=20260928" defer></script>
 </body>
 </html>

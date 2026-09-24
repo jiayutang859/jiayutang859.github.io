@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notes | Jiayu Tang</title>
-  <meta name="description" content="Working notes by Jiayu Tang on evidence and methods in computational immunology, structure prediction, and moving between experimental and computational biology.">
+  <title>Notes &amp; Collections | Jiayu Tang</title>
+  <meta name="description" content="Books, films, thoughts, and photographs Jiayu Tang wants to keep: a personal shelf of what he reads, watches, thinks about, and notices outside the lab.">
   <meta name="author" content="Jiayu Tang">
   <!-- Preview mode: hidden from search engines. Change to "index, follow" when ready to go public. -->
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://jiayutang859.github.io/notes.html">
   <meta property="og:title" content="Notes | Jiayu Tang">
-  <meta property="og:description" content="Short essays and research notes: what I'm learning, and how I think about interdisciplinary science.">
+  <meta property="og:description" content="Books, films, thoughts, and moments I want to keep.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jiayutang859.github.io/notes.html">
 
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260927">
+  <link rel="stylesheet" href="style.css?v=20260928">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -45,79 +45,83 @@
 
   <main id="main">
 
-    <section class="page-hero">
-      <div class="wrap narrow">
-        <span class="eyebrow rise" style="--d:0">Notes &amp; writing</span>
-        <h1 class="rise" style="--d:1">Thinking out loud</h1>
-        <p class="lede rise" style="--d:2">Working notes on evidence and methods: what I am learning, the questions I am stuck on, and what transfers between experimental and computational biology. I am writing these while still early in my research, so they are deliberately unfinished.</p>
+    <!-- ===== HEADER ===== -->
+    <section class="page-hero shelf-hero">
+      <div class="wrap">
+        <span class="eyebrow rise" style="--d:0">Notes &amp; collections</span>
+        <h1 class="rise" style="--d:1">Notes</h1>
+        <p class="lede rise" style="--d:2">Books, films, thoughts, and moments I want to keep.</p>
+        <p class="shelf-intro rise" style="--d:3">Outside the lab, I collect ideas through books, films, writing, and photography, with a standing interest in philosophy and in cooking. This is what I spend time with when I am not doing research.</p>
+        <nav class="toc rise" style="--d:4" aria-label="Collections on this page">
+          <a href="#books"><i class="fas fa-book"></i> Books</a>
+          <a href="#films"><i class="fas fa-clapperboard"></i> Movies &amp; Shows</a>
+          <a href="#thoughts"><i class="fas fa-pen-nib"></i> Thoughts</a>
+          <a href="#photography"><i class="fas fa-camera-retro"></i> Photography</a>
+        </nav>
       </div>
     </section>
 
-    <div class="wrap narrow">
-      <!--
-        To publish a note: copy notes/_template.html to notes/<slug>.html, write it,
-        then turn the matching card below into a link (<a class="card note" href="notes/<slug>.html">)
-        and change its status from "In draft" to the publication date.
-      -->
-      <div class="note-list">
-
-        <article class="card note reveal" id="food-science-to-antibody-design">
-          <span class="icon-badge warm"><i class="fas fa-route"></i></span>
-          <div>
-            <h3>What a Clinical Trial Taught Me About Computational Biology</h3>
-            <p>Controls, confounding, adherence, and data provenance are not administrative details in a human study. This note is about how those habits transfer to structure prediction, and where they need translating.</p>
-            <div class="note-meta"><span class="pill warm">Essay</span><span class="pill muted">Research practice</span></div>
-          </div>
-          <span class="note-status">In draft</span>
-        </article>
-
-        <article class="card note reveal" id="ai-makes-science-more-creative">
-          <span class="icon-badge"><i class="fas fa-lightbulb"></i></span>
-          <div>
-            <h3>Prediction Is Not Validation: Using AI Tools as Evidence</h3>
-            <p>A model output is evidence with uncertainty, not a result. What it takes to treat AI tools as assays: controls, replicates, applicability domains, and knowing when not to automate.</p>
-            <div class="note-meta"><span class="pill">Essay</span><span class="pill muted">Uncertainty</span></div>
-          </div>
-          <span class="note-status">In draft</span>
-        </article>
-
-        <article class="card note reveal" id="antibody-frameworks-epitope-geometry">
-          <span class="icon-badge"><i class="fas fa-dna"></i></span>
-          <div>
-            <h3>What I Am Learning About Antibody Frameworks and Epitope Geometry</h3>
-            <p>A beginner's working notes on why the scaffold around the CDRs might matter more than it seems, and what changes when you hold the loops fixed and swap everything else.</p>
-            <div class="note-meta"><span class="pill">Research note</span><span class="pill muted">Antibody engineering</span></div>
-          </div>
-          <span class="note-status">In draft</span>
-        </article>
-
-        <article class="card note reveal" id="structure-prediction-notes">
-          <span class="icon-badge"><i class="fas fa-cubes"></i></span>
-          <div>
-            <h3>Notes on Structure Prediction for Biomedical Research</h3>
-            <p>What confidence scores do and don't tell you, why native controls matter, and practical lessons from running antibody–antigen predictions at scale.</p>
-            <div class="note-meta"><span class="pill">Research note</span><span class="pill muted">Structure prediction</span></div>
-          </div>
-          <span class="note-status">In draft</span>
-        </article>
-
-        <article class="card note reveal" id="interdisciplinary-biomedical-science">
-          <span class="icon-badge warm"><i class="fas fa-people-arrows"></i></span>
-          <div>
-            <h3>How I Think About Interdisciplinary Biomedical Science</h3>
-            <p>Wet lab, clinical trials, bioinformatics, and AI each have their own standards of evidence. This note is about what I've found transfers between them, and what doesn't.</p>
-            <div class="note-meta"><span class="pill warm">Essay</span><span class="pill muted">Interdisciplinary science</span></div>
-          </div>
-          <span class="note-status">In draft</span>
-        </article>
-
+    <!-- ===== BOOKS ===== -->
+    <section class="shelf-section" id="books">
+      <div class="wrap">
+        <div class="shelf-hd">
+          <div><span class="eyebrow">Books</span><h2 class="sec-title">On the shelf</h2></div>
+          <p class="shelf-note">Titles and authors only, for now. My own notes will appear under a book once I have written them.</p>
+        </div>
+        <div class="bookshelf-wrap">
+          <div class="bookshelf" id="shelf-books" aria-label="Bookshelf"></div>
+          <div class="ledge" aria-hidden="true"></div>
+        </div>
       </div>
+    </section>
 
-      <div class="tip reveal" style="margin-top:2rem">
-        <i class="fas fa-envelope-open-text"></i>
-        <p>Is there a topic you'd like me to write about, or do you disagree with one of these ideas? <a href="contact.html">Let me know</a>. Some of the best notes start as conversations.</p>
+    <!-- ===== MOVIES & SHOWS ===== -->
+    <section class="shelf-section alt" id="films">
+      <div class="wrap">
+        <div class="shelf-hd">
+          <div><span class="eyebrow">Movies &amp; Shows</span><h2 class="sec-title">Cinema shelf</h2></div>
+          <p class="shelf-note">Posters at their own proportions. Hover or focus for the year and kind of thing it is.</p>
+        </div>
+        <div class="cinema" id="shelf-films" aria-label="Films and shows"></div>
       </div>
-    </div>
+    </section>
+
+    <!-- ===== THOUGHTS ===== -->
+    <section class="shelf-section" id="thoughts">
+      <div class="wrap">
+        <div class="shelf-hd">
+          <div><span class="eyebrow">Thoughts</span><h2 class="sec-title">Fragments and drafts</h2></div>
+          <p class="shelf-note">A commonplace notebook rather than a blog: short observations, questions I am sitting with, and longer notes while they are still in draft.</p>
+        </div>
+        <div class="thoughts" id="thought-fragments"></div>
+        <div class="thoughts" id="thought-longer"></div>
+        <!--
+          Longer notes: copy notes/_template.html to notes/<slug>.html (no leading underscore),
+          write it, then set that entry's "link" and "status" in assets/notes/collections.js.
+          Short fragments: add an object to the thoughts[] array in the same file.
+        -->
+      </div>
+    </section>
+
+    <!-- ===== PHOTOGRAPHY ===== -->
+    <section class="shelf-section alt" id="photography">
+      <div class="wrap">
+        <div class="shelf-hd">
+          <div><span class="eyebrow">Photography</span><h2 class="sec-title">Things I noticed</h2></div>
+          <p class="shelf-note">Moments and details from wherever I happened to be. Dates come from the camera; captions will follow. The full galleries live in the <a href="/studio/">studio</a>.</p>
+        </div>
+        <div class="photo-grid" id="photo-grid" aria-label="Photographs"></div>
+        <p class="shelf-more"><a class="text-link" href="/studio/">All photographs, by year <i class="fas fa-arrow-right"></i></a></p>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photograph">
+      <button class="lb-close" type="button" aria-label="Close"><i class="fas fa-xmark"></i></button>
+      <button class="lb-prev" type="button" aria-label="Previous photograph"><i class="fas fa-chevron-left"></i></button>
+      <figure><img alt=""><figcaption class="lb-cap"></figcaption></figure>
+      <button class="lb-next" type="button" aria-label="Next photograph"><i class="fas fa-chevron-right"></i></button>
+    </dialog>
+
   </main>
 
   <footer class="site-footer">
@@ -140,6 +144,8 @@
   </footer>
 
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-  <script src="script.js?v=20260927" defer></script>
+  <script src="assets/notes/collections.js"></script>
+  <script src="assets/notes/notes.js"></script>
+  <script src="script.js?v=20260928" defer></script>
 </body>
 </html>
