@@ -13,7 +13,7 @@
       const meta = [b.author, b.year].filter(Boolean).join(' · ');
       const inner = `
         <span class="book-cover" style="--h:${h}px"><img src="${esc(b.cover)}" alt="Cover of ${esc(b.title)}" loading="lazy" decoding="async"></span>
-        <span class="book-meta"><strong>${esc(b.title)}</strong>${b.subtitle ? `<em>${esc(b.subtitle)}</em>` : ''}<small>${esc(meta)}</small>${b.note ? `<p class="own-note">${esc(b.note)}</p>` : ''}</span>`;
+        <span class="book-meta"><strong>${esc(b.title)}</strong>${b.subtitle ? `<em>${esc(b.subtitle)}</em>` : ''}${b.originalTitle ? `<em>${esc(b.originalTitle)}</em>` : ''}<small>${esc(meta)}</small>${b.note ? `<p class="own-note">${esc(b.note)}</p>` : ''}</span>`;
       return b.link
         ? `<a class="book" href="${esc(b.link)}" target="_blank" rel="noopener">${inner}</a>`
         : `<div class="book" tabindex="0">${inner}</div>`;

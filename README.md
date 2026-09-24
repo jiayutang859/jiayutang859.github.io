@@ -18,7 +18,7 @@ Live at <https://jiayutang859.github.io>.
 | `index.html` | Home: two-column hero with portrait, five-stage research-vision workflow (observe → understand → model & predict → validate → modulate/engineer), three project cards (3D antibody, animated crossover-trial diagram, systematic-review diagram), contact actions |
 | `about.html` | First-person narrative of how the research questions developed, short bio, T-shaped trajectory, stage-by-stage story with "why I moved on" notes, the closed research loop annotated with where each habit came from (non-research interests live on Notes) |
 | `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations (project anchors used by the Home cards), output counts |
-| `notes.html` | Notes & collections: a bookshelf, a cinema shelf, thoughts (short fragments + longer notes in draft), and a photo gallery, all rendered from `assets/notes/collections.js` |
+| `notes.html` | Collections (nav label "Collections"; the URL stays notes.html): a bookshelf, a cinema shelf, thoughts (short fragments + longer notes in draft), and a photo gallery, all rendered from `assets/notes/collections.js` |
 | `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |
 | `contact.html` | Email, LinkedIn, GitHub, publications, resume |
 | `studio/` | Photography site (separate design, see `studio/README.md`) |
@@ -69,12 +69,11 @@ python3 -m http.server 8767
 Then open <http://localhost:8767>. Opening the files directly (`file://`) mostly
 works, but the 3D antibody needs a local server to load its structure file.
 
-## Preview mode (hidden from search engines)
+## Search engines
 
-Every page currently carries `<meta name="robots" content="noindex, nofollow">`,
-so search engines won't list the site. Anyone with the link can still open it,
-and this repository is public. To go public, change that tag to
-`index, follow` in all six pages (and `notes/_template.html`).
+Every page carries `<meta name="robots" content="index, follow">`, so the site is
+public and indexable. To hide it again, change that tag to `noindex, nofollow`
+in all six pages (and `notes/_template.html`).
 
 ## Deploying
 

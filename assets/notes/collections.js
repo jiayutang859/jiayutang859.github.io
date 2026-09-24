@@ -16,9 +16,9 @@
 window.COLLECTIONS = {
   books: [
   {
-    "title": "刘擎西方现代思想讲义",
-    "originalTitle": "Lectures on Modern Western Thought",
-    "author": "刘擎",
+    "title": "Lectures on Modern Western Thought",
+    "originalTitle": "刘擎西方现代思想讲义",
+    "author": "Liu Qing (刘擎)",
     "year": 2021,
     "cover": "assets/notes/books/liu-qing-modern-western-thought.jpg",
     "language": "zh",
@@ -36,8 +36,9 @@ window.COLLECTIONS = {
     "link": ""
   },
   {
-    "title": "我在北京送快递",
-    "author": "胡安焉",
+    "title": "I Deliver Parcels in Beijing",
+    "originalTitle": "我在北京送快递",
+      "author": "Hu Anyan (胡安焉)",
     "year": 2023,
     "cover": "assets/notes/books/beijing-delivery.jpg",
     "language": "zh",
@@ -45,8 +46,9 @@ window.COLLECTIONS = {
     "link": ""
   },
   {
-    "title": "Le Mythe de Sisyphe",
-    "author": "Albert Camus",
+    "title": "The Myth of Sisyphus",
+    "originalTitle": "Le Mythe de Sisyphe",
+      "author": "Albert Camus",
     "year": 1942,
     "edition": "Folio essais, Gallimard",
     "cover": "assets/notes/books/mythe-de-sisyphe.jpg",
@@ -55,8 +57,8 @@ window.COLLECTIONS = {
     "link": ""
   },
   {
-    "title": "当我们不再理解世界",
-    "originalTitle": "Un verdor terrible",
+    "title": "When We Cease to Understand the World",
+    "originalTitle": "当我们不再理解世界 · Un verdor terrible",
     "author": "Benjamín Labatut",
     "year": 2022,
     "cover": "assets/notes/books/when-we-cease-to-understand-the-world.jpg",
@@ -74,9 +76,10 @@ window.COLLECTIONS = {
     "link": ""
   },
   {
-    "title": "学术与政治",
-    "originalTitle": "Wissenschaft als Beruf · Politik als Beruf",
-    "author": "Max Weber",
+    "title": "The Vocation Lectures",
+    "originalTitle": "学术与政治 · Wissenschaft als Beruf",
+    "subtitle": "Science as a Vocation · Politics as a Vocation",
+      "author": "Max Weber",
     "year": 2005,
     "edition": "三联书店",
     "cover": "assets/notes/books/weber-vocation-lectures.jpg",
