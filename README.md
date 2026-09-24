@@ -16,7 +16,7 @@ Live at <https://jiayutang859.github.io>.
 | File | Purpose |
 |------|---------|
 | `index.html` | Home: two-column hero with portrait, five-stage research-vision workflow (observe → understand → model & predict → validate → modulate/engineer), three project cards (3D antibody, animated crossover-trial diagram, systematic-review diagram), contact actions |
-| `about.html` | Short bio, T-shaped development (past breadth → current depth → future loop), the full closed loop, what each stage taught, mindset orbit |
+| `about.html` | First-person narrative of how the research questions developed, short bio, T-shaped trajectory, stage-by-stage story with "why I moved on" notes, the closed research loop annotated with where each habit came from |
 | `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations (project anchors used by the Home cards), output counts |
 | `notes.html` | Working notes on evidence and methods (currently draft titles) |
 | `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |
@@ -30,7 +30,8 @@ Live at <https://jiayutang859.github.io>.
 | `style.css` | All styles. Colours and fonts are CSS variables at the top (`--accent`, `--warm`, `--paper`, …) |
 | `script.js` | Mobile menu, scroll reveal, CV section highlighting, back-to-top, the 3D antibody inside any `.mol-panel`, and redirects from old single-page links (`/#publications` → `cv.html#publications`) |
 | `Resume_Jiayu_Tang.pdf` / `CV_Jiayu_Tang.pdf` | Downloadable resume and full CV |
-| `headshot.jpg` | Portrait (Home hero, About page, social previews) |
+| `headshot.jpg` | Portrait (Home hero, social previews) |
+| `assets/graduation-ms.jpg` | Graduation portrait (About page); the full-resolution `Graduation_MS.JPG` is gitignored |
 | `assets/logos/` | Institution, journal, and tool logos (Wikimedia Commons, Simple Icons, official sites) |
 | `assets/data/1hzh-backbone.pdb` | Backbone-only human IgG1 structure (PDB 1HZH) rendered with 3Dmol.js |
 

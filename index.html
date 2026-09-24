@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260926">
+  <link rel="stylesheet" href="style.css?v=20260927">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -287,11 +287,14 @@
           <!-- 2. Pilot clinical trial: crossover design → pulses → gut microbiome → host outcomes -->
           <a class="card work reveal" href="research.html#pulses-microbiome" style="--c:var(--s1);--c-lt:var(--s1-lt)">
             <div class="proj-viz">
-              <svg class="ct" viewBox="0 0 400 300" role="img" aria-label="Diagram: twelve participants randomized to three pulse arms in a crossover design with samples at each phase; dietary pulses shift the gut microbial community and change host outcomes">
+              <svg class="ct" viewBox="0 0 400 300" role="img" aria-label="Diagram: twelve participants randomized to three dry bean arms in a crossover design with samples at each phase; the three arms are white beans, pink beans, and a mixture">
                 <defs>
                   <symbol id="ct-person" viewBox="0 0 10 20">
                     <circle cx="5" cy="3.2" r="3"/>
                     <path d="M0.6 19.5 V12.5 a4.4 4.4 0 0 1 8.8 0 V19.5 Z"/>
+                  </symbol>
+                  <symbol id="ct-bean" viewBox="0 0 62 74">
+                    <path transform="translate(-26 -190)" d="M42 200 C 28 210, 27 240, 46 252 C 61 262, 82 249, 84 230 C 86 211, 72 192, 57 194 C 51 195, 47 199, 42 200 Z"/>
                   </symbol>
                   <clipPath id="ctClip"><rect class="ct-clip" x="96" y="26" width="290" height="104"/></clipPath>
                 </defs>
@@ -306,60 +309,58 @@
                 <text x="40" y="135" text-anchor="middle">randomized</text>
                 <path class="rand" d="M72 76 C 84 76, 84 56, 96 56 M72 76 H96 M72 76 C 84 76, 84 96, 96 96"/>
 
-                <!-- period labels + shading -->
-                <rect class="period" x="130" y="46" width="60" height="60" rx="3"/>
-                <rect class="period" x="220" y="46" width="60" height="60" rx="3"/>
-                <rect class="period" x="310" y="46" width="60" height="60" rx="3"/>
-                <text x="115" y="38" text-anchor="middle">base</text>
-                <text x="160" y="38" text-anchor="middle">pulse 1</text>
-                <text x="205" y="38" text-anchor="middle">wash</text>
-                <text x="250" y="38" text-anchor="middle">pulse 2</text>
-                <text x="295" y="38" text-anchor="middle">wash</text>
-                <text x="340" y="38" text-anchor="middle">pulse 3</text>
+                <!-- periods: baseline · phase 1 · washout 1 · phase 2 · washout 2 · phase 3 -->
+                <rect class="period" x="126" y="46" width="54" height="60" rx="3"/>
+                <rect class="period" x="220" y="46" width="54" height="60" rx="3"/>
+                <rect class="period" x="314" y="46" width="54" height="60" rx="3"/>
+                <text x="105" y="31" text-anchor="middle">baseline</text>
+                <text x="157" y="31" text-anchor="middle">phase 1</text>
+                <text x="200" y="42" text-anchor="middle">washout 1</text>
+                <text x="247" y="31" text-anchor="middle">phase 2</text>
+                <text x="294" y="42" text-anchor="middle">washout 2</text>
+                <text x="341" y="31" text-anchor="middle">phase 3</text>
 
                 <!-- three arms crossing over; revealed by the sweep -->
                 <g class="ct-swept" clip-path="url(#ctClip)">
-                  <path class="arm a" d="M96 56 H190 C 205 56, 205 96, 220 96 H280 C 295 96, 295 76, 310 76 H370"/>
-                  <path class="arm b" d="M96 76 H190 C 205 76, 205 56, 220 56 H280 C 295 56, 295 96, 310 96 H370"/>
-                  <path class="arm c" d="M96 96 H190 C 205 96, 205 76, 220 76 H280 C 295 76, 295 56, 310 56 H370"/>
-                  <g class="tick"><line x1="130" y1="108" x2="130" y2="114"/><line x1="190" y1="108" x2="190" y2="114"/><line x1="220" y1="108" x2="220" y2="114"/><line x1="280" y1="108" x2="280" y2="114"/><line x1="310" y1="108" x2="310" y2="114"/><line x1="370" y1="108" x2="370" y2="114"/></g>
-                  <g class="sample"><circle cx="130" cy="118" r="3"/><circle cx="190" cy="118" r="3"/><circle cx="220" cy="118" r="3"/><circle cx="280" cy="118" r="3"/><circle cx="310" cy="118" r="3"/><circle cx="370" cy="118" r="3"/></g>
+                  <path class="arm a" d="M96 56 H180 C 200 56, 200 96, 220 96 H274 C 294 96, 294 76, 314 76 H368"/>
+                  <path class="arm b" d="M96 76 H180 C 200 76, 200 56, 220 56 H274 C 294 56, 294 96, 314 96 H368"/>
+                  <path class="arm c" d="M96 96 H180 C 200 96, 200 76, 220 76 H274 C 294 76, 294 56, 314 56 H368"/>
+                  <g class="tick"><line x1="126" y1="108" x2="126" y2="114"/><line x1="180" y1="108" x2="180" y2="114"/><line x1="220" y1="108" x2="220" y2="114"/><line x1="274" y1="108" x2="274" y2="114"/><line x1="314" y1="108" x2="314" y2="114"/><line x1="368" y1="108" x2="368" y2="114"/></g>
+                  <g class="sample"><circle cx="126" cy="118" r="3"/><circle cx="180" cy="118" r="3"/><circle cx="220" cy="118" r="3"/><circle cx="274" cy="118" r="3"/><circle cx="314" cy="118" r="3"/><circle cx="368" cy="118" r="3"/></g>
                 </g>
                 <line class="ct-cursor" x1="96" y1="44" x2="96" y2="122"/>
                 <text x="386" y="132" text-anchor="end" class="lc">samples</text>
-                <text x="240" y="152" text-anchor="middle" class="lc">stool · blood · 24-h blood pressure · diet, at each phase</text>
+                <text x="240" y="152" text-anchor="middle" class="lc">microbiome outcomes · blood · 24-h blood pressure · diet, at each phase</text>
 
-                <!-- mechanism: pulses → gut microbiome → host outcomes -->
-                <path class="bean" d="M42 200 C 28 210, 27 240, 46 252 C 61 262, 82 249, 84 230 C 86 211, 72 192, 57 194 C 51 195, 47 199, 42 200 Z"/>
-                <path class="bean-hi" d="M50 206 C 44 214, 45 226, 52 230 C 58 233, 66 226, 64 218 C 62 211, 56 204, 50 206 Z"/>
-                <path class="bean" transform="translate(-6 34) scale(0.55)" d="M42 200 C 28 210, 27 240, 46 252 C 61 262, 82 249, 84 230 C 86 211, 72 192, 57 194 C 51 195, 47 199, 42 200 Z"/>
-                <text x="58" y="286" text-anchor="middle">dietary pulses</text>
-                <path class="flow-line" d="M92 226 C 110 226, 118 220, 136 220"/>
+                <!-- the three interventions: white beans, pink beans, and a mixture -->
+                <g class="bean white">
+                  <use href="#ct-bean" x="46" y="190" width="34" height="40" transform="rotate(-14 63 210)"/>
+                  <use href="#ct-bean" x="78" y="196" width="30" height="36" transform="rotate(18 93 214)"/>
+                  <use href="#ct-bean" x="60" y="224" width="30" height="36" transform="rotate(-30 75 242)"/>
+                </g>
+                <circle class="key a" cx="50" cy="175" r="3.5"/><text x="58" y="178">white beans</text>
 
-                <path class="gut" d="M150 196 C 196 186, 206 226, 162 232 C 124 238, 130 278, 172 274 C 204 271, 204 294, 178 298"/>
-                <path class="gut-in" d="M150 196 C 196 186, 206 226, 162 232 C 124 238, 130 278, 172 274 C 204 271, 204 294, 178 298"/>
-                <circle class="taxon a" style="--k:0" cx="160" cy="198" r="4.5"/>
-                <circle class="taxon b shrink" style="--k:1" cx="186" cy="210" r="4"/>
-                <circle class="taxon c" style="--k:2" cx="166" cy="234" r="3.5"/>
-                <circle class="taxon a shrink" style="--k:3" cx="146" cy="250" r="4"/>
-                <circle class="taxon c" style="--k:4" cx="174" cy="270" r="4.5"/>
-                <circle class="taxon b" style="--k:5" cx="194" cy="278" r="3.5"/>
-                <text x="168" y="286" text-anchor="middle">gut microbiome</text>
-                <path class="flow-line" d="M212 236 C 232 236, 238 236, 258 236"/>
+                <g class="bean pink">
+                  <use href="#ct-bean" x="166" y="190" width="34" height="40" transform="rotate(-14 183 210)"/>
+                  <use href="#ct-bean" x="198" y="196" width="30" height="36" transform="rotate(18 213 214)"/>
+                  <use href="#ct-bean" x="180" y="224" width="30" height="36" transform="rotate(-30 195 242)"/>
+                </g>
+                <circle class="key b" cx="174" cy="175" r="3.5"/><text x="182" y="178">pink beans</text>
 
-                <line class="axis" x1="272" y1="178" x2="272" y2="262"/>
-                <line class="axis" x1="272" y1="262" x2="372" y2="262"/>
-                <path class="ct-draw base" pathLength="1" d="M278 236 L 300 238 L 322 234 L 344 237 L 366 235"/>
-                <path class="ct-draw out" pathLength="1" d="M278 234 L 300 226 L 322 216 L 344 200 L 366 190"/>
-                <circle class="a-fade" cx="366" cy="190" r="3.5" fill="var(--accent)"/>
-                <text x="322" y="286" text-anchor="middle">host outcomes</text>
+                <g>
+                  <use class="bean white" href="#ct-bean" x="286" y="190" width="34" height="40" transform="rotate(-14 303 210)"/>
+                  <use class="bean pink" href="#ct-bean" x="318" y="196" width="30" height="36" transform="rotate(18 333 214)"/>
+                  <use class="bean pink" href="#ct-bean" x="292" y="226" width="28" height="34" transform="rotate(-30 306 243)"/>
+                  <use class="bean white" href="#ct-bean" x="322" y="232" width="26" height="32" transform="rotate(34 335 248)"/>
+                </g>
+                <circle class="key c" cx="288" cy="175" r="3.5"/><text x="296" y="178">mixed beans</text>
               </svg>
-              <span class="viz-tag">Randomized crossover · 12 weeks · 3 pulse market classes</span>
+              <span class="viz-tag">Randomized crossover · 12 weeks · 3 dry bean market classes</span>
             </div>
             <div class="work-body">
               <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Pilot clinical trial · M.Sc.</span></div>
-              <h3>Dietary pulses, the gut microbiome, and human health: a pilot clinical trial</h3>
-              <p>A 12-week randomized crossover trial in which the same participants ate three bean market classes in turn, with stool, blood, blood-pressure, and dietary data collected at every phase.</p>
+              <h3>Dry beans, the gut microbiome, and human health: a pilot clinical trial</h3>
+              <p>A 12-week randomized crossover trial in which the same participants ate white beans, pink beans, and a mixture in turn, with microbiome, blood, blood-pressure, and dietary data collected at every phase.</p>
               <div class="stage-dots" aria-label="Stages exercised: observe; validate"><i class="on"></i><i></i><i></i><i class="on" style="--c:var(--s4);--c-lt:var(--s4-lt)"></i><i></i><span>observe · validate</span></div>
               <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
             </div>
@@ -368,7 +369,7 @@
           <!-- 3. Systematic review: search → screen → extract (restrained) -->
           <a class="card work reveal" href="research.html#systematic-review" style="--c:var(--s2);--c-lt:var(--s2-lt)">
             <div class="proj-viz">
-              <svg class="sr" viewBox="0 0 400 300" role="img" aria-label="Diagram: records from three databases are screened by two reviewers with machine-learning assistance, then extracted and verified into a final dataset">
+              <svg class="sr" viewBox="0 0 400 300" role="img" aria-label="Diagram: records from three databases are screened by two reviewers, then extracted by a language-model agent and verified by two human reviewers into a final dataset">
                 <path class="funnel" d="M20 60 L120 60 L150 120 L250 120 L280 150 L380 150 L380 240 L280 240 L250 210 L150 210 L120 250 L20 250 Z" opacity="0"/>
                 <!-- search: three database stacks -->
                 <g class="doc-stack">
@@ -387,11 +388,10 @@
 
                 <!-- screening: reviewers + ML over a grid of records -->
                 <g class="reviewer">
-                  <circle cx="176" cy="60" r="5"/><path d="M168 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
-                  <circle cx="232" cy="60" r="5"/><path d="M224 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
+                  <circle cx="192" cy="60" r="5"/><path d="M184 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
+                  <circle cx="216" cy="60" r="5"/><path d="M208 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
                 </g>
-                <rect class="ml" x="196" y="56" width="16" height="16" rx="3"/><path class="ml" d="M200 64 h8 M204 60 v8"/>
-                <text x="204" y="94" text-anchor="middle">2 reviewers + ML</text>
+                <text x="204" y="94" text-anchor="middle">2 reviewers</text>
                 <g class="records">
                   <rect class="d" style="--k:0" x="150" y="104" width="12" height="15" rx="2"/><rect class="d in" style="--k:0" x="166" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="182" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="198" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="214" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="230" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="246" y="104" width="12" height="15" rx="2"/>
                   <rect class="d" style="--k:1" x="150" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="166" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="182" y="123" width="12" height="15" rx="2"/><rect class="d in" style="--k:1" x="198" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="214" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="230" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="246" y="123" width="12" height="15" rx="2"/>
@@ -406,21 +406,30 @@
                 <path class="arrow" d="M298 156 l7 4 l-7 4 z"/>
 
                 <!-- extraction: table + verification check + dataset bars -->
+                <rect class="agent" x="332" y="52" width="28" height="22" rx="5"/>
+                <circle class="agent-eye" cx="341" cy="63" r="2.4"/><circle class="agent-eye" cx="351" cy="63" r="2.4"/>
+                <line class="agent-ant" x1="346" y1="52" x2="346" y2="45"/><circle class="agent-eye" cx="346" cy="43.5" r="1.8"/>
+                <text x="346" y="90" text-anchor="middle">llm agent</text>
                 <rect class="table" x="312" y="118" width="68" height="52" rx="4"/>
                 <path class="grid" d="M312 132 H380 M312 146 H380 M312 158 H380 M335 118 V170 M358 118 V170"/>
-                <circle class="chk-bg" cx="378" cy="118" r="10"/>
-                <path class="chk" d="M373 118 l3.5 3.5 l6.5 -7"/>
-                <rect class="bar" x="318" y="200" width="10" height="26"/><rect class="bar" x="334" y="190" width="10" height="36"/><rect class="bar" x="350" y="206" width="10" height="20"/><rect class="bar" x="366" y="196" width="10" height="30"/>
-                <line class="grid" x1="312" y1="226" x2="382" y2="226"/>
-                <text x="346" y="104" text-anchor="middle">extract · verify</text>
+                <text x="346" y="104" text-anchor="middle">extract</text>
+                <g class="reviewer">
+                  <circle cx="334" cy="192" r="4.5"/><path d="M327 208 v-5 a7 7 0 0 1 14 0 v5 z"/>
+                  <circle cx="358" cy="192" r="4.5"/><path d="M351 208 v-5 a7 7 0 0 1 14 0 v5 z"/>
+                </g>
+                <circle class="chk-bg" cx="374" cy="190" r="9"/>
+                <path class="chk" d="M369.5 190 l3.2 3.2 l6 -6.5"/>
+                <text x="340" y="224" text-anchor="middle">2 reviewers verify</text>
+                <rect class="bar" x="318" y="238" width="10" height="20"/><rect class="bar" x="334" y="230" width="10" height="28"/><rect class="bar" x="350" y="243" width="10" height="15"/><rect class="bar" x="366" y="235" width="10" height="23"/>
+                <line class="grid" x1="312" y1="258" x2="382" y2="258"/>
                 <text x="346" y="280" text-anchor="middle">dataset</text>
               </svg>
-              <span class="viz-tag">Systematic review · 1,800+ records · ML-assisted screening</span>
+              <span class="viz-tag">Systematic review · 1,800+ records · LLM-agent extraction</span>
             </div>
             <div class="work-body">
               <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Systematic review · M.Sc.</span></div>
               <h3>Dietary pulses and human nutrition: a systematic review</h3>
-              <p>Intervention trials of pulse market classes, screened from 1,800+ records by two reviewers with machine-learning assistance, then extracted with a language-model agent and verified by hand.</p>
+              <p>Intervention trials of pulse market classes, screened from 1,800+ records by two reviewers, with data extracted by a language-model agent we built and verified by two human reviewers.</p>
               <div class="stage-dots" aria-label="Stages exercised: understand"><i></i><i class="on"></i><i></i><i></i><i></i><span>understand</span></div>
               <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
             </div>
@@ -498,6 +507,6 @@
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js" defer></script>
-  <script src="script.js?v=20260926" defer></script>
+  <script src="script.js?v=20260927" defer></script>
 </body>
 </html>
