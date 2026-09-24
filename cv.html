@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260924">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,18 +27,17 @@
     <div class="nav-wrap">
       <a class="brand" href="./">
         <span class="brand-name">Jiayu Tang</span>
-        <span class="brand-role">AI for science · computational biology · human health</span>
+        <span class="brand-role">Computational immunology &amp; protein design · Wang Lab, UF</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="siteNav"><i class="fas fa-bars"></i></button>
       <nav class="site-nav" id="siteNav" aria-label="Main">
         <ul>
           <li><a href="./">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="research.html">Research</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="notes.html">Notes</a></li>
           <li><a href="cv.html" aria-current="page">CV</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="nav-studio"><a href="/studio/"><i class="fas fa-camera-retro"></i> Studio</a></li>
         </ul>
       </nav>
     </div>
@@ -119,7 +118,7 @@
                   <div>
                     <h3>Research Assistant <span class="now-pill">Current</span></h3>
                     <p class="exp-where">Wang Lab · Dept. of Infectious Diseases and Immunology · University of Florida</p>
-                    <p class="exp-advisor">Advisor: Dr. Yiquan Wang · incoming PhD student in the Wang Lab</p>
+                    <p class="exp-advisor">Advisor: Dr. Yiquan Wang · PhD trainee in the Wang Lab</p>
                   </div>
                   <time class="exp-when">Aug 2026 – Present</time>
                 </header>
@@ -323,66 +322,65 @@
 
       <section class="cv-section" id="skills">
         <h2><i class="fas fa-screwdriver-wrench"></i> Skills</h2>
-          <div class="skill-feature">
-            <div class="skill-feature-hd">
-              <img src="assets/logos/deepmind.svg" alt="">
-              <div>
-                <h4>Computational Antibody Engineering</h4>
-                <p>VH–VL framework panels · fixed-CDR framework swaps · framework grafting · epitope masks</p>
-              </div>
-            </div>
-            <ul class="chips">
-              <li><img src="assets/logos/deepmind.svg" alt="">AlphaFold 3</li>
-              <li><i class="fas fa-wand-magic-sparkles"></i>Germinal</li>
-              <li><i class="fas fa-dna"></i>RFantibody</li>
-            </ul>
-            <p class="skill-eval"><strong>Structural evaluation:</strong> AF3 confidence metrics · pose RMSD · CDR RMSD · epitope recovery · contact analysis · VH–VL orientation</p>
+          <div class="skill-legend">
+            <span><span class="lvl working">Working</span> used independently in completed research</span>
+            <span><span class="lvl developing">Developing</span> in active use, still building</span>
+            <span><span class="lvl foundational">Foundational</span> coursework or limited use</span>
           </div>
-
-          <div class="tool-groups">
-            <div class="tool-group">
-              <h4>AI Tools</h4>
-              <ul class="tool-grid">
-                <li><img src="assets/logos/claude.svg" alt=""><span>Claude Code</span></li>
-                <li><img src="assets/logos/cursor.svg" alt=""><span>Cursor</span></li>
-                <li><img src="assets/logos/gemini.svg" alt=""><span>Gemini</span></li>
+          <div class="card skill-layers">
+            <div class="skill-layer">
+              <h4>Biological domains</h4>
+              <ul class="skill-items">
+                <li>Human nutrition &amp; clinical research <span class="lvl working">working</span></li>
+                <li>Gut microbiome <span class="lvl working">working</span></li>
+                <li>Food chemistry &amp; fermentation <span class="lvl working">working</span></li>
+                <li>Antibody biology <span class="lvl developing">developing</span></li>
+                <li>Structural biology <span class="lvl developing">developing</span></li>
+                <li>Immunology <span class="lvl developing">developing</span></li>
               </ul>
             </div>
-            <div class="tool-group">
-              <h4>Programming</h4>
-              <ul class="tool-grid">
-                <li><img src="assets/logos/python.svg" alt=""><span>Python</span></li>
-                <li><img src="assets/logos/r.svg" alt=""><span>R</span></li>
-                <li><img src="assets/logos/sas.png" alt="" class="wide"><span>SAS</span></li>
+            <div class="skill-layer">
+              <h4>Computational methods</h4>
+              <ul class="skill-items">
+                <li>Statistical modeling: experimental design, multiple regression, multivariate analysis <span class="lvl working">working</span></li>
+                <li>ML-assisted literature screening &amp; extraction, validated against human review <span class="lvl working">working</span></li>
+                <li>Protein structure prediction: AlphaFold 3, ColabFold <span class="lvl developing">developing</span></li>
+                <li>Structural analysis: RMSD, interface contacts, epitope recovery, VH–VL orientation <span class="lvl developing">developing</span></li>
+                <li>Computational pipelines with provenance tracking <span class="lvl developing">developing</span></li>
+                <li>High-performance computing (HiPerGator) <span class="lvl developing">developing</span></li>
+                <li>Generative protein design: RFantibody, Germinal <span class="lvl foundational">foundational</span></li>
               </ul>
             </div>
-            <div class="tool-group">
-              <h4>Research Tools</h4>
-              <ul class="tool-grid">
-                <li><img src="assets/logos/redcap.svg" alt="" class="wide"><span>REDCap</span></li>
-                <li><img src="assets/logos/endnote.png" alt="" class="wide"><span>EndNote</span></li>
-                <li><img src="assets/logos/notion.svg" alt=""><span>Notion</span></li>
-                <li><img src="assets/logos/asreview.svg" alt="" class="wide"><span>ASReview</span></li>
+            <div class="skill-layer">
+              <h4>Research design &amp; operations</h4>
+              <ul class="skill-items">
+                <li>Randomized crossover trial coordination <span class="lvl working">working</span></li>
+                <li>Protocol, consent &amp; SOP development <span class="lvl working">working</span></li>
+                <li>IRB &amp; ClinicalTrials.gov processes · GCP <span class="lvl working">working</span></li>
+                <li>Participant recruitment &amp; biospecimen handling <span class="lvl working">working</span></li>
+                <li>Systematic review (PICOS) <span class="lvl working">working</span></li>
+                <li>Uncertainty &amp; robustness analysis for model outputs <span class="lvl developing">developing</span></li>
               </ul>
             </div>
-            <div class="tool-group">
-              <h4>Design &amp; Visualization</h4>
-              <ul class="tool-grid">
-                <li><img src="assets/logos/biorender.svg" alt="" class="wide"><span>BioRender</span></li>
-                <li><img src="assets/logos/illustrator.svg" alt=""><span>Illustrator</span></li>
-                <li><img src="assets/logos/canva.svg" alt=""><span>Canva</span></li>
+            <div class="skill-layer">
+              <h4>Technical environment</h4>
+              <ul class="skill-items">
+                <li><img src="assets/logos/python.svg" alt="">Python <span class="lvl working">working</span></li>
+                <li><img src="assets/logos/r.svg" alt="">R <span class="lvl working">working</span></li>
+                <li>REDCap <span class="lvl working">working</span></li>
+                <li>EndNote <span class="lvl working">working</span></li>
+                <li>ASReview <span class="lvl working">working</span></li>
+                <li>SAS <span class="lvl foundational">foundational</span></li>
+                <li>BioRender · Illustrator · Canva <span class="lvl foundational">foundational</span></li>
               </ul>
+              <p class="skill-note">LLM-based tools are used for coding and literature work, with outputs checked against references or human review.</p>
             </div>
-          </div>
-
-          <div class="mini-grid">
-            <div class="mini-box">
-              <i class="fas fa-chart-line"></i>
-              <div><h4>Statistical Methods</h4><p>Experimental Design · Multiple Regression · Multivariate Analysis</p></div>
-            </div>
-            <div class="mini-box">
-              <i class="fas fa-language"></i>
-              <div><h4>Languages</h4><p>Mandarin (native) · English (fluent)</p></div>
+            <div class="skill-layer">
+              <h4>Languages</h4>
+              <ul class="skill-items">
+                <li>Mandarin (native)</li>
+                <li>English (fluent)</li>
+              </ul>
             </div>
           </div>
       </section>
@@ -484,7 +482,7 @@
         <div>Wang Lab · University of Florida · Gainesville, FL</div>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <a href="about.html">About</a><a href="research.html">Research</a><a href="notes.html">Notes</a><a href="cv.html">CV</a><a href="contact.html">Contact</a><a href="/studio/">Studio</a>
+        <a href="research.html">Research</a><a href="about.html">About</a><a href="notes.html">Notes</a><a href="cv.html#publications">Publications</a><a href="cv.html">CV</a><a href="contact.html">Contact</a><a href="/studio/">Studio</a>
       </nav>
       <div class="footer-social">
         <a href="mailto:jasper.tang859@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -497,6 +495,6 @@
   </footer>
 
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20260924" defer></script>
 </body>
 </html>

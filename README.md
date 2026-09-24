@@ -1,7 +1,9 @@
 # Jiayu Tang – Personal Website
 
-A personal research website: narrative first, CV second. Plain HTML, CSS, and
+A personal research website organized around a research mindset rather than a
+chronology: observe → understand → predict → design. Plain HTML, CSS, and
 JavaScript with no build step, served by GitHub Pages from the `main` branch.
+The positioning and page-by-page rationale are in `WEBSITE_REDESIGN_PLAN.md`.
 
 Live at <https://jiayutang859.github.io>.
 
@@ -11,11 +13,11 @@ Live at <https://jiayutang859.github.io>.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home: identity, short story, what I'm exploring, who I'd like to meet, featured projects, notes preview |
-| `about.html` | The longer story: food science → nutrition → gut microbiome → clinical trials → AI for science → antibody engineering |
-| `research.html` | Projects framed as question / why it matters / approach / tools / status / what I'm learning |
-| `notes.html` | Essays and research notes (currently draft titles) |
-| `cv.html` | Full CV: education, research, publications, presentations, awards, skills, teaching, service, certifications |
+| `index.html` | Home: identity, trajectory (observe → understand → predict → design), current research and where it is heading, four working habits, selected work, background in brief |
+| `about.html` | Intellectual development in four stages and what each taught; six research principles; where this is heading |
+| `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations |
+| `notes.html` | Working notes on evidence and methods (currently draft titles) |
+| `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |
 | `contact.html` | Email, LinkedIn, GitHub, publications, resume |
 | `studio/` | Photography site (separate design, see `studio/README.md`) |
 
@@ -31,7 +33,8 @@ Live at <https://jiayutang859.github.io>.
 | `assets/data/1hzh-backbone.pdb` | Backbone-only human IgG1 structure (PDB 1HZH) rendered with 3Dmol.js |
 
 The header and footer are repeated in every page. If you change the navigation,
-change it in all six pages (and `notes/_template.html`).
+change it in all six pages (and `notes/_template.html`). The photography site is
+linked from the footer and the About page, not the main nav.
 
 ---
 

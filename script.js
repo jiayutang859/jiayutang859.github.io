@@ -67,7 +67,7 @@ if (cvLinks.length && 'IntersectionObserver' in window) {
 
 // --- Scroll reveal (subtle fade-in) ---
 const revealEls = document.querySelectorAll(
-  '.reveal, .edu-card, .exp-card, .award-card, .teach-card, .tool-group, .skill-feature, .project, .stop'
+  '.reveal, .edu-card, .exp-card, .award-card, .teach-card, .skill-layers, .project, .stop, .trajectory li'
 );
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
