@@ -67,7 +67,7 @@ if (cvLinks.length && 'IntersectionObserver' in window) {
 
 // --- Scroll reveal (subtle fade-in) ---
 const revealEls = document.querySelectorAll(
-  '.reveal, .edu-card, .exp-card, .award-card, .teach-card, .skill-layers, .project, .stop, .trajectory li'
+  '.reveal, .edu-card, .exp-card, .award-card, .teach-card, .skill-layers, .project, .stop, .foundation'
 );
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -90,16 +90,13 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   });
 }
 
-// --- Home hero: rotating 3D antibody (human IgG1, PDB 1HZH) ---
+// --- Rotating 3D antibody (human IgG1, PDB 1HZH) inside any .mol-panel ---
 (function initMolecule() {
   const el     = document.getElementById('molViewer');
-  const figure = el && el.closest('.hero-mol');
+  const panel  = el && el.closest('.mol-panel');
   if (!el) return;
 
-  const fail = () => {
-    figure.classList.add('failed');
-    figure.parentElement.classList.add('no-mol');
-  };
+  const fail = () => { if (panel) panel.classList.add('failed'); };
 
   if (!window.$3Dmol) { fail(); return; }
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jiayu Tang | Computational Immunology &amp; Protein Design, University of Florida</title>
-  <meta name="description" content="Jiayu Tang is a PhD trainee in the Wang Lab at the University of Florida studying how biological interactions can be understood, predicted, and engineered, currently through computational immunology, antibody–antigen recognition, and protein design.">
+  <meta name="description" content="Jiayu Tang is a PhD trainee in the Wang Lab at the University of Florida studying how human biological interactions can be understood, predicted, and engineered, currently through computational immunology, antibody–antigen recognition, and protein design.">
   <meta name="keywords" content="Jiayu Tang, computational immunology, antibody engineering, antibody–antigen recognition, protein design, structure prediction, AlphaFold, structural biology, gut microbiome, clinical trials, University of Florida, Wang Lab">
   <meta name="author" content="Jiayu Tang">
   <!-- Preview mode: hidden from search engines. Change to "index, follow" when ready to go public. -->
@@ -13,7 +13,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Jiayu Tang | Computational Immunology & Protein Design">
-  <meta property="og:description" content="Understanding, predicting, and designing biological interactions. PhD trainee in the Wang Lab, University of Florida, with an experimental and human-health background.">
+  <meta property="og:description" content="Understanding, predicting, and designing human biological interactions. PhD trainee in the Wang Lab, University of Florida, with an experimental and human-health background.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jiayutang859.github.io/">
   <meta property="og:image" content="https://jiayutang859.github.io/headshot.jpg">
@@ -30,7 +30,7 @@
     "url": "https://jiayutang859.github.io/",
     "image": "https://jiayutang859.github.io/headshot.jpg",
     "jobTitle": "PhD Trainee, Wang Lab",
-    "description": "Early-stage biomedical researcher studying how biological interactions can be understood, predicted, and engineered, currently through computational immunology, antibody–antigen recognition, and protein design.",
+    "description": "Early-stage biomedical researcher studying how human biological interactions can be understood, predicted, and engineered, currently through computational immunology, antibody–antigen recognition, and protein design.",
     "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Florida" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "University of Nebraska–Lincoln" },
@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260924">
+  <link rel="stylesheet" href="style.css?v=20260925">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -66,8 +66,8 @@
       <nav class="site-nav" id="siteNav" aria-label="Main">
         <ul>
           <li><a href="./" aria-current="page">Home</a></li>
-          <li><a href="research.html">Research</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
           <li><a href="notes.html">Notes</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -78,7 +78,7 @@
 
   <main id="main">
 
-    <!-- ===== HERO: identity (the 15-second read) ===== -->
+    <!-- ===== 1. HERO: who am I ===== -->
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
         <span class="orb orb-a"></span>
@@ -89,14 +89,14 @@
         <div class="hero-text">
           <p class="hello rise" style="--d:0">Jiayu Tang · PhD trainee, Wang Lab, University of Florida</p>
           <h1 class="hero-heading rise" style="--d:1">
-            Understanding, predicting, and <span class="text-accent">designing</span> biological interactions.
+            Understanding, predicting, and <span class="text-accent">designing</span> human biological interactions.
           </h1>
           <p class="hero-sub rise" style="--d:2">
-            I work in computational immunology in <a href="https://yiquan2.com/Lab-Page/" target="_blank" rel="noopener">Dr. Yiquan Wang's lab</a>, studying how antibody frameworks, binding loops, and epitopes together shape antigen recognition, and when AI-based structure predictions are trustworthy enough to design from. I came to computation from experimental food science, human clinical trials, and gut microbiome research, and that <strong>experimental, human-health perspective</strong> shapes how I approach models.
+            I am a PhD trainee in <a href="https://yiquan2.com/Lab-Page/" target="_blank" rel="noopener">Dr. Yiquan Wang's lab</a>, using AI-enabled computational methods to study how biological molecules recognize one another. My current entry point is <strong>computational immunology and antibody engineering</strong>. My background is experimental: food science, a human clinical trial, and gut microbiome research.
           </p>
           <div class="btn-row rise" style="--d:3">
-            <a href="research.html" class="btn btn-solid"><i class="fas fa-flask"></i> Research</a>
-            <a href="about.html" class="btn btn-outline"><i class="fas fa-user"></i> About</a>
+            <a href="about.html" class="btn btn-solid"><i class="fas fa-user"></i> About</a>
+            <a href="research.html" class="btn btn-outline"><i class="fas fa-flask"></i> Research</a>
             <a href="cv.html" class="btn btn-ghost"><i class="fas fa-file-lines"></i> CV</a>
           </div>
           <div class="hero-affil rise" style="--d:4">
@@ -105,163 +105,321 @@
           </div>
         </div>
 
-        <figure class="hero-mol rise" style="--d:2">
+        <!-- Biological interactions across scales: system → cells → molecules → model → prediction → design → validation -->
+        <figure class="hero-viz rise" style="--d:2" aria-label="Animated diagram: biological interactions across scales are measured, represented computationally, predicted, designed, and validated">
           <div class="mol-glow" aria-hidden="true"></div>
-          <div id="molViewer" class="mol-viewer" role="img" aria-label="Rotating 3D model of a human IgG1 antibody"></div>
+          <svg viewBox="0 0 520 460" role="img" aria-hidden="true">
+            <!-- scale rings -->
+            <circle class="viz-ring" cx="260" cy="225" r="200"/>
+            <circle class="viz-ring" cx="260" cy="225" r="140"/>
+            <circle class="viz-ring" cx="260" cy="225" r="82"/>
+            <text class="viz-label" x="412" y="76">human · system</text>
+            <text class="viz-label" x="368" y="121">cells · communities</text>
+            <text class="viz-label" x="326" y="163">molecules</text>
+            <text class="viz-label" x="260" y="279" text-anchor="middle">model</text>
+
+            <!-- edges: biology, drawn in as the system is measured -->
+            <g>
+              <path class="viz-edge a-edge" style="--k:0" pathLength="1" d="M191.6 37 Q 160 86 152.8 135"/>
+              <path class="viz-edge a-edge" style="--k:1" pathLength="1" d="M360 51.8 Q 330 62 284.3 87.1"/>
+              <path class="viz-edge a-edge" style="--k:2" pathLength="1" d="M360 51.8 Q 392 108 391.6 177.1"/>
+              <path class="viz-edge a-edge" style="--k:3" pathLength="1" d="M448 293.4 Q 410 296 359 324"/>
+              <path class="viz-edge a-edge" style="--k:4" pathLength="1" d="M160 398.2 Q 174 386 212.1 356.6"/>
+              <path class="viz-edge a-edge" style="--k:5" pathLength="1" d="M72 156.6 Q 84 210 122.1 249.4"/>
+              <path class="viz-edge inner a-edge" style="--k:6" pathLength="1" d="M152.8 135 Q 190 136 219 154"/>
+              <path class="viz-edge inner a-edge" style="--k:7" pathLength="1" d="M284.3 87.1 Q 246 116 219 154"/>
+              <path class="viz-edge inner a-edge" style="--k:8" pathLength="1" d="M284.3 87.1 Q 316 130 331 184"/>
+              <path class="viz-edge inner a-edge" style="--k:9" pathLength="1" d="M391.6 177.1 Q 360 174 331 184"/>
+              <path class="viz-edge inner a-edge" style="--k:10" pathLength="1" d="M359 324 Q 336 316 301 296"/>
+              <path class="viz-edge inner a-edge" style="--k:11" pathLength="1" d="M212.1 356.6 Q 250 336 301 296"/>
+              <path class="viz-edge inner a-edge" style="--k:12" pathLength="1" d="M122.1 249.4 Q 152 246 182.9 253"/>
+              <path class="viz-edge inner a-edge" style="--k:13" pathLength="1" d="M212.1 356.6 Q 194 306 182.9 253"/>
+              <path class="viz-edge inner a-edge" style="--k:14" pathLength="1" d="M219 154 L 260 225"/>
+              <path class="viz-edge inner a-edge" style="--k:15" pathLength="1" d="M331 184 L 260 225"/>
+              <path class="viz-edge inner a-edge" style="--k:16" pathLength="1" d="M301 296 L 260 225"/>
+              <path class="viz-edge inner a-edge" style="--k:17" pathLength="1" d="M182.9 253 L 260 225"/>
+            </g>
+
+            <!-- nodes: system → cells → molecules -->
+            <g>
+              <circle class="viz-node a-node" style="--k:0" cx="191.6" cy="37" r="7"/>
+              <circle class="viz-node a-node" style="--k:1" cx="360" cy="51.8" r="6"/>
+              <circle class="viz-node a-node" style="--k:2" cx="448" cy="293.4" r="7"/>
+              <circle class="viz-node a-node" style="--k:3" cx="160" cy="398.2" r="6"/>
+              <circle class="viz-node a-node" style="--k:4" cx="72" cy="156.6" r="6"/>
+              <circle class="viz-node cell a-node" style="--k:5" cx="152.8" cy="135" r="5"/>
+              <circle class="viz-node cell a-node" style="--k:6" cx="284.3" cy="87.1" r="5.5"/>
+              <circle class="viz-node cell a-node" style="--k:7" cx="391.6" cy="177.1" r="5"/>
+              <circle class="viz-node cell a-node" style="--k:8" cx="359" cy="324" r="5"/>
+              <circle class="viz-node cell a-node" style="--k:9" cx="212.1" cy="356.6" r="5.5"/>
+              <circle class="viz-node cell a-node" style="--k:10" cx="122.1" cy="249.4" r="5"/>
+              <circle class="viz-node mol a-node" style="--k:11" cx="219" cy="154" r="5"/>
+              <circle class="viz-node mol a-node" style="--k:12" cx="331" cy="184" r="5"/>
+              <circle class="viz-node mol a-node" style="--k:13" cx="301" cy="296" r="5"/>
+              <circle class="viz-node mol a-node" style="--k:14" cx="182.9" cy="253" r="5"/>
+            </g>
+
+            <!-- computational representation: a structured lattice at the core -->
+            <g class="a-fade">
+              <circle class="viz-core" cx="260" cy="225" r="30"/>
+              <polygon class="viz-lattice" points="282,225 271,244 249,244 238,225 249,206 271,206"/>
+              <polygon class="viz-lattice" points="271,225 265.5,234.5 254.5,234.5 249,225 254.5,215.5 265.5,215.5"/>
+              <path class="viz-lattice" d="M282 225 L238 225 M271 244 L249 206 M249 244 L271 206"/>
+            </g>
+
+            <!-- prediction: a dashed, model-derived interaction reaching a new target -->
+            <path class="viz-predict a-predict" d="M262 196 Q 262 160 281 146"/>
+
+            <!-- design: a proposed molecule appears -->
+            <g class="a-design">
+              <circle class="viz-design-glow" cx="281" cy="146" r="17"/>
+              <circle class="viz-design" cx="281" cy="146" r="7"/>
+            </g>
+
+            <!-- validation: evidence propagates back out through the biological scales -->
+            <circle class="viz-pulse a-pulse" cx="281" cy="146" r="12"/>
+          </svg>
           <figcaption class="mol-caption">
-            <span><i class="swatch swatch-heavy"></i>Heavy chains</span>
-            <span><i class="swatch swatch-light"></i>Light chains</span>
-            <span class="mol-src">Human IgG1 · PDB 1HZH</span>
+            <span><i class="swatch" style="background:var(--warm)"></i>biology</span>
+            <span><i class="swatch" style="background:var(--accent)"></i>model &amp; prediction</span>
+            <span><i class="swatch" style="background:var(--green)"></i>validation</span>
           </figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ===== TRAJECTORY: one way of thinking, at finer scales ===== -->
-    <section class="band">
-      <div class="wrap">
-        <span class="eyebrow reveal">Trajectory</span>
-        <h2 class="sec-title reveal">One way of thinking, at finer and finer scales</h2>
-        <p class="sec-intro reveal">My research subjects have changed. The questions I ask about evidence have not. Each stage below is a habit of mind rather than a field.</p>
-        <ol class="trajectory reveal" aria-label="Research trajectory">
-          <li>
-            <span class="stage-verb"><i class="fas fa-microscope"></i>Observe</span>
-            <p>Measuring biological effects with validated assays and controls.</p>
-            <span class="stage-fields">Food science · fermentation · human nutrition</span>
-          </li>
-          <li>
-            <span class="stage-verb"><i class="fas fa-diagram-project"></i>Understand</span>
-            <p>Studying interaction-driven systems and quantifying uncertainty.</p>
-            <span class="stage-fields">Gut microbiome · clinical trials · statistics · systematic review</span>
-          </li>
-          <li>
-            <span class="stage-verb"><i class="fas fa-cubes"></i>Predict</span>
-            <p>Modeling molecular recognition and testing when models can be trusted.</p>
-            <span class="stage-fields">Structure prediction · computational immunology</span>
-          </li>
-          <li class="now">
-            <span class="now-tag">Now · building</span>
-            <span class="stage-verb"><i class="fas fa-dna"></i>Design</span>
-            <p>Using validated predictions to propose new molecules.</p>
-            <span class="stage-fields">Antibody engineering · protein design</span>
-          </li>
-        </ol>
-        <p class="trajectory-foot reveal">What is the control, what is the confounder, how variable is the result, and what would validate it. Those questions travelled with me from the fermentation bench to the clinic to the cluster.</p>
-      </div>
-    </section>
-
-    <!-- ===== NOW + WHERE THIS IS HEADING ===== -->
+    <!-- ===== 2. CURRENT FOCUS: what do I do ===== -->
     <section class="band alt">
-      <div class="wrap now-grid">
+      <div class="wrap focus">
+        <div class="reveal">
+          <span class="eyebrow">Current focus</span>
+          <h2 class="sec-title">Computational immunology, approached like an experiment</h2>
+          <p class="sec-intro">In the Wang Lab I study how antibody frameworks, binding loops, and epitope geometry interact to shape predicted antigen recognition, using structure prediction at scale with native controls and replicate runs, and benchmarking generative antibody design tools against the same controls.</p>
+          <a class="text-link" href="research.html#current">The current project in detail <i class="fas fa-arrow-right"></i></a>
+        </div>
         <div class="card reveal">
-          <span class="eyebrow">Current research</span>
-          <h3 class="now-title">How framework context shapes predicted antibody–antigen recognition</h3>
-          <p>Holding the binding loops and the epitope fixed while varying the human VH–VL framework, I am testing how much structure-prediction and design tools respond to framework choice, using native antibody structures as controls and replicate predictions to separate signal from model noise.</p>
-          <p class="now-lbl">Three questions I am working on</p>
+          <h3>Three questions I am working on</h3>
           <ul class="check-list">
             <li><i class="fas fa-circle-dot"></i><span>How do <strong>framework, CDR, and epitope geometry interact</strong> in predicted binding?</span></li>
             <li><i class="fas fa-circle-dot"></i><span>When is a <strong>confident prediction actually a correct one</strong> for antibody–antigen complexes?</span></li>
-            <li><i class="fas fa-circle-dot"></i><span>Which <strong>generative design tools</strong> produce candidates worth testing, and how would we know?</span></li>
+            <li><i class="fas fa-circle-dot"></i><span>Which <strong>generative design outputs</strong> are worth experimental testing, and by what criteria?</span></li>
           </ul>
-          <p class="card-foot"><a class="text-link" href="research.html#current">Read the project <i class="fas fa-arrow-right"></i></a></p>
-        </div>
-
-        <div class="card reveal">
-          <span class="eyebrow">Where this is heading</span>
-          <ol class="horizon">
-            <li class="now"><span class="h-lbl">Now</span><p>Computational immunology and antibody engineering.</p></li>
-            <li><span class="h-lbl">Developing</span><p>AI-enabled molecular biology: structural modeling, protein design, biological foundation models, and the controls and uncertainty estimates needed to use them as evidence.</p></li>
-            <li><span class="h-lbl">Long-term</span><p>Understanding and engineering biological interactions across molecular and biomedical scales.</p></li>
-          </ol>
-          <p class="card-foot"><a class="text-link" href="research.html#questions">Questions I am growing toward <i class="fas fa-arrow-right"></i></a></p>
         </div>
       </div>
     </section>
 
-    <!-- ===== HOW I WORK (four of six attributes) ===== -->
+    <!-- ===== 3. SELECTED WORK: what have I done ===== -->
     <section class="band">
-      <div class="wrap">
-        <div class="sec-hd-row">
-          <div>
-            <span class="eyebrow">How I approach research</span>
-            <h2 class="sec-title">Four working habits</h2>
-          </div>
-          <a class="text-link" href="about.html#approach">All six, and where they came from <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="principles quad">
-          <div class="card reveal">
-            <span class="icon-badge"><i class="fas fa-vial-circle-check"></i></span>
-            <h3>Experimental thinking, in silico</h3>
-            <p>A structure prediction is an assay output. It gets native controls, replicates, and a provenance record before it gets a biological interpretation.</p>
-          </div>
-          <div class="card reveal">
-            <span class="icon-badge warm"><i class="fas fa-diagram-project"></i></span>
-            <h3>Interaction, not ranking</h3>
-            <p>I ask how framework, CDRs, epitope, and model behaviour interact in context, rather than which component is universally best.</p>
-          </div>
-          <div class="card reveal">
-            <span class="icon-badge"><i class="fas fa-chart-simple"></i></span>
-            <h3>Uncertainty is part of the result</h3>
-            <p>Distributions, confidence, and the model's applicability domain are reported alongside point predictions. A confident prediction is evidence, not a result.</p>
-          </div>
-          <div class="card reveal">
-            <span class="icon-badge warm"><i class="fas fa-layer-group"></i></span>
-            <h3>Molecules in context</h3>
-            <p>Having worked at the scale of human physiology and microbial communities, I try to state what a molecular prediction would mean one or two scales up.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SELECTED WORK ===== -->
-    <section class="band alt">
       <div class="wrap">
         <div class="sec-hd-row">
           <div>
             <span class="eyebrow">Selected work</span>
-            <h2 class="sec-title">One current program, one foundation</h2>
+            <h2 class="sec-title">Projects</h2>
           </div>
           <a class="text-link" href="research.html">All research <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="project-cards two">
-          <a class="card project-card reveal" href="research.html#current">
-            <div class="pc-top"><img src="assets/logos/uf.svg" alt="University of Florida"><span class="pill green">Current · Wang Lab</span></div>
-            <h3>Framework context in antibody–antigen recognition</h3>
-            <p class="pc-q">Structure prediction at scale with native controls and replicates; benchmarking generative antibody design tools against the same controls.</p>
-            <span class="text-link">Read the project <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a class="card project-card reveal" href="research.html#foundations">
-            <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Foundation · 2024–2026</span></div>
-            <h3>A randomized crossover trial of dietary pulses and the gut microbiome</h3>
-            <p class="pc-q">Protocol, consent, SOPs, 200+ clinic visits, biospecimens. Where I learned that study design determines what a result can mean.</p>
-            <span class="text-link">Research foundations <i class="fas fa-arrow-right"></i></span>
-          </a>
-        </div>
-        <div class="link-row reveal">
-          <a href="cv.html#publications"><i class="fas fa-book-open"></i> Publications</a>
-          <a href="cv.html#presentations"><i class="fas fa-person-chalkboard"></i> Presentations</a>
-          <a href="https://scholar.google.com/citations?user=CdDGp14AAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fab fa-google-scholar"></i> Google Scholar</a>
-          <a href="cv.html"><i class="fas fa-file-lines"></i> Full CV</a>
+
+        <div class="work-grid">
+
+          <!-- Antibody / computational immunology: the 3D IgG1 model lives here -->
+          <article class="card work reveal">
+            <div class="proj-viz mol-panel">
+              <div class="mol-glow" aria-hidden="true"></div>
+              <div id="molViewer" class="mol-viewer" role="img" aria-label="Rotating 3D model of a human IgG1 antibody, heavy chains in blue and light chains in amber"></div>
+              <span class="viz-tag"><i class="swatch swatch-heavy"></i>Heavy <i class="swatch swatch-light"></i>Light · Human IgG1 · PDB 1HZH</span>
+            </div>
+            <div class="work-body">
+              <div class="pc-top"><img src="assets/logos/uf.svg" alt="University of Florida"><span class="pill green">Current · Wang Lab</span></div>
+              <h3>Framework context in antibody–antigen recognition</h3>
+              <p>Holding binding loops and epitope fixed while varying the human VH–VL framework, to test how much structure-prediction and design tools respond to framework choice, and how much of that is biology rather than model behaviour.</p>
+              <ul class="work-facts">
+                <li>Provenance-tracked dataset</li>
+                <li>AlphaFold 3 / ColabFold at scale on HiPerGator</li>
+                <li>RFantibody &amp; Germinal benchmarks</li>
+                <li>In progress, unpublished</li>
+              </ul>
+              <a class="text-link" href="research.html#current">Read the project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Dietary pulses → participant → gut microbiome → host response -->
+          <article class="card work reveal">
+            <div class="proj-viz">
+              <svg class="mb" viewBox="0 0 400 300" role="img" aria-label="Diagram: dietary beans enter a participant's gut, shift the microbial community, and change a host physiological readout">
+                <!-- dietary input -->
+                <path class="mb-bean" d="M42 130 C 28 140, 27 170, 46 182 C 61 192, 82 179, 84 160 C 86 141, 72 122, 57 124 C 51 125, 47 129, 42 130 Z"/>
+                <path class="mb-bean-hi" d="M50 136 C 44 144, 45 156, 52 160 C 58 163, 66 156, 64 148 C 62 141, 56 134, 50 136 Z"/>
+                <path class="mb-bean" transform="translate(-14 26) scale(0.62)" d="M42 130 C 28 140, 27 170, 46 182 C 61 192, 82 179, 84 160 C 86 141, 72 122, 57 124 C 51 125, 47 129, 42 130 Z"/>
+                <text x="56" y="212" text-anchor="middle">dietary pulses</text>
+                <!-- intake flow -->
+                <path class="mb-flow" d="M90 150 C 118 150, 128 122, 158 118"/>
+
+                <!-- participant: head + torso outline -->
+                <circle class="mb-body" cx="214" cy="52" r="14"/>
+                <path class="mb-body" d="M176 82 C 176 74, 184 72, 192 72 L 236 72 C 244 72, 252 74, 252 82 L 252 208 C 252 222, 240 232, 226 232 L 202 232 C 188 232, 176 222, 176 208 Z"/>
+                <!-- gut -->
+                <path class="mb-gut" d="M190 108 C 236 98, 246 138, 202 144 C 164 150, 170 190, 212 186 C 244 183, 244 206, 218 210"/>
+                <path class="mb-gut-in" d="M190 108 C 236 98, 246 138, 202 144 C 164 150, 170 190, 212 186 C 244 183, 244 206, 218 210"/>
+                <text x="214" y="250" text-anchor="middle">participant · gut</text>
+
+                <!-- microbial community, shifting composition -->
+                <g class="mb-links a-fade">
+                  <line class="mb-link" x1="200" y1="110" x2="226" y2="122"/>
+                  <line class="mb-link" x1="226" y1="122" x2="206" y2="146"/>
+                  <line class="mb-link" x1="206" y1="146" x2="186" y2="162"/>
+                  <line class="mb-link" x1="186" y1="162" x2="214" y2="182"/>
+                  <line class="mb-link" x1="214" y1="182" x2="234" y2="190"/>
+                  <line class="mb-link" x1="206" y1="146" x2="214" y2="182"/>
+                </g>
+                <circle class="taxon a" style="--k:0" cx="200" cy="110" r="4.5"/>
+                <circle class="taxon b shrink" style="--k:1" cx="226" cy="122" r="4"/>
+                <circle class="taxon c" style="--k:2" cx="206" cy="146" r="3.5"/>
+                <circle class="taxon a shrink" style="--k:3" cx="186" cy="162" r="4"/>
+                <circle class="taxon c" style="--k:4" cx="214" cy="182" r="4.5"/>
+                <circle class="taxon b" style="--k:5" cx="234" cy="190" r="3.5"/>
+                <circle class="taxon a" style="--k:6" cx="222" cy="206" r="3"/>
+                <text x="214" y="266" text-anchor="middle">microbial community</text>
+
+                <!-- host readout -->
+                <path class="mb-flow" d="M256 150 C 272 150, 276 150, 290 150"/>
+                <line class="mb-axis" x1="300" y1="92" x2="300" y2="196"/>
+                <line class="mb-axis" x1="300" y1="196" x2="386" y2="196"/>
+                <path class="mb-draw base" pathLength="1" d="M304 168 L 322 170 L 340 166 L 358 169 L 378 167"/>
+                <path class="mb-draw out" pathLength="1" d="M304 166 L 322 158 L 340 150 L 358 132 L 378 122"/>
+                <circle class="a-fade" cx="378" cy="122" r="3.5" fill="var(--accent)"/>
+                <text x="343" y="212" text-anchor="middle">host response</text>
+                <text x="343" y="226" text-anchor="middle" style="text-transform:none;letter-spacing:0;font-weight:500">stool · blood · blood pressure · diet</text>
+              </svg>
+              <span class="viz-tag">Randomized crossover trial · 12 weeks · 3 phases</span>
+            </div>
+            <div class="work-body">
+              <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">M.Sc. · Deehan Lab · 2024–2026</span></div>
+              <h3>Dietary pulses, the gut microbiome, and human health</h3>
+              <p>A human intervention study asking whether bean market classes that look alike on a label act differently in the gut. I coordinated the trial from protocol and consent through 200+ clinic visits, biospecimens, and data, and led the companion systematic review.</p>
+              <ul class="work-facts">
+                <li>IRB-approved · ClinicalTrials.gov</li>
+                <li>Biobank study</li>
+                <li>1,800+ references screened</li>
+                <li>Manuscripts in preparation</li>
+              </ul>
+              <a class="text-link" href="research.html#foundations">Read the project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ===== BACKGROUND IN BRIEF ===== -->
-    <section class="band">
+    <!-- ===== 4. RESEARCH OUTPUTS ===== -->
+    <section class="band alt tight" style="padding-bottom:3.5rem">
+      <div class="wrap">
+        <span class="eyebrow reveal">Research outputs</span>
+        <ul class="outputs reveal">
+          <li><a href="cv.html#publications"><strong>2</strong><span>co-authored publications in <cite>Foods</cite> and <cite>J. Sci. Food Agric.</cite></span><small>Publications <i class="fas fa-arrow-right"></i></small></a></li>
+          <li><a href="cv.html#publications"><strong>3</strong><span>manuscripts in preparation, two as co-first author</span><small>In preparation <i class="fas fa-arrow-right"></i></small></a></li>
+          <li><a href="cv.html#presentations"><strong>7</strong><span>conference presentations, including ASM Missouri Valley Branch</span><small>Presentations <i class="fas fa-arrow-right"></i></small></a></li>
+          <li><a href="cv.html#teaching"><strong>3</strong><span>guest lectures on systematic review and ML-assisted screening</span><small>Teaching <i class="fas fa-arrow-right"></i></small></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 5. TRAJECTORY / RESEARCH VISION: the closed loop ===== -->
+    <section class="band" id="vision">
+      <div class="wrap">
+        <span class="eyebrow reveal">Trajectory · research vision</span>
+        <h2 class="sec-title reveal">The full cycle I am working toward</h2>
+        <p class="sec-intro reveal">Not where I have been, but the kind of science I want to be able to do end to end, whatever the system. The centre stays fixed. The cycle keeps turning.</p>
+
+        <div class="loop-grid">
+          <svg class="loop-svg reveal" viewBox="0 0 640 560" role="img" aria-label="Closed research loop around Human Biological Interactions: observe, understand, predict, design, validate, and back to observe">
+            <defs>
+              <marker id="arrowA" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="loop-arrow" d="M0 0 L10 5 L0 10 Z"/></marker>
+              <marker id="arrowW" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="loop-arrow warm" d="M0 0 L10 5 L0 10 Z"/></marker>
+            </defs>
+            <circle class="loop-outer" cx="320" cy="280" r="236"/>
+
+            <!-- arcs, clockwise -->
+            <path class="loop-arc warm" d="M354.7 83 A200 200 0 0 1 496.6 186.1" marker-end="url(#arrowW)"/>
+            <path class="loop-arc" d="M518.1 252.2 A200 200 0 0 1 463.9 419" marker-end="url(#arrowA)"/>
+            <path class="loop-arc" d="M407.7 459.8 A200 200 0 0 1 232.3 459.8" marker-end="url(#arrowA)"/>
+            <path class="loop-arc" d="M176.1 419 A200 200 0 0 1 121.9 252.2" marker-end="url(#arrowA)"/>
+            <path class="loop-arc warm" d="M143.4 186.1 A200 200 0 0 1 285.3 83" marker-end="url(#arrowW)"/>
+
+            <!-- centre -->
+            <circle class="loop-center-halo" cx="320" cy="280" r="112"/>
+            <circle class="loop-center" cx="320" cy="280" r="94"/>
+            <text class="loop-center-sub" x="320" y="256" text-anchor="middle">centred on</text>
+            <text class="loop-center-text" x="320" y="283" text-anchor="middle">Human Biological</text>
+            <text class="loop-center-text" x="320" y="309" text-anchor="middle">Interactions</text>
+
+            <!-- nodes -->
+            <g>
+              <circle class="loop-node warm" style="--i:0" cx="320" cy="80" r="30"/>
+              <text class="loop-icon warm" x="320" y="80">&#xf610;</text>
+              <text class="loop-label" x="320" y="36" text-anchor="middle">Observe</text>
+              <text class="loop-step" x="320" y="130" text-anchor="middle">MEASURE REAL SYSTEMS</text>
+            </g>
+            <g>
+              <circle class="loop-node warm" style="--i:1" cx="510.2" cy="218.2" r="30"/>
+              <text class="loop-icon warm" x="510.2" y="218.2">&#xf542;</text>
+              <text class="loop-label" x="552" y="212" text-anchor="start">Understand</text>
+              <text class="loop-step" x="552" y="230" text-anchor="start">MECHANISM · CONTEXT</text>
+            </g>
+            <g>
+              <circle class="loop-node" style="--i:2" cx="437.6" cy="441.8" r="30"/>
+              <text class="loop-icon" x="437.6" y="441.8">&#xf1b3;</text>
+              <text class="loop-label" x="437.6" y="503" text-anchor="middle">Predict</text>
+              <text class="loop-step" x="437.6" y="521" text-anchor="middle">QUANTITATIVE MODELS</text>
+            </g>
+            <g>
+              <circle class="loop-node" style="--i:3" cx="202.4" cy="441.8" r="30"/>
+              <text class="loop-icon" x="202.4" y="441.8">&#xf471;</text>
+              <text class="loop-label" x="202.4" y="503" text-anchor="middle">Design</text>
+              <text class="loop-step" x="202.4" y="521" text-anchor="middle">ENGINEER INTERACTIONS</text>
+            </g>
+            <g>
+              <circle class="loop-node" style="--i:4" cx="129.8" cy="218.2" r="30"/>
+              <text class="loop-icon" x="129.8" y="218.2">&#xe596;</text>
+              <text class="loop-label" x="88" y="212" text-anchor="end">Validate</text>
+              <text class="loop-step" x="88" y="230" text-anchor="end">BACK TO EVIDENCE</text>
+            </g>
+          </svg>
+
+          <ol class="loop-steps reveal">
+            <li><span class="icon-badge warm"><i class="fas fa-microscope"></i></span><div><h3>Observe</h3><p>Measure real biological systems and phenomena, with controls and provenance.</p></div></li>
+            <li><span class="icon-badge warm"><i class="fas fa-diagram-project"></i></span><div><h3>Understand</h3><p>Identify mechanisms, relationships, context, and system-level behaviour.</p></div></li>
+            <li><span class="icon-badge"><i class="fas fa-cubes"></i></span><div><h3>Predict</h3><p>Use quantitative and computational models to anticipate biological behaviour, with uncertainty attached.</p></div></li>
+            <li><span class="icon-badge"><i class="fas fa-dna"></i></span><div><h3>Design</h3><p>Use those models to intentionally modify or engineer biological interactions.</p></div></li>
+            <li><span class="icon-badge"><i class="fas fa-vial-circle-check"></i></span><div><h3>Validate</h3><p>Return predictions and designs to experimental or biological evidence.</p></div></li>
+            <li class="back"><span class="icon-badge"><i class="fas fa-rotate-left"></i></span><div><h3>Back to observe</h3><p>Validation produces new observations, new uncertainty, and new biological questions.</p></div></li>
+          </ol>
+        </div>
+        <p class="loop-foot reveal">My earlier training sits mostly on the observe and understand side of this loop. My PhD is building depth in predict and design. The long-term goal is to be able to run the whole cycle, and to keep it centred on human biology rather than on any one tool or molecule.</p>
+      </div>
+    </section>
+
+    <!-- ===== 6. BACKGROUND IN BRIEF: the short bio ===== -->
+    <section class="band alt">
       <div class="wrap narrow">
         <span class="eyebrow reveal">Background in brief</span>
-        <h2 class="sec-title reveal">Where this perspective came from</h2>
+        <h2 class="sec-title reveal">Short bio</h2>
         <div class="prose reveal">
-          <p>I trained in food science at <a href="https://en.nwafu.edu.cn/" target="_blank" rel="noopener">Northwest A&amp;F University</a>, where fermentation experiments in Dr. Chunxia Xiao's lab were my first lesson in measurement and controls. At the <a href="https://www.unl.edu/" target="_blank" rel="noopener">University of Nebraska–Lincoln</a> I moved to human nutrition and the gut microbiome with Dr. Edward Deehan: I coordinated a randomized clinical trial, led a systematic review, and added a statistics minor. Those years taught me that biological outcomes come from interacting components, and that good evidence depends on design, provenance, and honest uncertainty.</p>
-          <p>Reaching the limits of what experimental workflows alone could answer led me to computation, and to the Wang Lab at the University of Florida, where I am now building expertise in <strong>computational immunology and antibody engineering</strong> as an entry point into modeling and designing biological interactions more broadly.</p>
+          <p>Jiayu Tang is a PhD trainee in <a href="https://yiquan2.com/Lab-Page/" target="_blank" rel="noopener">Dr. Yiquan Wang's lab</a> at the University of Florida, where he is developing expertise in computational immunology, antibody–antigen recognition, structural modeling, and AI-enabled antibody and protein design. His undergraduate and master's research in food science and functional foods, human nutrition, the gut microbiome, systematic review, and a human clinical trial gave him experience across experimental biology, human research, complex systems, and quantitative reasoning. Together, these stages are helping him build toward a research approach that moves across observation, mechanistic understanding, prediction, design, and validation to study human biological interactions.</p>
         </div>
-        <p class="reveal" style="margin-top:1.25rem"><a class="text-link" href="about.html">The longer story, stage by stage <i class="fas fa-arrow-right"></i></a></p>
+        <p class="reveal" style="margin-top:1.25rem"><a class="text-link" href="about.html">How each stage shaped the approach <i class="fas fa-arrow-right"></i></a></p>
       </div>
     </section>
 
-    <!-- ===== CONTACT STRIP ===== -->
+    <!-- ===== 7. LINKS / CONTACT ===== -->
     <section class="band tight">
       <div class="wrap">
+        <div class="link-row reveal" style="margin:0 0 2rem">
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+          <a href="research.html"><i class="fas fa-flask"></i> Research</a>
+          <a href="cv.html#publications"><i class="fas fa-book-open"></i> Publications</a>
+          <a href="cv.html"><i class="fas fa-file-lines"></i> CV</a>
+          <a href="https://scholar.google.com/citations?user=CdDGp14AAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fab fa-google-scholar"></i> Google Scholar</a>
+        </div>
         <div class="cta-band reveal">
           <div>
             <h2>Working on something related?</h2>
@@ -285,7 +443,7 @@
         <div>Wang Lab · University of Florida · Gainesville, FL</div>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <a href="research.html">Research</a><a href="about.html">About</a><a href="notes.html">Notes</a><a href="cv.html#publications">Publications</a><a href="cv.html">CV</a><a href="contact.html">Contact</a><a href="/studio/">Studio</a>
+        <a href="about.html">About</a><a href="research.html">Research</a><a href="notes.html">Notes</a><a href="cv.html#publications">Publications</a><a href="cv.html">CV</a><a href="contact.html">Contact</a><a href="/studio/">Studio</a>
       </nav>
       <div class="footer-social">
         <a href="mailto:jasper.tang859@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -300,6 +458,6 @@
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js" defer></script>
-  <script src="script.js?v=20260924" defer></script>
+  <script src="script.js?v=20260925" defer></script>
 </body>
 </html>
