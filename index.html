@@ -50,7 +50,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260929">
+  <link rel="stylesheet" href="style.css?v=20260930">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -100,7 +100,7 @@
             </div>
             <div class="rise" style="--d:4">
               <dt>Trajectory</dt>
-              <dd>My previous research experience in functional foods, the gut microbiome, systematic review, and human clinical trials helped me build toward a broader research mindset for studying human biological interactions.</dd>
+              <dd>My previous research experience in functional foods, the gut microbiome, systematic review, and human clinical trials helped me build toward a broader research mindset for studying biological interactions in humans. My current research topic specifically focuses on antibody–antigen interactions.</dd>
             </div>
           </dl>
 
@@ -115,17 +115,202 @@
             <img src="headshot.jpg" alt="Portrait of Jiayu Tang" width="1066" height="1600" fetchpriority="high">
             <span class="portrait-tag"><img src="assets/logos/uf.svg" alt=""> Wang Lab · University of Florida</span>
           </div>
-          <figcaption><i class="fas fa-location-dot"></i> Gainesville, Florida</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ===== 2. MY RESEARCH VISION ===== -->
+    <!-- ===== 2. SELECTED WORK ===== -->
+    <section class="band" id="work">
+      <div class="wrap">
+        <div class="sec-hd-row">
+          <div>
+            <span class="eyebrow">Selected Work</span>
+            <h2 class="sec-title">Three applications of one approach</h2>
+          </div>
+          <a class="text-link" href="research.html">All research <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="work-group reveal">
+          <div class="work-hd"><span class="pill green">Current</span><h3>Wang Lab · University of Florida</h3></div>
+          <div class="work-grid one">
+          <!-- 1. Antibody–antigen recognition: rotating 3D IgG1 -->
+          <a class="card work wide reveal" href="research.html#current" style="--c:var(--s3);--c-lt:var(--s3-lt)">
+            <div class="proj-viz mol-panel">
+              <div class="mol-glow" aria-hidden="true"></div>
+              <div id="molViewer" class="mol-viewer" role="img" aria-label="Rotating 3D model of a human IgG1 antibody, heavy chains in blue and light chains in amber"></div>
+              <span class="viz-tag"><i class="swatch swatch-heavy"></i>Heavy <i class="swatch swatch-light"></i>Light · Human IgG1 · PDB 1HZH</span>
+            </div>
+            <div class="work-body">
+              <div class="pc-top"><img src="assets/logos/uf.svg" alt="University of Florida"><span class="pill green">In progress · Wang Lab</span></div>
+              <h3>Framework context in antibody–antigen recognition</h3>
+              <p>Holding binding loops and epitope fixed while varying the human VH–VL framework, to test how far structure-prediction and design tools respond to framework choice.</p>
+              <div class="stage-dots" aria-label="Stages exercised: model and predict; modulate and engineer"><i></i><i></i><i class="on"></i><i></i><i class="on" style="--c:var(--s5);--c-lt:var(--s5-lt)"></i><span>model &amp; predict · engineer</span></div>
+              <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+          </div>
+        </div>
+
+        <div class="work-group">
+          <div class="work-hd"><span class="pill warm">Previous</span><h3>M.Sc. research · University of Nebraska–Lincoln</h3></div>
+          <div class="work-grid two">
+          <!-- 2. Pilot clinical trial: crossover design → pulses → gut microbiome → host outcomes -->
+          <a class="card work reveal" href="research.html#pulses-microbiome" style="--c:var(--s1);--c-lt:var(--s1-lt)">
+            <div class="proj-viz">
+              <svg class="ct" viewBox="0 0 400 300" role="img" aria-label="Diagram: twelve participants randomized to three dry bean arms in a crossover design with samples at each phase; the three arms are white beans, pink beans, and a mixture">
+                <defs>
+                  <symbol id="ct-person" viewBox="0 0 10 20">
+                    <circle cx="5" cy="3.2" r="3"/>
+                    <path d="M0.6 19.5 V12.5 a4.4 4.4 0 0 1 8.8 0 V19.5 Z"/>
+                  </symbol>
+                  <symbol id="ct-bean" viewBox="0 0 62 74">
+                    <path transform="translate(-26 -190)" d="M42 200 C 28 210, 27 240, 46 252 C 61 262, 82 249, 84 230 C 86 211, 72 192, 57 194 C 51 195, 47 199, 42 200 Z"/>
+                  </symbol>
+                  <clipPath id="ctClip"><rect class="ct-clip" x="96" y="26" width="290" height="104"/></clipPath>
+                </defs>
+
+                <!-- participants -->
+                <g class="person">
+                  <use href="#ct-person" x="14" y="42" width="10" height="20"/><use href="#ct-person" x="28" y="42" width="10" height="20"/><use href="#ct-person" x="42" y="42" width="10" height="20"/><use href="#ct-person" x="56" y="42" width="10" height="20"/>
+                  <use href="#ct-person" x="14" y="66" width="10" height="20"/><use href="#ct-person" x="28" y="66" width="10" height="20"/><use href="#ct-person" x="42" y="66" width="10" height="20"/><use href="#ct-person" x="56" y="66" width="10" height="20"/>
+                  <use href="#ct-person" x="14" y="90" width="10" height="20"/><use href="#ct-person" x="28" y="90" width="10" height="20"/><use href="#ct-person" x="42" y="90" width="10" height="20"/><use href="#ct-person" x="56" y="90" width="10" height="20"/>
+                </g>
+                <text x="40" y="124" text-anchor="middle">n = 12</text>
+                <text x="40" y="135" text-anchor="middle">randomized</text>
+                <path class="rand" d="M72 76 C 84 76, 84 56, 96 56 M72 76 H96 M72 76 C 84 76, 84 96, 96 96"/>
+
+                <!-- periods: baseline · phase 1 · washout 1 · phase 2 · washout 2 · phase 3 -->
+                <rect class="period" x="126" y="46" width="54" height="60" rx="3"/>
+                <rect class="period" x="220" y="46" width="54" height="60" rx="3"/>
+                <rect class="period" x="314" y="46" width="54" height="60" rx="3"/>
+                <text x="105" y="31" text-anchor="middle">baseline</text>
+                <text x="157" y="31" text-anchor="middle">phase 1</text>
+                <text x="200" y="42" text-anchor="middle">washout 1</text>
+                <text x="247" y="31" text-anchor="middle">phase 2</text>
+                <text x="294" y="42" text-anchor="middle">washout 2</text>
+                <text x="341" y="31" text-anchor="middle">phase 3</text>
+
+                <!-- three arms crossing over; revealed by the sweep -->
+                <g class="ct-swept" clip-path="url(#ctClip)">
+                  <path class="arm a" d="M96 56 H180 C 200 56, 200 96, 220 96 H274 C 294 96, 294 76, 314 76 H368"/>
+                  <path class="arm b" d="M96 76 H180 C 200 76, 200 56, 220 56 H274 C 294 56, 294 96, 314 96 H368"/>
+                  <path class="arm c" d="M96 96 H180 C 200 96, 200 76, 220 76 H274 C 294 76, 294 56, 314 56 H368"/>
+                  <g class="tick"><line x1="126" y1="108" x2="126" y2="114"/><line x1="180" y1="108" x2="180" y2="114"/><line x1="220" y1="108" x2="220" y2="114"/><line x1="274" y1="108" x2="274" y2="114"/><line x1="314" y1="108" x2="314" y2="114"/><line x1="368" y1="108" x2="368" y2="114"/></g>
+                  <g class="sample"><circle cx="126" cy="118" r="3"/><circle cx="180" cy="118" r="3"/><circle cx="220" cy="118" r="3"/><circle cx="274" cy="118" r="3"/><circle cx="314" cy="118" r="3"/><circle cx="368" cy="118" r="3"/></g>
+                </g>
+                <line class="ct-cursor" x1="96" y1="44" x2="96" y2="122"/>
+                <text x="386" y="132" text-anchor="end" class="lc">samples</text>
+                <text x="240" y="152" text-anchor="middle" class="lc">microbiome outcomes · blood · 24-h blood pressure · diet, at each phase</text>
+
+                <!-- the three interventions: white beans, pink beans, and a mixture -->
+                <g class="bean white">
+                  <use href="#ct-bean" x="46" y="190" width="34" height="40" transform="rotate(-14 63 210)"/>
+                  <use href="#ct-bean" x="78" y="196" width="30" height="36" transform="rotate(18 93 214)"/>
+                  <use href="#ct-bean" x="60" y="224" width="30" height="36" transform="rotate(-30 75 242)"/>
+                </g>
+                <circle class="key a" cx="50" cy="175" r="3.5"/><text x="58" y="178">white beans</text>
+
+                <g class="bean pink">
+                  <use href="#ct-bean" x="166" y="190" width="34" height="40" transform="rotate(-14 183 210)"/>
+                  <use href="#ct-bean" x="198" y="196" width="30" height="36" transform="rotate(18 213 214)"/>
+                  <use href="#ct-bean" x="180" y="224" width="30" height="36" transform="rotate(-30 195 242)"/>
+                </g>
+                <circle class="key b" cx="174" cy="175" r="3.5"/><text x="182" y="178">pink beans</text>
+
+                <g>
+                  <use class="bean white" href="#ct-bean" x="286" y="190" width="34" height="40" transform="rotate(-14 303 210)"/>
+                  <use class="bean pink" href="#ct-bean" x="318" y="196" width="30" height="36" transform="rotate(18 333 214)"/>
+                  <use class="bean pink" href="#ct-bean" x="292" y="226" width="28" height="34" transform="rotate(-30 306 243)"/>
+                  <use class="bean white" href="#ct-bean" x="322" y="232" width="26" height="32" transform="rotate(34 335 248)"/>
+                </g>
+                <circle class="key c" cx="288" cy="175" r="3.5"/><text x="296" y="178">mixed beans</text>
+              </svg>
+              <span class="viz-tag">Randomized crossover · 12 weeks · 3 dry bean market classes</span>
+            </div>
+            <div class="work-body">
+              <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Manuscript in prep</span></div>
+              <h3>Dry beans, the gut microbiome, and human health: a pilot clinical trial</h3>
+              <p>A 12-week randomized crossover trial in which the same participants ate white beans, pink beans, and a mixture in turn, with microbiome, blood, blood-pressure, and dietary data collected at every phase.</p>
+              <div class="stage-dots" aria-label="Stages exercised: observe; validate"><i class="on"></i><i></i><i></i><i class="on" style="--c:var(--s4);--c-lt:var(--s4-lt)"></i><i></i><span>observe · validate</span></div>
+              <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- 3. Systematic review: search → screen → extract (restrained) -->
+          <a class="card work reveal" href="research.html#systematic-review" style="--c:var(--s2);--c-lt:var(--s2-lt)">
+            <div class="proj-viz">
+              <svg class="sr" viewBox="0 0 400 300" role="img" aria-label="Diagram: records from three databases are read by a language-model agent that extracts structured data, which two human reviewers verify into a final dataset">
+                <path class="funnel" d="M20 60 L120 60 L150 120 L250 120 L280 150 L380 150 L380 240 L280 240 L250 210 L150 210 L120 250 L20 250 Z" opacity="0"/>
+                <!-- search: three database stacks -->
+                <g class="doc-stack">
+                  <rect class="doc" x="30" y="86" width="34" height="42" rx="3"/><rect class="doc" x="36" y="80" width="34" height="42" rx="3"/><rect class="doc" x="42" y="74" width="34" height="42" rx="3"/>
+                  <path class="doc-ln" d="M50 86 h18 M50 94 h18 M50 102 h12"/>
+                  <rect class="doc" x="30" y="150" width="34" height="42" rx="3"/><rect class="doc" x="36" y="144" width="34" height="42" rx="3"/><rect class="doc" x="42" y="138" width="34" height="42" rx="3"/>
+                  <path class="doc-ln" d="M50 150 h18 M50 158 h18 M50 166 h12"/>
+                  <rect class="doc" x="30" y="214" width="34" height="42" rx="3"/><rect class="doc" x="36" y="208" width="34" height="42" rx="3"/><rect class="doc" x="42" y="202" width="34" height="42" rx="3"/>
+                  <path class="doc-ln" d="M50 214 h18 M50 222 h18 M50 230 h12"/>
+                </g>
+                <text x="56" y="52" text-anchor="middle" class="big">1,800+</text>
+                <text x="56" y="64" text-anchor="middle">records</text>
+                <text x="56" y="280" text-anchor="middle">3 databases</text>
+                <path class="link" d="M84 100 C 104 100, 108 160, 128 160 M84 164 H128 M84 228 C 104 228, 108 160, 128 160"/>
+                <path class="arrow" d="M128 156 l7 4 l-7 4 z"/>
+
+                <!-- screening: reviewers + ML over a grid of records -->
+                <rect class="agent" x="190" y="54" width="28" height="22" rx="5"/>
+                <circle class="agent-eye" cx="199" cy="65" r="2.4"/><circle class="agent-eye" cx="209" cy="65" r="2.4"/>
+                <line class="agent-ant" x1="204" y1="54" x2="204" y2="47"/><circle class="agent-eye" cx="204" cy="45.5" r="1.8"/>
+                <text x="204" y="94" text-anchor="middle">llm agent</text>
+                <g class="records">
+                  <rect class="d" style="--k:0" x="150" y="104" width="12" height="15" rx="2"/><rect class="d in" style="--k:0" x="166" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="182" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="198" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="214" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="230" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="246" y="104" width="12" height="15" rx="2"/>
+                  <rect class="d" style="--k:1" x="150" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="166" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="182" y="123" width="12" height="15" rx="2"/><rect class="d in" style="--k:1" x="198" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="214" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="230" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="246" y="123" width="12" height="15" rx="2"/>
+                  <rect class="d" style="--k:2" x="150" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="166" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="182" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="198" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="214" y="142" width="12" height="15" rx="2"/><rect class="d in" style="--k:2" x="230" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="246" y="142" width="12" height="15" rx="2"/>
+                  <rect class="d in" style="--k:3" x="150" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="166" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="182" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="198" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="214" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="230" y="161" width="12" height="15" rx="2"/><rect class="d in" style="--k:3" x="246" y="161" width="12" height="15" rx="2"/>
+                  <rect class="d" style="--k:4" x="150" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="166" y="180" width="12" height="15" rx="2"/><rect class="d in" style="--k:4" x="182" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="198" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="214" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="230" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="246" y="180" width="12" height="15" rx="2"/>
+                  <rect class="d" style="--k:5" x="150" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="166" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="182" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="198" y="199" width="12" height="15" rx="2"/><rect class="d in" style="--k:5" x="214" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="230" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="246" y="199" width="12" height="15" rx="2"/>
+                </g>
+                <text x="204" y="236" text-anchor="middle" class="lc">structured fields per study</text>
+                <text x="204" y="280" text-anchor="middle">extract</text>
+                <path class="link" d="M264 160 H298"/>
+                <path class="arrow" d="M298 156 l7 4 l-7 4 z"/>
+
+                <!-- verification: two human reviewers check every extracted value → dataset -->
+                <g class="reviewer">
+                  <circle cx="334" cy="60" r="5"/><path d="M326 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
+                  <circle cx="358" cy="60" r="5"/><path d="M350 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
+                </g>
+                <text x="346" y="94" text-anchor="middle">2 reviewers</text>
+                <rect class="table" x="312" y="118" width="68" height="52" rx="4"/>
+                <path class="grid" d="M312 132 H380 M312 146 H380 M312 158 H380 M335 118 V170 M358 118 V170"/>
+                <circle class="chk-bg" cx="378" cy="118" r="10"/>
+                <path class="chk" d="M373 118 l3.5 3.5 l6.5 -7"/>
+                <text x="346" y="108" text-anchor="middle">verify</text>
+                <text x="346" y="188" text-anchor="middle" class="lc">every value checked</text>
+                <rect class="bar" x="318" y="220" width="10" height="26"/><rect class="bar" x="334" y="210" width="10" height="36"/><rect class="bar" x="350" y="226" width="10" height="20"/><rect class="bar" x="366" y="216" width="10" height="30"/>
+                <line class="grid" x1="312" y1="246" x2="382" y2="246"/>
+                <text x="346" y="280" text-anchor="middle">dataset</text>
+              </svg>
+              <span class="viz-tag">Systematic review · 1,800+ records · LLM-agent extraction</span>
+            </div>
+            <div class="work-body">
+              <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Manuscript in prep</span></div>
+              <h3>Dietary pulses and human nutrition: a systematic review</h3>
+              <p>Intervention trials of pulse market classes from 1,800+ records across three databases, with data extracted by a language-model agent we built and every value verified by two human reviewers.</p>
+              <div class="stage-dots" aria-label="Stages exercised: understand"><i></i><i class="on"></i><i></i><i></i><i></i><span>understand</span></div>
+              <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. MY RESEARCH PHILOSOPHY ===== -->
     <section class="band alt vision" id="vision">
       <div class="wrap">
-        <span class="eyebrow reveal">My Research Vision</span>
-        <h2 class="vision-statement reveal">Understanding, predicting, and <em>modulating</em> biological interactions in humans.</h2>
-        <p class="sec-intro reveal">Not one biological object, but one reusable way of working: a five-stage cycle that can be applied to interactions at any scale, from an antibody meeting its antigen to a diet meeting the gut microbiome.</p>
+        <span class="eyebrow reveal">My Research Philosophy</span>
+        <h2 class="vision-statement reveal">To understand, predict, and modulate biological interactions in humans.</h2>
+        <p class="sec-intro reveal">Not one biological object, but one reusable way of working: a five-stage cycle that can be applied to interactions at any scale.</p>
 
         <ol class="flow reveal" aria-label="Five-stage research workflow">
 
@@ -254,192 +439,11 @@
       </div>
     </section>
 
-    <!-- ===== 3. SELECTED WORK ===== -->
-    <section class="band" id="work">
-      <div class="wrap">
-        <div class="sec-hd-row">
-          <div>
-            <span class="eyebrow">Selected Work</span>
-            <h2 class="sec-title">Three applications of one approach</h2>
-          </div>
-          <a class="text-link" href="research.html">All research <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="work-grid">
-
-          <!-- 1. Antibody–antigen recognition: rotating 3D IgG1 -->
-          <a class="card work reveal" href="research.html#current" style="--c:var(--s3);--c-lt:var(--s3-lt)">
-            <div class="proj-viz mol-panel">
-              <div class="mol-glow" aria-hidden="true"></div>
-              <div id="molViewer" class="mol-viewer" role="img" aria-label="Rotating 3D model of a human IgG1 antibody, heavy chains in blue and light chains in amber"></div>
-              <span class="viz-tag"><i class="swatch swatch-heavy"></i>Heavy <i class="swatch swatch-light"></i>Light · Human IgG1 · PDB 1HZH</span>
-            </div>
-            <div class="work-body">
-              <div class="pc-top"><img src="assets/logos/uf.svg" alt="University of Florida"><span class="pill green">Current · Wang Lab</span></div>
-              <h3>Framework context in antibody–antigen recognition</h3>
-              <p>Holding binding loops and epitope fixed while varying the human VH–VL framework, to test how far structure-prediction and design tools respond to framework choice.</p>
-              <div class="stage-dots" aria-label="Stages exercised: model and predict; modulate and engineer"><i></i><i></i><i class="on"></i><i></i><i class="on" style="--c:var(--s5);--c-lt:var(--s5-lt)"></i><span>model &amp; predict · engineer</span></div>
-              <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-
-          <!-- 2. Pilot clinical trial: crossover design → pulses → gut microbiome → host outcomes -->
-          <a class="card work reveal" href="research.html#pulses-microbiome" style="--c:var(--s1);--c-lt:var(--s1-lt)">
-            <div class="proj-viz">
-              <svg class="ct" viewBox="0 0 400 300" role="img" aria-label="Diagram: twelve participants randomized to three dry bean arms in a crossover design with samples at each phase; the three arms are white beans, pink beans, and a mixture">
-                <defs>
-                  <symbol id="ct-person" viewBox="0 0 10 20">
-                    <circle cx="5" cy="3.2" r="3"/>
-                    <path d="M0.6 19.5 V12.5 a4.4 4.4 0 0 1 8.8 0 V19.5 Z"/>
-                  </symbol>
-                  <symbol id="ct-bean" viewBox="0 0 62 74">
-                    <path transform="translate(-26 -190)" d="M42 200 C 28 210, 27 240, 46 252 C 61 262, 82 249, 84 230 C 86 211, 72 192, 57 194 C 51 195, 47 199, 42 200 Z"/>
-                  </symbol>
-                  <clipPath id="ctClip"><rect class="ct-clip" x="96" y="26" width="290" height="104"/></clipPath>
-                </defs>
-
-                <!-- participants -->
-                <g class="person">
-                  <use href="#ct-person" x="14" y="42" width="10" height="20"/><use href="#ct-person" x="28" y="42" width="10" height="20"/><use href="#ct-person" x="42" y="42" width="10" height="20"/><use href="#ct-person" x="56" y="42" width="10" height="20"/>
-                  <use href="#ct-person" x="14" y="66" width="10" height="20"/><use href="#ct-person" x="28" y="66" width="10" height="20"/><use href="#ct-person" x="42" y="66" width="10" height="20"/><use href="#ct-person" x="56" y="66" width="10" height="20"/>
-                  <use href="#ct-person" x="14" y="90" width="10" height="20"/><use href="#ct-person" x="28" y="90" width="10" height="20"/><use href="#ct-person" x="42" y="90" width="10" height="20"/><use href="#ct-person" x="56" y="90" width="10" height="20"/>
-                </g>
-                <text x="40" y="124" text-anchor="middle">n = 12</text>
-                <text x="40" y="135" text-anchor="middle">randomized</text>
-                <path class="rand" d="M72 76 C 84 76, 84 56, 96 56 M72 76 H96 M72 76 C 84 76, 84 96, 96 96"/>
-
-                <!-- periods: baseline · phase 1 · washout 1 · phase 2 · washout 2 · phase 3 -->
-                <rect class="period" x="126" y="46" width="54" height="60" rx="3"/>
-                <rect class="period" x="220" y="46" width="54" height="60" rx="3"/>
-                <rect class="period" x="314" y="46" width="54" height="60" rx="3"/>
-                <text x="105" y="31" text-anchor="middle">baseline</text>
-                <text x="157" y="31" text-anchor="middle">phase 1</text>
-                <text x="200" y="42" text-anchor="middle">washout 1</text>
-                <text x="247" y="31" text-anchor="middle">phase 2</text>
-                <text x="294" y="42" text-anchor="middle">washout 2</text>
-                <text x="341" y="31" text-anchor="middle">phase 3</text>
-
-                <!-- three arms crossing over; revealed by the sweep -->
-                <g class="ct-swept" clip-path="url(#ctClip)">
-                  <path class="arm a" d="M96 56 H180 C 200 56, 200 96, 220 96 H274 C 294 96, 294 76, 314 76 H368"/>
-                  <path class="arm b" d="M96 76 H180 C 200 76, 200 56, 220 56 H274 C 294 56, 294 96, 314 96 H368"/>
-                  <path class="arm c" d="M96 96 H180 C 200 96, 200 76, 220 76 H274 C 294 76, 294 56, 314 56 H368"/>
-                  <g class="tick"><line x1="126" y1="108" x2="126" y2="114"/><line x1="180" y1="108" x2="180" y2="114"/><line x1="220" y1="108" x2="220" y2="114"/><line x1="274" y1="108" x2="274" y2="114"/><line x1="314" y1="108" x2="314" y2="114"/><line x1="368" y1="108" x2="368" y2="114"/></g>
-                  <g class="sample"><circle cx="126" cy="118" r="3"/><circle cx="180" cy="118" r="3"/><circle cx="220" cy="118" r="3"/><circle cx="274" cy="118" r="3"/><circle cx="314" cy="118" r="3"/><circle cx="368" cy="118" r="3"/></g>
-                </g>
-                <line class="ct-cursor" x1="96" y1="44" x2="96" y2="122"/>
-                <text x="386" y="132" text-anchor="end" class="lc">samples</text>
-                <text x="240" y="152" text-anchor="middle" class="lc">microbiome outcomes · blood · 24-h blood pressure · diet, at each phase</text>
-
-                <!-- the three interventions: white beans, pink beans, and a mixture -->
-                <g class="bean white">
-                  <use href="#ct-bean" x="46" y="190" width="34" height="40" transform="rotate(-14 63 210)"/>
-                  <use href="#ct-bean" x="78" y="196" width="30" height="36" transform="rotate(18 93 214)"/>
-                  <use href="#ct-bean" x="60" y="224" width="30" height="36" transform="rotate(-30 75 242)"/>
-                </g>
-                <circle class="key a" cx="50" cy="175" r="3.5"/><text x="58" y="178">white beans</text>
-
-                <g class="bean pink">
-                  <use href="#ct-bean" x="166" y="190" width="34" height="40" transform="rotate(-14 183 210)"/>
-                  <use href="#ct-bean" x="198" y="196" width="30" height="36" transform="rotate(18 213 214)"/>
-                  <use href="#ct-bean" x="180" y="224" width="30" height="36" transform="rotate(-30 195 242)"/>
-                </g>
-                <circle class="key b" cx="174" cy="175" r="3.5"/><text x="182" y="178">pink beans</text>
-
-                <g>
-                  <use class="bean white" href="#ct-bean" x="286" y="190" width="34" height="40" transform="rotate(-14 303 210)"/>
-                  <use class="bean pink" href="#ct-bean" x="318" y="196" width="30" height="36" transform="rotate(18 333 214)"/>
-                  <use class="bean pink" href="#ct-bean" x="292" y="226" width="28" height="34" transform="rotate(-30 306 243)"/>
-                  <use class="bean white" href="#ct-bean" x="322" y="232" width="26" height="32" transform="rotate(34 335 248)"/>
-                </g>
-                <circle class="key c" cx="288" cy="175" r="3.5"/><text x="296" y="178">mixed beans</text>
-              </svg>
-              <span class="viz-tag">Randomized crossover · 12 weeks · 3 dry bean market classes</span>
-            </div>
-            <div class="work-body">
-              <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Pilot clinical trial · M.Sc.</span></div>
-              <h3>Dry beans, the gut microbiome, and human health: a pilot clinical trial</h3>
-              <p>A 12-week randomized crossover trial in which the same participants ate white beans, pink beans, and a mixture in turn, with microbiome, blood, blood-pressure, and dietary data collected at every phase.</p>
-              <div class="stage-dots" aria-label="Stages exercised: observe; validate"><i class="on"></i><i></i><i></i><i class="on" style="--c:var(--s4);--c-lt:var(--s4-lt)"></i><i></i><span>observe · validate</span></div>
-              <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-
-          <!-- 3. Systematic review: search → screen → extract (restrained) -->
-          <a class="card work reveal" href="research.html#systematic-review" style="--c:var(--s2);--c-lt:var(--s2-lt)">
-            <div class="proj-viz">
-              <svg class="sr" viewBox="0 0 400 300" role="img" aria-label="Diagram: records from three databases are read by a language-model agent that extracts structured data, which two human reviewers verify into a final dataset">
-                <path class="funnel" d="M20 60 L120 60 L150 120 L250 120 L280 150 L380 150 L380 240 L280 240 L250 210 L150 210 L120 250 L20 250 Z" opacity="0"/>
-                <!-- search: three database stacks -->
-                <g class="doc-stack">
-                  <rect class="doc" x="30" y="86" width="34" height="42" rx="3"/><rect class="doc" x="36" y="80" width="34" height="42" rx="3"/><rect class="doc" x="42" y="74" width="34" height="42" rx="3"/>
-                  <path class="doc-ln" d="M50 86 h18 M50 94 h18 M50 102 h12"/>
-                  <rect class="doc" x="30" y="150" width="34" height="42" rx="3"/><rect class="doc" x="36" y="144" width="34" height="42" rx="3"/><rect class="doc" x="42" y="138" width="34" height="42" rx="3"/>
-                  <path class="doc-ln" d="M50 150 h18 M50 158 h18 M50 166 h12"/>
-                  <rect class="doc" x="30" y="214" width="34" height="42" rx="3"/><rect class="doc" x="36" y="208" width="34" height="42" rx="3"/><rect class="doc" x="42" y="202" width="34" height="42" rx="3"/>
-                  <path class="doc-ln" d="M50 214 h18 M50 222 h18 M50 230 h12"/>
-                </g>
-                <text x="56" y="52" text-anchor="middle" class="big">1,800+</text>
-                <text x="56" y="64" text-anchor="middle">records</text>
-                <text x="56" y="280" text-anchor="middle">3 databases</text>
-                <path class="link" d="M84 100 C 104 100, 108 160, 128 160 M84 164 H128 M84 228 C 104 228, 108 160, 128 160"/>
-                <path class="arrow" d="M128 156 l7 4 l-7 4 z"/>
-
-                <!-- screening: reviewers + ML over a grid of records -->
-                <rect class="agent" x="190" y="54" width="28" height="22" rx="5"/>
-                <circle class="agent-eye" cx="199" cy="65" r="2.4"/><circle class="agent-eye" cx="209" cy="65" r="2.4"/>
-                <line class="agent-ant" x1="204" y1="54" x2="204" y2="47"/><circle class="agent-eye" cx="204" cy="45.5" r="1.8"/>
-                <text x="204" y="94" text-anchor="middle">llm agent</text>
-                <g class="records">
-                  <rect class="d" style="--k:0" x="150" y="104" width="12" height="15" rx="2"/><rect class="d in" style="--k:0" x="166" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="182" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="198" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="214" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="230" y="104" width="12" height="15" rx="2"/><rect class="d" style="--k:0" x="246" y="104" width="12" height="15" rx="2"/>
-                  <rect class="d" style="--k:1" x="150" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="166" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="182" y="123" width="12" height="15" rx="2"/><rect class="d in" style="--k:1" x="198" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="214" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="230" y="123" width="12" height="15" rx="2"/><rect class="d" style="--k:1" x="246" y="123" width="12" height="15" rx="2"/>
-                  <rect class="d" style="--k:2" x="150" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="166" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="182" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="198" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="214" y="142" width="12" height="15" rx="2"/><rect class="d in" style="--k:2" x="230" y="142" width="12" height="15" rx="2"/><rect class="d" style="--k:2" x="246" y="142" width="12" height="15" rx="2"/>
-                  <rect class="d in" style="--k:3" x="150" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="166" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="182" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="198" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="214" y="161" width="12" height="15" rx="2"/><rect class="d" style="--k:3" x="230" y="161" width="12" height="15" rx="2"/><rect class="d in" style="--k:3" x="246" y="161" width="12" height="15" rx="2"/>
-                  <rect class="d" style="--k:4" x="150" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="166" y="180" width="12" height="15" rx="2"/><rect class="d in" style="--k:4" x="182" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="198" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="214" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="230" y="180" width="12" height="15" rx="2"/><rect class="d" style="--k:4" x="246" y="180" width="12" height="15" rx="2"/>
-                  <rect class="d" style="--k:5" x="150" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="166" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="182" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="198" y="199" width="12" height="15" rx="2"/><rect class="d in" style="--k:5" x="214" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="230" y="199" width="12" height="15" rx="2"/><rect class="d" style="--k:5" x="246" y="199" width="12" height="15" rx="2"/>
-                </g>
-                <text x="204" y="236" text-anchor="middle" class="lc">structured fields per study</text>
-                <text x="204" y="280" text-anchor="middle">extract</text>
-                <path class="link" d="M264 160 H298"/>
-                <path class="arrow" d="M298 156 l7 4 l-7 4 z"/>
-
-                <!-- verification: two human reviewers check every extracted value → dataset -->
-                <g class="reviewer">
-                  <circle cx="334" cy="60" r="5"/><path d="M326 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
-                  <circle cx="358" cy="60" r="5"/><path d="M350 78 v-6 a8 8 0 0 1 16 0 v6 z"/>
-                </g>
-                <text x="346" y="94" text-anchor="middle">2 reviewers</text>
-                <rect class="table" x="312" y="118" width="68" height="52" rx="4"/>
-                <path class="grid" d="M312 132 H380 M312 146 H380 M312 158 H380 M335 118 V170 M358 118 V170"/>
-                <circle class="chk-bg" cx="378" cy="118" r="10"/>
-                <path class="chk" d="M373 118 l3.5 3.5 l6.5 -7"/>
-                <text x="346" y="108" text-anchor="middle">verify</text>
-                <text x="346" y="188" text-anchor="middle" class="lc">every value checked</text>
-                <rect class="bar" x="318" y="220" width="10" height="26"/><rect class="bar" x="334" y="210" width="10" height="36"/><rect class="bar" x="350" y="226" width="10" height="20"/><rect class="bar" x="366" y="216" width="10" height="30"/>
-                <line class="grid" x1="312" y1="246" x2="382" y2="246"/>
-                <text x="346" y="280" text-anchor="middle">dataset</text>
-              </svg>
-              <span class="viz-tag">Systematic review · 1,800+ records · LLM-agent extraction</span>
-            </div>
-            <div class="work-body">
-              <div class="pc-top"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span class="pill warm">Systematic review · M.Sc.</span></div>
-              <h3>Dietary pulses and human nutrition: a systematic review</h3>
-              <p>Intervention trials of pulse market classes from 1,800+ records across three databases, with data extracted by a language-model agent we built and every value verified by two human reviewers.</p>
-              <div class="stage-dots" aria-label="Stages exercised: understand"><i></i><i class="on"></i><i></i><i></i><i></i><span>understand</span></div>
-              <span class="work-cta">Open project <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
     <!-- ===== 4. CONTACT ===== -->
     <section class="band connect" id="contact">
       <div class="wrap">
         <span class="eyebrow reveal">Contact</span>
         <h2 class="connect-title reveal">Let's connect<span class="dot">.</span></h2>
-        <p class="sec-intro reveal">Antibody design, structure prediction and its validation, microbiome and clinical research, or moving between experimental and computational biology: I would be glad to hear from you.</p>
         <ul class="connect-grid reveal">
           <li>
             <a class="connect-card" href="mailto:jasper.tang859@gmail.com">
@@ -502,6 +506,6 @@
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <script src="https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js" defer></script>
-  <script src="script.js?v=20260929" defer></script>
+  <script src="script.js?v=20260930" defer></script>
 </body>
 </html>

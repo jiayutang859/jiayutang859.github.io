@@ -1,8 +1,8 @@
 # Jiayu Tang – Personal Website
 
-A personal research website. Home has exactly four sections (Who I am · My
-Research Vision · Selected Work · Contact); About carries the intellectual
-development, the closed research loop, and the research mindset.
+A personal research website. Home has exactly four sections (Who I am ·
+Selected Work · My Research Philosophy · Contact); About carries the short bio,
+the four-stage trajectory, and the closing statement of the research mindset.
 All diagrams are inline SVG animated with CSS and respect `prefers-reduced-motion`. Plain HTML, CSS, and
 JavaScript with no build step, served by GitHub Pages from the `main` branch.
 The positioning and page-by-page rationale are in `WEBSITE_REDESIGN_PLAN.md`.
@@ -15,8 +15,8 @@ Live at <https://jiayutang859.github.io>.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home: two-column hero with portrait, five-stage research-vision workflow (observe → understand → model & predict → validate → modulate/engineer), three project cards (3D antibody, animated crossover-trial diagram, systematic-review diagram), contact actions |
-| `about.html` | First-person narrative of how the research questions developed, short bio, T-shaped trajectory, stage-by-stage story with "why I moved on" notes, the closed research loop annotated with where each habit came from (non-research interests live on Notes) |
+| `index.html` | Home: two-column hero with portrait; Selected Work split into Current (wide 3D-antibody card) and Previous (animated crossover-trial diagram, systematic-review diagram, both "Manuscript in prep"); five-stage research-philosophy workflow (observe → understand → model & predict → validate → modulate/engineer); contact actions |
+| `about.html` | Short "In brief" bio with photo, one Trajectory section (four stage cards, each with field chips and a three-sentence note on what it taught), and a closing "Where it converges" paragraph with the mini loop (non-research interests live on Collections) |
 | `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations (project anchors used by the Home cards), output counts |
 | `notes.html` | Collections (nav label "Collections"; the URL stays notes.html): a bookshelf, a cinema shelf, thoughts (short fragments + longer notes in draft), and a photo gallery, all rendered from `assets/notes/collections.js` |
 | `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |

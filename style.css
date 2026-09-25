@@ -358,13 +358,8 @@ a.card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: v
 .about-photo figcaption i { color: var(--accent); margin-right: 0.3rem; }
 .about-photo .fun { margin-top: 0.5rem; font-size: 0.8rem; font-style: italic; color: var(--muted); text-align: center; line-height: 1.5; }
 .about-top .page-hero { padding: 0; }
-.bio-brief { margin-top: 1.5rem; padding: 1.1rem 1.35rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--warm); border-radius: 0 12px 12px 0; font-size: 0.93rem; color: var(--muted); line-height: 1.6; }
-.bio-brief .eyebrow { margin-bottom: 0.35rem; }
-.bio-brief a { font-weight: 600; }
 .about-story p { margin-bottom: 1rem; font-size: 1.02rem; line-height: 1.7; }
 .about-story p:last-child { margin-bottom: 0; }
-.about-story p.close { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1rem; }
-.about-story p.close strong { font-weight: 700; }
 
 /* Journey timeline */
 .journey { position: relative; display: flex; flex-direction: column; gap: 1.25rem; }
@@ -373,10 +368,10 @@ a.card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: v
 .stop-dot {
   width: 56px; height: 56px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  background: var(--surface); border: 2px solid var(--border); color: var(--warm); font-size: 1.1rem;
+  background: var(--surface); border: 2px solid var(--c-lt, var(--border)); color: var(--c, var(--warm)); font-size: 1.1rem;
   position: relative; z-index: 1;
 }
-.stop.now .stop-dot { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 0 0 6px var(--accent-lt); }
+.stop.now .stop-dot { background: var(--c, var(--accent)); border-color: var(--c, var(--accent)); color: #fff; box-shadow: 0 0 0 6px var(--c-lt, var(--accent-lt)); }
 .stop .card { padding: 1.5rem 1.75rem; }
 .stop-hd { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.6rem; }
 .stop-hd h3 { font-size: 1.3rem; }
@@ -655,15 +650,6 @@ a.contact-card .contact-val { color: var(--accent); }
 .contrib { margin-top: 0.9rem; padding: 0.7rem 1rem; background: var(--accent-lt); border-radius: 10px; font-size: 0.9rem; line-height: 1.55; }
 .contrib strong { color: var(--accent); }
 
-/* About: stage takeaways */
-.takeaway { margin-top: 0.9rem; padding: 0.7rem 1rem; background: var(--accent-lt); border-radius: 10px; font-size: 0.92rem; line-height: 1.55; }
-.takeaway strong { color: var(--accent); }
-.stop .stop-num { position: absolute; left: 0; top: 0; }
-.moved-on { margin-top: 0.9rem; display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.9rem; color: var(--muted); font-style: italic; line-height: 1.55; }
-.moved-on i { color: var(--warm); font-size: 0.8rem; margin-top: 0.35rem; }
-.stop.now .moved-on i { color: var(--accent); }
-
-
 /* ============================================================
    HOME — CURRENT FOCUS / SELECTED WORK / OUTPUTS
    ============================================================ */
@@ -693,6 +679,20 @@ a.work:hover .work-cta i { transform: translateX(3px); }
 .work-cta i { font-size: 0.8em; transition: transform 0.2s; }
 .work .pc-top .pill { margin: 0; white-space: nowrap; }
 
+/* Current / Previous groups */
+.work-group + .work-group { margin-top: 2.5rem; }
+.work-hd { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.1rem; }
+.work-hd .pill { margin: 0; }
+.work-hd h3 { font-size: 0.82rem; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.work-hd::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.work-grid.one { grid-template-columns: 1fr; }
+.work-grid.two { grid-template-columns: repeat(2, 1fr); }
+.work.wide { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.work.wide .proj-viz { aspect-ratio: auto; min-height: 360px; border-bottom: none; border-right: 1px solid var(--border); }
+.work.wide .work-body { padding: 2.1rem 2.4rem; justify-content: center; gap: 0.9rem; }
+.work.wide .work-body h3 { font-size: 1.5rem; }
+.work.wide .work-body > p { font-size: 1rem; }
+
 /* Which workflow stages a project exercises */
 .stage-dots { display: flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; }
 .stage-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--border); display: inline-block; }
@@ -711,61 +711,16 @@ a.work:hover .work-cta i { transform: translateX(3px); }
 .outputs small { font-size: 0.74rem; color: var(--accent); font-weight: 600; margin-top: auto; padding-top: 0.5rem; }
 
 /* ============================================================
-   RESEARCH VISION — closed loop around Human Biological Interactions
+   ABOUT — mini loop (shared keyframe)
    ============================================================ */
-.loop-grid { display: grid; margin-top: 1rem; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
-.loop-svg { width: 100%; max-width: 620px; height: auto; display: block; margin: 0 auto; overflow: visible; }
-.loop-outer { fill: none; stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 7; transform-origin: 320px 280px; animation: loopSpin 90s linear infinite; }
-.loop-arc { fill: none; stroke: var(--c, var(--accent)); opacity: 0.55; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 7 8; animation: loopFlow 1.6s linear infinite; }
-.loop-arrow { fill: var(--c, var(--accent)); }
-.loop-center { fill: var(--surface); stroke: var(--accent-bd); stroke-width: 1.5; }
-.loop-center-halo { fill: var(--accent-lt); opacity: 0.6; }
-.loop-center-text { font-family: var(--serif); font-weight: 700; font-size: 21px; fill: var(--ink); letter-spacing: -0.01em; }
-.loop-center-sub { font-family: var(--sans); font-size: 9.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; fill: var(--muted); }
-.loop-node { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; animation: loopGlow 12s ease-in-out infinite; animation-delay: calc(var(--i, 0) * 2.4s); }
-.loop-icon { font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 18px; fill: var(--c, var(--accent)); text-anchor: middle; dominant-baseline: central; }
-.loop-label { font-family: var(--serif); font-weight: 700; font-size: 19px; fill: var(--ink); }
-.loop-step { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 0.1em; fill: var(--muted); }
 @keyframes loopSpin { to { transform: rotate(360deg); } }
 @keyframes loopFlow { to { stroke-dashoffset: -15; } }
-@keyframes loopGlow { 0%, 100% { fill: var(--surface); stroke: var(--border); } 8%, 16% { fill: var(--c-lt, var(--accent-lt)); stroke: var(--c, var(--accent)); } 26% { fill: var(--surface); stroke: var(--border); } }
-
-.loop-steps { display: flex; flex-direction: column; }
-.loop-steps li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 0.9rem; padding: 0.85rem 0; border-top: 1px dashed var(--border); align-items: start; }
-.loop-steps li:first-child { border-top: none; padding-top: 0; }
-.loop-steps .icon-badge { width: 34px; height: 34px; font-size: 0.85rem; background: var(--c-lt, var(--accent-lt)); color: var(--c, var(--accent)); }
-.loop-steps h3 { font-size: 1.05rem; margin-bottom: 0.15rem; }
-.loop-steps p { font-size: 0.92rem; color: var(--muted); line-height: 1.5; }
-.loop-steps .habit { display: inline-block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c, var(--accent)); margin-left: 0.5rem; vertical-align: middle; }
-.loop-steps .ex { margin-top: 0.4rem; font-size: 0.84rem; color: var(--text); border-left: 2px solid var(--c-lt, var(--accent-lt)); padding-left: 0.65rem; }
-.loop-steps .ex strong { color: var(--c, var(--accent)); font-weight: 600; }
-.loop-steps li.back h3 { color: var(--accent); }
-.loop-foot { margin-top: 1.5rem; font-size: 0.95rem; color: var(--muted); max-width: 640px; }
-
 /* ============================================================
-   ABOUT — T-SHAPED DEVELOPMENT
+   ABOUT — TRAJECTORY (stage tags, mini loop, journey chips)
    ============================================================ */
-.tshape { display: grid; grid-template-columns: minmax(0, 1.25fr) 52px minmax(0, 1fr) 52px minmax(0, 0.78fr); align-items: center; margin-top: 2rem; }
-.t-col { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem 1.6rem; }
-.t-col.t-past { align-self: stretch; border-color: var(--warm-bd); }
-.t-col.t-now { border-color: var(--accent-bd); box-shadow: 0 0 0 4px var(--accent-lt), var(--shadow); }
-.t-col.t-future { text-align: center; border-style: dashed; background: var(--paper); }
 .t-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: var(--accent-lt); border-radius: 999px; padding: 0.2rem 0.65rem; margin-bottom: 0.7rem; }
 .t-tag.warm { color: var(--warm); background: var(--warm-lt); }
 .t-tag.green { color: var(--green); background: #ecfdf3; }
-.t-col h3 { font-size: 1.2rem; margin-bottom: 1rem; }
-.t-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.t-group h4 { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.45rem; }
-.t-group h4 i { font-size: 0.8rem; color: var(--warm); }
-.t-now .t-group h4 i { color: var(--accent); }
-.t-group ul { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.t-group li { font-size: 0.78rem; color: var(--ink); background: var(--paper); border: 1px solid var(--border); border-radius: 999px; padding: 0.22rem 0.6rem; line-height: 1.35; }
-.t-now .t-group li { background: var(--accent-lt); border-color: var(--accent-bd); }
-.t-note { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px dashed var(--border); font-size: 0.86rem; color: var(--muted); }
-.t-link { width: 100%; height: 100%; display: block; }
-.t-link .funnel { fill: var(--surface-2); stroke: var(--border); stroke-width: 1; }
-.t-link .arrow { fill: var(--accent-lt); stroke: var(--accent-bd); stroke-width: 1; }
-.t-future p { font-size: 0.86rem; color: var(--muted); margin-top: 0.75rem; }
 .mini-loop { width: 100%; max-width: 190px; height: auto; margin: 0.25rem auto 0; display: block; overflow: visible; }
 .mini-loop .ring { fill: none; stroke: var(--accent-bd); stroke-width: 2; stroke-dasharray: 5 6; animation: loopFlow 1.8s linear infinite; }
 .mini-loop .dot { fill: var(--c, var(--accent)); }
@@ -779,6 +734,14 @@ a.work:hover .work-cta i { transform: translateX(3px); }
 .stage-hd h3 { font-size: 1.05rem; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 .stage-hd::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 .journey + .stage-hd { margin-top: 2.5rem; }
+.stop-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.1rem 0 0.9rem; }
+.stop-chips li { font-size: 0.76rem; color: var(--ink); background: var(--c-lt, var(--paper)); border: 1px solid var(--border); border-radius: 999px; padding: 0.2rem 0.6rem; line-height: 1.35; }
+
+/* About: closing section with the mini loop */
+.converge { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 3rem; align-items: center; }
+.converge .mini-loop { max-width: 220px; margin: 0; }
+.close-note { font-family: var(--serif); font-size: 1.2rem; line-height: 1.6; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 1.1rem; max-width: 720px; }
+.close-note strong { font-weight: 700; }
 
 /* ============================================================
    HOME — WHO I AM (two-column hero with integrated portrait)
@@ -1112,13 +1075,14 @@ a.thought:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); tex
   .shelf-section { padding: 3rem 0; }
 
   .band { padding: 3.5rem 0; }
-  .about-top, .contact-layout, .q-lists, .work-grid, .loop-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-top, .contact-layout, .q-lists, .work-grid, .work-grid.two, .converge { grid-template-columns: 1fr; gap: 2rem; }
   .work-grid { gap: 1.5rem; max-width: 520px; margin: 0 auto; }
+  .work.wide { grid-template-columns: 1fr; }
+  .work.wide .proj-viz { aspect-ratio: 4 / 3; min-height: 0; border-right: none; border-bottom: 1px solid var(--border); }
+  .work.wide .work-body { padding: 1.5rem 1.6rem 1.7rem; }
+  .work.wide .work-body h3 { font-size: 1.25rem; }
+  .converge .mini-loop { margin: 0 auto; }
   .outputs { grid-template-columns: 1fr 1fr; }
-  .tshape { grid-template-columns: 1fr; }
-  .t-link { display: none; }
-  .t-col.t-now { width: 88%; margin: 0 auto; }
-  .t-col.t-future { width: 76%; margin: 0 auto; }
   .skill-layer, .foundation { grid-template-columns: 1fr; gap: 0.75rem; }
   .foundation .logo-slot { justify-content: flex-start; }
   .about-photo { max-width: 280px; }
@@ -1177,7 +1141,7 @@ a.thought:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); tex
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .rise, .orb, .text-accent, .mol-glow, .stage-art *, .ct *, .sr *, .loop-svg *, .mini-loop *, .portrait-frame::after { animation: none !important; }
+  .rise, .orb, .text-accent, .mol-glow, .stage-art *, .ct *, .sr *, .mini-loop *, .portrait-frame::after { animation: none !important; }
   .book, .poster, .poster img, .photo img, .thought { transition: none !important; }
   .stage-art .curve { stroke-dashoffset: 0 !important; }
   .ct .ct-clip { transform: none !important; }
