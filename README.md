@@ -17,10 +17,10 @@ Live at <https://jiayutang859.github.io>.
 |------|---------|
 | `index.html` | Home: two-column hero with portrait; Selected Work split into Current (wide 3D-antibody card) and Previous (animated crossover-trial diagram, systematic-review diagram, both "Manuscript in prep"); five-stage research-philosophy workflow (observe → understand → model & predict → validate → modulate/engineer); contact actions |
 | `about.html` | Short "In brief" bio with photo, one Trajectory section (four stage cards, each with field chips and a three-sentence note on what it taught), and a closing "Where it converges" paragraph with the mini loop (non-research interests live on Collections) |
-| `research.html` | Current research (question / why / approach / tools / status / learning), research questions (now vs growing toward), methods with proficiency labels, research foundations (project anchors used by the Home cards), output counts |
-| `notes.html` | Collections (nav label "Collections"; the URL stays notes.html): a bookshelf, a cinema shelf, thoughts (short fragments + longer notes in draft), and a photo gallery, all rendered from `assets/notes/collections.js` |
+| `research.html` | Current research (objective + tools & methods only), Methods & tools (four illustrated layers, one small icon per element), research foundations (project anchors used by the Home cards). Publications live on the CV page |
+| `notes.html` | Collections (nav label "Collections"; the URL stays notes.html): thoughts first, then a bookshelf, a cinema shelf, and a photo gallery, all rendered from `assets/notes/collections.js` |
 | `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |
-| `contact.html` | Email, LinkedIn, GitHub, publications, resume |
+| `contact.html` | A single list of contact cards: email, LinkedIn, GitHub, Google Scholar, resume, institution |
 | `studio/` | Photography site (separate design, see `studio/README.md`) |
 
 ## Shared files
@@ -56,6 +56,9 @@ Everything on Notes comes from `assets/notes/collections.js`:
 - **A longer note:** copy `notes/_template.html` to `notes/<slug>.html` (drop the
   leading underscore: GitHub Pages does not publish files that start with `_`),
   write it, then set that entry's `link` and change `status` from "In draft" to a date.
+- **Display caps:** `notes.js` shows the first 10 books and the 10 newest
+  photographs from each calendar year. Extra entries stay in the data file and are
+  simply not rendered; change `BOOK_LIMIT` or `PHOTOS_PER_YEAR` to show more.
 - **A photograph:** put a web-sized copy in `assets/notes/photos/` and add
   `{ src, w, h, date, camera, lens, caption, place }` to `photos[]`. Leave `caption`
   and `place` empty rather than guessing.

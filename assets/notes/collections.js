@@ -10,6 +10,10 @@
    longer[]   longer notes: title, summary, tags[], status ("In draft" or a date), link
    photos[]   src, w, h, date, camera, lens, caption, place (leave "" when unknown)
 
+   Display caps in notes.js: the shelf shows the first 10 books; the gallery shows
+   the 10 newest photographs from each calendar year. Extra entries stay in this
+   file and simply are not rendered.
+
    Cover and poster art is used for identification only; rights remain with the
    publishers and studios.
    ============================================================ */

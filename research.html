@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260930">
+  <link rel="stylesheet" href="style.css?v=20261001">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -47,14 +47,12 @@
     <section class="page-hero">
       <div class="wrap">
         <span class="eyebrow rise" style="--d:0">Research</span>
-        <h1 class="rise" style="--d:1">Current research, open questions, and foundations</h1>
-        <p class="lede rise" style="--d:2">One active research program, the questions it is part of, the methods I am using and learning, and the earlier research that shaped how I do this work. I try to be explicit about what is in progress versus what I am growing toward.</p>
+        <h1 class="rise" style="--d:1">Current research, methods, and foundations</h1>
+        <p class="lede rise" style="--d:2">One active research program, the tools and methods I work with, and the earlier research that shaped how I do this work.</p>
         <nav class="toc rise" style="--d:3" aria-label="Sections on this page">
           <a href="#current"><i class="fas fa-dna"></i> Current research</a>
-          <a href="#questions"><i class="fas fa-circle-question"></i> Research questions</a>
-          <a href="#methods"><i class="fas fa-toolbox"></i> Methods &amp; approaches</a>
+          <a href="#methods"><i class="fas fa-toolbox"></i> Methods &amp; tools</a>
           <a href="#foundations"><i class="fas fa-layer-group"></i> Research foundations</a>
-          <a href="#publications"><i class="fas fa-book-open"></i> Publications</a>
         </nav>
       </div>
     </section>
@@ -74,24 +72,10 @@
             <div class="logo-slot"><img src="assets/logos/uf.svg" alt="University of Florida"></div>
           </header>
 
-          <p class="question"><span class="lbl">The question</span>When the binding loops, antigen, and epitope are held fixed, how do the human VH–VL <em>framework</em>, the CDRs, and the epitope geometry interact to shape what structure-prediction and design tools predict about binding? And how much of any observed effect is biology rather than model behaviour?</p>
+          <p class="question"><span class="lbl">Objective</span>To test how the human VH–VL framework, the CDRs, and the epitope geometry interact to shape what structure-prediction and design tools predict about antibody–antigen binding, and to separate a real framework effect from model behaviour.</p>
 
           <div class="qa-grid">
-            <div class="qa">
-              <h3><i class="fas fa-bullseye"></i> Why it matters</h3>
-              <p>Frameworks are often treated as passive scaffolds, but they influence CDR conformation and VH–VL packing. If prediction and design tools are sensitive to framework context, that changes how grafting, humanization, and de novo design should be done, and how far in-silico results can be trusted. Separating a real framework effect from model uncertainty is itself part of the question.</p>
-            </div>
-            <div class="qa">
-              <h3><i class="fas fa-route"></i> Approach</h3>
-              <ul class="bullets">
-                <li>Assemble a provenance-tracked dataset of paired human VH–VL frameworks, parent antibody structures, and epitope definitions</li>
-                <li>Graft fixed CDRs onto alternative frameworks, keeping native antibodies as positive controls</li>
-                <li>Run replicate structure predictions with AlphaFold 3 / ColabFold on HiPerGator and report distributions, not single runs</li>
-                <li>Evaluate with epitope-masked structural analysis</li>
-                <li>Benchmark generative antibody design tools against the same controls</li>
-              </ul>
-            </div>
-            <div class="qa">
+            <div class="qa wide">
               <h3><i class="fas fa-toolbox"></i> Tools &amp; methods</h3>
               <ul class="chips">
                 <li><i class="fas fa-cubes"></i>AlphaFold 3</li>
@@ -100,107 +84,72 @@
                 <li><i class="fas fa-wand-magic-sparkles"></i>Germinal</li>
                 <li><img src="assets/logos/python.svg" alt="">Python</li>
                 <li><i class="fas fa-server"></i>HiPerGator HPC</li>
+                <li><i class="fas fa-scissors"></i>CDR grafting onto alternative frameworks</li>
+                <li><i class="fas fa-clone"></i>Replicate predictions, reported as distributions</li>
+                <li><i class="fas fa-shield-halved"></i>Native antibody structures as controls</li>
+                <li><i class="fas fa-ruler-combined"></i>Epitope-masked structural analysis</li>
               </ul>
               <p style="margin-top:0.8rem;font-size:0.88rem;color:var(--muted)">Metrics: prediction confidence, pose and CDR RMSD, epitope recovery, interface contacts, VH–VL orientation, with replicate spread reported for each.</p>
-            </div>
-            <div class="qa">
-              <h3><i class="fas fa-signal"></i> Current status</h3>
-              <p>In progress. The dataset and evaluation pipeline are built; large-scale predictions and early design-tool benchmarks are under way. Results are preliminary and unpublished.</p>
-            </div>
-            <div class="qa wide learning">
-              <h3><i class="fas fa-seedling"></i> What I am learning</h3>
-              <p>A confident prediction is not a correct one. The controls and the replicate structure matter as much as the model, and much of the work is deciding what a given metric is entitled to mean. I am also building the structural intuition this field depends on, one structure at a time.</p>
             </div>
           </div>
         </article>
       </section>
 
-      <!-- ===== 2. RESEARCH QUESTIONS ===== -->
-      <section class="r-section" id="questions">
-        <span class="eyebrow">2 · Research questions</span>
-        <h2 class="sec-title">What I am working on, and what I am growing toward</h2>
-        <p class="sec-intro">The first list is active work. The second is direction, not a set of mature research programs.</p>
-        <div class="q-lists">
-          <div class="card reveal">
-            <h3>Working on now</h3>
-            <p class="q-note">Active in the Wang Lab.</p>
-            <ul class="check-list">
-              <li><i class="fas fa-circle-dot"></i><span>How do framework, CDR, and epitope geometry interact in predicted antibody–antigen binding?</span></li>
-              <li><i class="fas fa-circle-dot"></i><span>When are structure-prediction confidence metrics trustworthy for antibody–antigen complexes, and what controls expose their failure modes?</span></li>
-              <li><i class="fas fa-circle-dot"></i><span>Which generative design outputs are worth experimental testing, and by what criteria?</span></li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Growing toward</h3>
-            <p class="q-note">Directions I want the PhD to open up.</p>
-            <ul class="check-list warm">
-              <li><i class="fas fa-seedling"></i><span>How does molecular context shape immune recognition more broadly, beyond antibodies?</span></li>
-              <li><i class="fas fa-seedling"></i><span>How can sequence–structure–function relationships guide protein and antibody design under uncertainty?</span></li>
-              <li><i class="fas fa-seedling"></i><span>How should experimental controls, replicates, and applicability domains be built into AI-driven biology as standard practice?</span></li>
-              <li><i class="fas fa-seedling"></i><span>How can molecular predictions be connected to physiological and translational outcomes, the scale I worked at before?</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== 3. METHODS & APPROACHES ===== -->
+      <!-- ===== 2. METHODS & TOOLS ===== -->
       <section class="r-section" id="methods">
-        <span class="eyebrow">3 · Methods &amp; approaches</span>
-        <h2 class="sec-title">What I use, and what I am still learning</h2>
-        <p class="sec-intro">Grouped by layer rather than by software. Proficiency is labelled honestly; the detailed list is on the <a href="cv.html#skills">CV</a>.</p>
-        <div class="skill-legend">
-          <span><span class="lvl working">Working</span> used independently in completed research</span>
-          <span><span class="lvl developing">Developing</span> in active use, still building</span>
-          <span><span class="lvl foundational">Foundational</span> coursework or limited use</span>
-        </div>
-        <div class="card skill-layers reveal">
-          <div class="skill-layer">
-            <h4>Biological domains</h4>
-            <ul class="skill-items">
-              <li>Human clinical &amp; nutrition research <span class="lvl working">working</span></li>
-              <li>Gut microbiome <span class="lvl working">working</span></li>
-              <li>Antibody biology <span class="lvl developing">developing</span></li>
-              <li>Structural biology <span class="lvl developing">developing</span></li>
-              <li>Immunology <span class="lvl developing">developing</span></li>
+        <span class="eyebrow">2 · Methods &amp; tools</span>
+        <h2 class="sec-title">What I work with</h2>
+        <p class="sec-intro">Grouped by layer rather than by software. The detailed list is on the <a href="cv.html#skills">CV</a>.</p>
+        <div class="method-layers reveal">
+          <section class="method-layer">
+            <h3><i class="fas fa-bacterium"></i> Biological domains</h3>
+            <ul class="method-items">
+            <li><span class="m-ico"><i class="fas fa-user-doctor"></i></span>Human clinical &amp; nutrition research</li>
+            <li><span class="m-ico"><i class="fas fa-bacterium"></i></span>Gut microbiome</li>
+            <li><span class="m-ico"><i class="fas fa-y"></i></span>Antibody biology</li>
+            <li><span class="m-ico"><i class="fas fa-cubes"></i></span>Structural biology</li>
+            <li><span class="m-ico"><i class="fas fa-shield-virus"></i></span>Immunology</li>
             </ul>
-          </div>
-          <div class="skill-layer">
-            <h4>Computational methods</h4>
-            <ul class="skill-items">
-              <li>Statistical modeling <span class="lvl working">working</span></li>
-              <li>LLM-assisted data extraction with human verification <span class="lvl working">working</span></li>
-              <li>Protein structure prediction <span class="lvl developing">developing</span></li>
-              <li>Structural analysis <span class="lvl developing">developing</span></li>
-              <li>Computational pipelines &amp; HPC <span class="lvl developing">developing</span></li>
-              <li>Generative protein design <span class="lvl foundational">early</span></li>
+          </section>
+          <section class="method-layer">
+            <h3><i class="fas fa-laptop-code"></i> Computational methods</h3>
+            <ul class="method-items">
+            <li><span class="m-ico"><i class="fas fa-chart-line"></i></span>Statistical modeling</li>
+            <li><span class="m-ico"><i class="fas fa-robot"></i></span>LLM-assisted data extraction with human verification</li>
+            <li><span class="m-ico"><i class="fas fa-diagram-project"></i></span>Protein structure prediction</li>
+            <li><span class="m-ico"><i class="fas fa-ruler-combined"></i></span>Structural analysis</li>
+            <li><span class="m-ico"><i class="fas fa-server"></i></span>Computational pipelines &amp; HPC</li>
+            <li><span class="m-ico"><i class="fas fa-wand-magic-sparkles"></i></span>Generative protein design</li>
             </ul>
-          </div>
-          <div class="skill-layer">
-            <h4>Research design</h4>
-            <ul class="skill-items">
-              <li>Experimental &amp; clinical trial design <span class="lvl working">working</span></li>
-              <li>Protocols, SOPs, controls, QC <span class="lvl working">working</span></li>
-              <li>Systematic review <span class="lvl working">working</span></li>
-              <li>Uncertainty analysis for model outputs <span class="lvl developing">developing</span></li>
+          </section>
+          <section class="method-layer">
+            <h3><i class="fas fa-clipboard-check"></i> Research design</h3>
+            <ul class="method-items">
+            <li><span class="m-ico"><i class="fas fa-flask-vial"></i></span>Experimental &amp; clinical trial design</li>
+            <li><span class="m-ico"><i class="fas fa-file-signature"></i></span>Protocols, SOPs, controls, QC</li>
+            <li><span class="m-ico"><i class="fas fa-magnifying-glass-chart"></i></span>Systematic review</li>
+            <li><span class="m-ico"><i class="fas fa-wave-square"></i></span>Uncertainty analysis for model outputs</li>
             </ul>
-          </div>
-          <div class="skill-layer">
-            <h4>Technical environment</h4>
-            <ul class="skill-items">
-              <li><img src="assets/logos/python.svg" alt="">Python <span class="lvl working">working</span></li>
-              <li><img src="assets/logos/r.svg" alt="">R <span class="lvl working">working</span></li>
-              <li>SAS <span class="lvl foundational">foundational</span></li>
-              <li>REDCap · EndNote</li>
-              <li>AlphaFold 3 · ColabFold · RFantibody · Germinal</li>
-              <li>HiPerGator HPC</li>
+          </section>
+          <section class="method-layer">
+            <h3><i class="fas fa-screwdriver-wrench"></i> Technical environment</h3>
+            <ul class="method-items">
+            <li><span class="m-ico"><img src="assets/logos/python.svg" alt=""></span>Python</li>
+            <li><span class="m-ico"><img src="assets/logos/r.svg" alt=""></span>R</li>
+            <li><span class="m-ico"><i class="fas fa-table-columns"></i></span>SAS</li>
+            <li><span class="m-ico"><i class="fas fa-clipboard-list"></i></span>REDCap</li>
+            <li><span class="m-ico"><i class="fas fa-book-bookmark"></i></span>EndNote</li>
+            <li><span class="m-ico"><i class="fas fa-cubes"></i></span>AlphaFold 3 · ColabFold</li>
+            <li><span class="m-ico"><i class="fas fa-dna"></i></span>RFantibody · Germinal</li>
+            <li><span class="m-ico"><i class="fas fa-server"></i></span>HiPerGator HPC</li>
             </ul>
-          </div>
+          </section>
         </div>
       </section>
 
-      <!-- ===== 4. RESEARCH FOUNDATIONS ===== -->
+      <!-- ===== 3. RESEARCH FOUNDATIONS ===== -->
       <section class="r-section" id="foundations">
-        <span class="eyebrow">4 · Research foundations</span>
+        <span class="eyebrow">3 · Research foundations</span>
         <h2 class="sec-title">Previous research, and what each stage contributed</h2>
         <p class="sec-intro">These projects studied different biological questions from my current work. They are here because each one changed how I do research now.</p>
 
@@ -226,17 +175,6 @@
           </div>
         </article>
 
-        <article class="card foundation reveal" id="microbiome">
-          <div class="logo-slot"><i class="fas fa-bacterium" style="font-size:1.6rem;color:var(--warm)"></i></div>
-          <div>
-            <span class="pill warm">Thesis theme</span><span class="pill muted">2023 – 2026</span>
-            <h3>Gut microbiome and dietary fiber</h3>
-            <p class="project-where">University of Nebraska–Lincoln</p>
-            <p>Thesis and trial work on how dietary pulses shape gut microbial communities and host markers, in a system where the same fiber can produce different responders.</p>
-            <p class="contrib"><strong>Contributed:</strong> an interaction-driven, context-dependent view of biological systems that I now apply to framework, CDR, and epitope interactions.</p>
-          </div>
-        </article>
-
         <article class="card foundation reveal" id="earlier">
           <div class="logo-slot"><img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal"></div>
           <div>
@@ -247,24 +185,6 @@
             <p class="contrib"><strong>Contributed:</strong> measurement discipline; assays, replicates, and controls as the basis of any claimed effect.</p>
           </div>
         </article>
-      </section>
-
-      <!-- ===== 5. PUBLICATIONS & PRESENTATIONS ===== -->
-      <section class="r-section" id="publications">
-        <span class="eyebrow">5 · Publications &amp; presentations</span>
-        <h2 class="sec-title">Where the record lives</h2>
-        <p class="sec-intro">Two published co-authored papers, three manuscripts in preparation, and conference posters are listed on the CV page and on Google Scholar.</p>
-        <ul class="outputs reveal" style="margin-bottom:1.75rem">
-          <li><a href="cv.html#publications"><strong>2</strong><span>co-authored publications in <cite>Foods</cite> and <cite>J. Sci. Food Agric.</cite></span><small>Publications <i class="fas fa-arrow-right"></i></small></a></li>
-          <li><a href="cv.html#publications"><strong>3</strong><span>manuscripts in preparation, two as co-first author</span><small>In preparation <i class="fas fa-arrow-right"></i></small></a></li>
-          <li><a href="cv.html#presentations"><strong>7</strong><span>conference presentations, including ASM Missouri Valley Branch</span><small>Presentations <i class="fas fa-arrow-right"></i></small></a></li>
-          <li><a href="cv.html#teaching"><strong>3</strong><span>guest lectures on systematic review methods and AI tools</span><small>Teaching <i class="fas fa-arrow-right"></i></small></a></li>
-        </ul>
-        <div class="link-row reveal" style="margin-top:0">
-          <a href="cv.html#publications"><i class="fas fa-book-open"></i> Publications</a>
-          <a href="cv.html#presentations"><i class="fas fa-person-chalkboard"></i> Conference presentations</a>
-          <a href="https://scholar.google.com/citations?user=CdDGp14AAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fab fa-google-scholar"></i> Google Scholar</a>
-        </div>
       </section>
 
       <div class="cta-band reveal" style="margin-top:3rem">
@@ -301,6 +221,6 @@
   </footer>
 
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-  <script src="script.js?v=20260930" defer></script>
+  <script src="script.js?v=20261001" defer></script>
 </body>
 </html>

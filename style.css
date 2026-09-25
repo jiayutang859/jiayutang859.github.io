@@ -570,12 +570,7 @@ a.card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: v
 a.contact-card .contact-val { color: var(--accent); }
 .contact-sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.1rem; }
 
-.topic-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 2rem; }
-.topic-cloud li { font-size: 0.9rem; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.4rem 0.95rem; }
-.topic-cloud li i { color: var(--warm); margin-right: 0.4rem; }
 
-.tip { display: flex; gap: 0.9rem; align-items: flex-start; background: var(--warm-lt); border: 1px solid var(--warm-bd); border-radius: 12px; padding: 1rem 1.25rem; font-size: 0.93rem; }
-.tip i { color: var(--warm); margin-top: 0.3rem; }
 
 
 /* ============================================================
@@ -639,6 +634,18 @@ a.contact-card .contact-val { color: var(--accent); }
 }
 .skill-items li:not(:has(.lvl)) { padding-right: 0.85rem; }
 .skill-items img { height: 16px; width: auto; }
+
+/* Research: methods & tools, one small graphic per element */
+.method-layers { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.method-layer { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem 1.6rem; }
+.method-layer h3 { font-size: 0.78rem; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.1rem; padding-bottom: 0.7rem; border-bottom: 1px dashed var(--border); }
+.method-layer h3 i { color: var(--accent); font-size: 1rem; }
+.method-items { display: flex; flex-direction: column; gap: 0.55rem; }
+.method-items li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.93rem; color: var(--ink); line-height: 1.4; }
+.m-ico { flex-shrink: 0; width: 32px; height: 32px; border-radius: 9px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-lt); color: var(--accent); font-size: 0.88rem; }
+.m-ico img { height: 17px; width: auto; }
+.method-layer:nth-child(2) .m-ico, .method-layer:nth-child(4) .m-ico { background: var(--warm-lt); color: var(--warm); }
+.method-layer:nth-child(2) h3 i, .method-layer:nth-child(4) h3 i { color: var(--warm); }
 .skill-note { font-size: 0.85rem; color: var(--muted); margin-top: 0.9rem; }
 
 .foundation { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 1.75rem; padding: 1.75rem; margin-bottom: 1.25rem; align-items: start; }
@@ -1075,7 +1082,8 @@ a.thought:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); tex
   .shelf-section { padding: 3rem 0; }
 
   .band { padding: 3.5rem 0; }
-  .about-top, .contact-layout, .q-lists, .work-grid, .work-grid.two, .converge { grid-template-columns: 1fr; gap: 2rem; }
+  .about-top, .contact-layout, .q-lists, .work-grid, .work-grid.two, .converge, .method-layers { grid-template-columns: 1fr; gap: 2rem; }
+  .method-layers { gap: 1.25rem; }
   .work-grid { gap: 1.5rem; max-width: 520px; margin: 0 auto; }
   .work.wide { grid-template-columns: 1fr; }
   .work.wide .proj-viz { aspect-ratio: 4 / 3; min-height: 0; border-right: none; border-bottom: 1px solid var(--border); }

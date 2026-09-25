@@ -5,10 +5,19 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const $ = id => document.getElementById(id);
 
+  /* Display caps: ten books on the shelf, ten photographs per calendar year. */
+  const BOOK_LIMIT = 10, PHOTOS_PER_YEAR = 10;
+  const books = (C.books || []).slice(0, BOOK_LIMIT);
+  const yearOf = p => String(p.date || '').slice(0, 4);
+  const perYear = {};
+  const photos = [...(C.photos || [])]
+    .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+    .filter(p => { const y = yearOf(p); perYear[y] = (perYear[y] || 0) + 1; return perYear[y] <= PHOTOS_PER_YEAR; });
+
   /* ---- Books: a shelf of covers at their natural proportions ---- */
   const shelf = $('shelf-books');
   if (shelf) {
-    shelf.innerHTML = C.books.map((b, i) => {
+    shelf.innerHTML = books.map((b, i) => {
       const h = [210, 198, 216, 204, 212, 194, 206][i % 7];
       const meta = [b.author, b.year].filter(Boolean).join(' · ');
       const inner = `
@@ -65,7 +74,7 @@
   /* ---- Photographs: editorial masonry + lightbox ---- */
   const gal = $('photo-grid');
   if (gal) {
-    gal.innerHTML = C.photos.map((p, i) => {
+    gal.innerHTML = photos.map((p, i) => {
       const when = p.date ? new Date(p.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : '';
       const cap = [p.caption, p.place, when].filter(Boolean).join(' · ');
       return `<button class="photo" type="button" data-i="${i}" aria-label="Open photograph${when ? ', ' + esc(when) : ''}">
@@ -79,8 +88,8 @@
       const img = box.querySelector('img'), cap = box.querySelector('.lb-cap');
       let cur = 0;
       const show = i => {
-        cur = (i + C.photos.length) % C.photos.length;
-        const p = C.photos[cur];
+        cur = (i + photos.length) % photos.length;
+        const p = photos[cur];
         img.src = p.src; img.alt = p.caption || 'Photograph';
         const when = p.date ? new Date(p.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
         cap.textContent = [p.caption, p.place, when, p.camera && p.lens ? `${p.camera} · ${p.lens}` : ''].filter(Boolean).join('  ·  ');

@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20260930">
+  <link rel="stylesheet" href="style.css?v=20261001">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -49,39 +49,14 @@
       <div class="wrap">
         <span class="eyebrow rise" style="--d:0">Collections</span>
         <h1 class="rise" style="--d:1">Collections</h1>
-        <p class="lede rise" style="--d:2">Books, films, thoughts, and moments I want to keep.</p>
-        <p class="shelf-intro rise" style="--d:3">Outside the lab, I collect ideas through books, films, writing, and photography, with a standing interest in philosophy and in cooking. This is what I spend time with when I am not doing research.</p>
+        <p class="lede rise" style="--d:2">Research is not my only way of understanding the world.</p>
+        <p class="shelf-intro rise" style="--d:3">Much of what I find comes from ordinary life, and I want to keep understanding the world there too.</p>
         <nav class="toc rise" style="--d:4" aria-label="Collections on this page">
+          <a href="#thoughts"><i class="fas fa-pen-nib"></i> Thoughts</a>
           <a href="#books"><i class="fas fa-book"></i> Books</a>
           <a href="#films"><i class="fas fa-clapperboard"></i> Movies &amp; Shows</a>
-          <a href="#thoughts"><i class="fas fa-pen-nib"></i> Thoughts</a>
           <a href="#photography"><i class="fas fa-camera-retro"></i> Photography</a>
         </nav>
-      </div>
-    </section>
-
-    <!-- ===== BOOKS ===== -->
-    <section class="shelf-section" id="books">
-      <div class="wrap">
-        <div class="shelf-hd">
-          <div><span class="eyebrow">Books</span><h2 class="sec-title">On the shelf</h2></div>
-          <p class="shelf-note">Titles and authors only, for now. My own notes will appear under a book once I have written them.</p>
-        </div>
-        <div class="bookshelf-wrap">
-          <div class="bookshelf" id="shelf-books" aria-label="Bookshelf"></div>
-          <div class="ledge" aria-hidden="true"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== MOVIES & SHOWS ===== -->
-    <section class="shelf-section alt" id="films">
-      <div class="wrap">
-        <div class="shelf-hd">
-          <div><span class="eyebrow">Movies &amp; Shows</span><h2 class="sec-title">Cinema shelf</h2></div>
-          <p class="shelf-note">Posters at their own proportions. Hover or focus for the year and kind of thing it is.</p>
-        </div>
-        <div class="cinema" id="shelf-films" aria-label="Films and shows"></div>
       </div>
     </section>
 
@@ -102,12 +77,37 @@
       </div>
     </section>
 
+    <!-- ===== BOOKS ===== -->
+    <section class="shelf-section alt" id="books">
+      <div class="wrap">
+        <div class="shelf-hd">
+          <div><span class="eyebrow">Books</span><h2 class="sec-title">On the shelf</h2></div>
+          <p class="shelf-note">Ten at a time. Titles and authors only, for now; my own notes will appear under a book once I have written them.</p>
+        </div>
+        <div class="bookshelf-wrap">
+          <div class="bookshelf" id="shelf-books" aria-label="Bookshelf"></div>
+          <div class="ledge" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MOVIES & SHOWS ===== -->
+    <section class="shelf-section" id="films">
+      <div class="wrap">
+        <div class="shelf-hd">
+          <div><span class="eyebrow">Movies &amp; Shows</span><h2 class="sec-title">Cinema shelf</h2></div>
+          <p class="shelf-note">Posters at their own proportions. Hover or focus for the year and kind of thing it is.</p>
+        </div>
+        <div class="cinema" id="shelf-films" aria-label="Films and shows"></div>
+      </div>
+    </section>
+
     <!-- ===== PHOTOGRAPHY ===== -->
     <section class="shelf-section alt" id="photography">
       <div class="wrap">
         <div class="shelf-hd">
           <div><span class="eyebrow">Photography</span><h2 class="sec-title">Things I noticed</h2></div>
-          <p class="shelf-note">Moments and details from wherever I happened to be. Dates come from the camera; captions will follow. The full galleries live in the <a href="/studio/">studio</a>.</p>
+          <p class="shelf-note">Up to ten from each year, newest first. Dates come from the camera; captions will follow. The full galleries live in the <a href="/studio/">studio</a>.</p>
         </div>
         <div class="photo-grid" id="photo-grid" aria-label="Photographs"></div>
         <p class="shelf-more"><a class="text-link" href="/studio/">All photographs, by year <i class="fas fa-arrow-right"></i></a></p>
@@ -145,6 +145,6 @@
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="assets/notes/collections.js"></script>
   <script src="assets/notes/notes.js"></script>
-  <script src="script.js?v=20260930" defer></script>
+  <script src="script.js?v=20261001" defer></script>
 </body>
 </html>
