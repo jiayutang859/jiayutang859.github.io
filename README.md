@@ -72,6 +72,14 @@ python3 -m http.server 8767
 Then open <http://localhost:8767>. Opening the files directly (`file://`) mostly
 works, but the 3D antibody needs a local server to load its structure file.
 
+## Visitor counts
+
+Every page loads a small [GoatCounter](https://www.goatcounter.com) script just
+before `</body>`. It sets no cookies and stores no personal data, so the site needs
+no consent banner. The dashboard is at <https://jaspertang859.goatcounter.com>;
+localhost visits are not counted. To remove analytics, delete the
+`data-goatcounter` script block from all ten HTML files.
+
 ## Search engines
 
 Every page carries `<meta name="robots" content="index, follow">`, so the site is
