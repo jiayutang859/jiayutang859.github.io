@@ -59,9 +59,31 @@
       frag.remove();
     }
   }
+  /* Featured notes (e.g. the research philosophy) get a wide card above the rest */
+  const featured = $('thought-featured');
+  if (featured) {
+    const fs = C.longer.filter(n => n.featured);
+    if (fs.length) {
+      featured.innerHTML = fs.map(n => `
+        <${n.link ? `a href="${esc(n.link)}"` : 'article'} class="thought-feature">
+          <div class="tf-txt">
+            <span class="stamp">${esc(n.status)}</span>
+            <h3>${esc(n.title)}</h3>
+            <p>${esc(n.summary)}</p>
+            ${(n.tags || []).length ? `<div class="thought-tags">${n.tags.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
+            ${n.link ? '<span class="work-cta">Read the essay <i class="fas fa-arrow-right"></i></span>' : ''}
+          </div>
+          <div class="tf-eq" aria-hidden="true"><span class="eq-t">A</span><span class="eq-op">+</span><span class="eq-t">B</span><span class="eq-arrow"><small>interaction</small><svg viewBox="0 0 160 14"><path d="M2 7 H152"/><path d="M144 1.5 L154 7 L144 12.5"/></svg><small>context</small></span><span class="eq-t c">C</span></div>
+        </${n.link ? 'a' : 'article'}>`).join('');
+    } else {
+      featured.remove();
+    }
+  }
   const longer = $('thought-longer');
   if (longer) {
-    longer.innerHTML = C.longer.map(n => {
+    const rest = C.longer.filter(n => !n.featured);
+    if (!rest.length) longer.remove();
+    else longer.innerHTML = rest.map(n => {
       const body = `
         <span class="stamp">${esc(n.status)}</span>
         <h3>${esc(n.title)}</h3>

@@ -9,9 +9,9 @@
   if (!isHome || !location.hash) return;
   const map = {
     '#about':        'about.html',
-    '#background':   'cv.html#research',
-    '#publications': 'cv.html#publications',
-    '#experience':   'cv.html#skills',
+    '#background':   'research.html#trajectory',
+    '#publications': 'CV_Jiayu_Tang.pdf',
+    '#experience':   'research.html#methods',
     '#contact':      'contact.html',
   };
   const target = map[location.hash];
@@ -90,6 +90,22 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   });
 }
 
+// --- Collections: books, films, and photographs open from their buttons ---
+document.querySelectorAll('[data-shelf]').forEach(btn => {
+  const shelf = document.getElementById(btn.dataset.shelf);
+  if (!shelf) return;
+  const setOpen = open => {
+    shelf.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+  };
+  btn.addEventListener('click', () => {
+    const open = shelf.hidden;
+    setOpen(open);
+    if (open) shelf.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  });
+  if (location.hash === '#' + shelf.id) setOpen(true);   // deep links still work
+});
+
 // --- Rotating 3D antibody (human IgG1, PDB 1HZH) inside any .mol-panel ---
 (function initMolecule() {
   const el     = document.getElementById('molViewer');
@@ -116,7 +132,8 @@ if ('IntersectionObserver' in window && !reduceMotion) {
       viewer.setStyle({ chain: 'L' }, { cartoon: { color: '#f59e0b' } });
       viewer.setStyle({ chain: 'M' }, { cartoon: { color: '#fbbf24' } });
       viewer.zoomTo();
-      viewer.zoom(0.95);
+      // Tall panels (the featured card) need a little more room around the molecule
+      viewer.zoom(el.clientHeight > el.clientWidth * 1.1 ? 0.6 : 0.95);
       viewer.render();
 
       if (!reduceMotion) viewer.spin('y', 0.5);

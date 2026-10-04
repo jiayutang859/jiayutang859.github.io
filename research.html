@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Jiayu Tang</title>
-  <meta name="description" content="Jiayu Tang's research as a computational and experimental antibody researcher: how framework context shapes predicted antibody–antigen recognition, the computational, wet-lab, statistical, and clinical methods behind it, and the microbiome and food science research that shaped this approach.">
+  <meta name="description" content="Jiayu Tang's research path through biological interactions (food and bacteria, diet, gut microbiome and host, antibody and antigen), his current work on framework context in antibody–antigen recognition, the methods behind it, and the earlier projects that shaped it.">
   <meta name="author" content="Jiayu Tang">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jiayutang859.github.io/research.html">
   <meta property="og:title" content="Research | Jiayu Tang">
-  <meta property="og:description" content="Current research, methods, and research foundations of an integrated approach across computational discovery, wet-lab validation, statistical interpretation, and clinical translation.">
+  <meta property="og:description" content="An evolving research path through biological interactions, from food and bacteria to the gut microbiome and human hosts to antibodies and antigens, with current research and methods.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jiayutang859.github.io/research.html">
 
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20261004">
+  <link rel="stylesheet" href="style.css?v=20261008">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -26,7 +26,6 @@
     <div class="nav-wrap">
       <a class="brand" href="./">
         <span class="brand-name">Jiayu Tang</span>
-        <span class="brand-role">Computational &amp; experimental antibody research · Wang Lab, UF</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="siteNav"><i class="fas fa-bars"></i></button>
       <nav class="site-nav" id="siteNav" aria-label="Main">
@@ -34,9 +33,8 @@
           <li><a href="./">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="research.html" aria-current="page">Research</a></li>
-          <li><a href="notes.html">Collections</a></li>
-          <li><a href="cv.html">CV</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="notes.html">Collections</a></li>
         </ul>
       </nav>
     </div>
@@ -44,24 +42,77 @@
 
   <main id="main">
 
-    <section class="page-hero">
-      <div class="wrap">
-        <span class="eyebrow rise" style="--d:0">Research</span>
-        <h1 class="rise" style="--d:1">Current research, methods, and foundations</h1>
-        <p class="lede rise" style="--d:2">I am a computational and experimental antibody researcher developing an integrated approach across computational discovery, wet-lab validation, statistical interpretation, and clinical translation. Below: my current research, the methods I work with, and the earlier research that built each part of that approach.</p>
-        <nav class="toc rise" style="--d:3" aria-label="Sections on this page">
-          <a href="#current"><i class="fas fa-dna"></i> Current research</a>
-          <a href="#methods"><i class="fas fa-toolbox"></i> Methods</a>
-          <a href="#foundations"><i class="fas fa-layer-group"></i> Research foundations</a>
-        </nav>
-      </div>
-    </section>
 
     <div class="wrap">
 
-      <!-- ===== 1. CURRENT RESEARCH ===== -->
+      <!-- ===== 1. RESEARCH PATH ===== -->
+      <section class="r-section" id="path">
+        <span class="eyebrow">1 · Research path</span>
+        <h1 class="sec-title">An evolving path through biological interactions</h1>
+        <p class="sec-intro">Three systems, three kinds of interaction. The partners changed, from grains and bacteria to whole human hosts to single antibodies, but the question stayed the same: what outcome does an interaction produce, and can it be improved?</p>
+        <div class="path-graph reveal">
+          <svg class="path-line" viewBox="0 0 1000 640" preserveAspectRatio="none" aria-hidden="true"><path d="M130 510 C 230 520, 330 420, 445 379 C 560 338, 680 260, 795 205"/></svg>
+
+          <figure class="pbub b1" style="--bc:#7cc995;--bt:#f1faf3">
+            <svg class="pb-art" viewBox="0 0 240 130" role="img" aria-label="Millet grains and lactic acid bacteria producing phenolic, antioxidant nutrients">
+              <g class="grain"><circle cx="22" cy="92" r="7"/><circle cx="36" cy="92" r="7"/><circle cx="50" cy="92" r="7"/><circle cx="29" cy="80" r="7"/><circle cx="43" cy="80" r="7"/><circle cx="36" cy="68" r="7"/></g>
+              <text class="pb-op" x="72" y="90">+</text>
+              <g class="bact b-a"><rect x="88" y="58" width="42" height="15" rx="7.5" transform="rotate(-16 109 65)"/><circle class="dotin" cx="100" cy="68" r="1.8"/><circle class="dotin" cx="112" cy="64" r="1.8"/><path class="flag" d="M130 58 q6 -6 12 -2"/></g>
+              <g class="bact b-b"><rect x="94" y="84" width="42" height="15" rx="7.5" transform="rotate(12 115 91)"/><circle class="dotin" cx="108" cy="89" r="1.8"/><circle class="dotin" cx="121" cy="92" r="1.8"/><path class="flag" d="M95 86 q-7 4 -11 0"/></g>
+              <path class="pb-arrow" d="M146 80 H166"/><path class="pb-head" d="M163 75 L169 80 L163 85"/>
+              <g class="ring r-a"><polygon points="192,50 203,56.5 203,69.5 192,76 181,69.5 181,56.5"/><circle cx="192" cy="63" r="5.5"/><text class="pb-oh" x="205" y="50">OH</text></g>
+              <g class="ring r-b"><polygon points="214,82 223.5,87.5 223.5,98.5 214,104 204.5,98.5 204.5,87.5"/><circle cx="214" cy="93" r="4.6"/></g>
+              <path class="spark s1" d="M226 60 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 z"/>
+              <path class="spark s2" d="M182 92 l1.5 4 l4 1.5 l-4 1.5 l-1.5 4 l-1.5 -4 l-4 -1.5 l4 -1.5 z"/>
+              <text class="pb-lbl" x="36" y="122">millet</text><text class="pb-lbl" x="112" y="122">bacteria</text><text class="pb-lbl" x="204" y="122">nutrients</text>
+            </svg>
+            <figcaption><span class="pb-num">1</span><strong>Food – bacteria</strong><span class="pb-out"><i class="fas fa-arrow-right"></i> enriched functional nutrients</span><small>NWAFU · 2022–2023</small></figcaption>
+          </figure>
+
+          <figure class="pbub b2" style="--bc:#e48fb1;--bt:#fdf2f6">
+            <svg class="pb-art" viewBox="0 0 260 130" role="img" aria-label="A bowl of beans feeding the gut microbiome inside a human host, with improving health markers">
+              <path class="bowl" d="M8 68 Q 44 112 80 68 Z"/>
+              <g class="bean"><ellipse class="pk" cx="26" cy="63" rx="7" ry="5" transform="rotate(-20 26 63)"/><ellipse class="wh" cx="41" cy="60" rx="7" ry="5" transform="rotate(15 41 60)"/><ellipse class="pk" cx="56" cy="62" rx="7" ry="5" transform="rotate(-8 56 62)"/><ellipse class="wh" cx="34" cy="53" rx="6.5" ry="4.6"/><ellipse class="pk" cx="49" cy="52" rx="6.5" ry="4.6" transform="rotate(25 49 52)"/></g>
+              <path class="pb-arrow" d="M86 72 H100"/><path class="pb-head" d="M97 67.5 L102 72 L97 76.5"/>
+              <path class="gut" d="M112 44 C 112 30, 152 30, 152 44 C 152 58, 114 56, 114 70 C 114 86, 154 84, 152 98"/>
+              <path class="gut-in" d="M112 44 C 112 30, 152 30, 152 44 C 152 58, 114 56, 114 70 C 114 86, 154 84, 152 98"/>
+              <g class="mic"><circle class="m1" cx="124" cy="36" r="3"/><rect class="m2" x="139" y="38" width="9" height="4.5" rx="2.2"/><circle class="m3" cx="133" cy="56" r="2.6"/><rect class="m1" x="118" y="70" width="9" height="4.5" rx="2.2"/><circle class="m2" cx="136" cy="80" r="3"/><circle class="m3" cx="148" cy="92" r="2.6"/></g>
+              <path class="pb-arrow" d="M162 72 H176"/><path class="pb-head" d="M173 67.5 L178 72 L173 76.5"/>
+              <g class="host"><circle cx="196" cy="44" r="9"/><path d="M180 104 V76 a16 16 0 0 1 32 0 V104 Z"/></g>
+              <path class="heart" d="M196 92 C 186 85, 186 76, 192 76 C 194.5 76, 196 78, 196 79.5 C 196 78, 197.5 76, 200 76 C 206 76, 206 85, 196 92 Z"/>
+              <path class="axis" d="M220 60 V100 H254"/>
+              <polyline class="trend" points="224,94 232,88 240,90 251,70"/><path class="trend-hd" d="M245 70 L252 68 L250 75"/>
+              <text class="pb-lbl" x="44" y="122">diet</text><text class="pb-lbl" x="133" y="122">gut microbiome</text><text class="pb-lbl" x="196" y="122">host</text><text class="pb-lbl" x="238" y="122">health</text>
+            </svg>
+            <figcaption><span class="pb-num">2</span><strong>Diet – gut microbiome – host</strong><span class="pb-out"><i class="fas fa-arrow-right"></i> health outcome improvements</span><small>UNL · 2024–2026</small></figcaption>
+          </figure>
+
+          <figure class="pbub b3" style="--bc:#ee8a2a;--bt:#fff5ea">
+            <svg class="pb-art" viewBox="0 0 260 150" role="img" aria-label="An antibody binding a viral antigen, leading to an improved, protective immune response">
+              <g class="ab">
+                <path class="hc" d="M92 140 V98 L60 60 M92 98 L124 60"/>
+                <path class="lc" d="M69.2 84.8 L53.2 65.8 M114.8 84.8 L130.8 65.8"/>
+                <circle class="cdr" cx="58" cy="57" r="4"/><circle class="cdr" cx="126" cy="57" r="4"/>
+              </g>
+              <circle class="bind" cx="129" cy="56" r="7"/>
+              <g class="virus">
+                <g class="spikes"><path d="M146 22 V14 M160 30 L166 25 M164 44 H172 M160 58 L166 63 M146 66 V73 M132 30 L126 25 M128 44 H121"/><circle cx="146" cy="13" r="2.4"/><circle cx="167" cy="24" r="2.4"/><circle cx="173" cy="44" r="2.4"/><circle cx="167" cy="64" r="2.4"/><circle cx="146" cy="74" r="2.4"/><circle cx="125" cy="24" r="2.4"/><circle cx="120" cy="44" r="2.4"/></g>
+                <circle class="core" cx="146" cy="44" r="16"/>
+                <circle class="ep" cx="138" cy="52" r="3.5"/>
+              </g>
+              <path class="pb-arrow" d="M176 92 H198"/><path class="pb-head" d="M195 87 L201 92 L195 97"/>
+              <path class="shield" d="M228 64 L248 72 V90 C 248 104, 240 112, 228 118 C 216 112, 208 104, 208 90 V72 Z"/>
+              <path class="chk" d="M219 90 l6 6 l11 -12"/>
+              <text class="pb-lbl" x="64" y="146">antibody</text><text class="pb-lbl" x="180" y="12">antigen</text><text class="pb-lbl" x="228" y="140">immune response</text>
+            </svg>
+            <figcaption><span class="pb-num">3</span><strong>Antibody – antigen</strong><span class="pb-out"><i class="fas fa-arrow-right"></i> immune response improvements</span><small>UF · from Oct 2026</small></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== 2. CURRENT RESEARCH ===== -->
       <section class="r-section" id="current">
-        <span class="eyebrow">1 · Current research</span>
+        <span class="eyebrow">2 · Current research</span>
         <article class="card project current" id="antibody-frameworks">
           <header class="project-hd">
             <div>
@@ -96,11 +147,11 @@
         </article>
       </section>
 
-      <!-- ===== 2. METHODS & TOOLS ===== -->
+      <!-- ===== 3. METHODS ===== -->
       <section class="r-section" id="methods">
-        <span class="eyebrow">2 · Methods</span>
+        <span class="eyebrow">3 · Methods</span>
         <h2 class="sec-title">What I work with</h2>
-        <p class="sec-intro">Grouped by capability rather than by software: tools change, and AI coding agents now carry much of the implementation. What stays is knowing how to connect the layers into one study. The detailed list is on the <a href="cv.html#skills">CV</a>.</p>
+        <p class="sec-intro">Grouped by capability rather than by software: tools change, and AI coding agents now carry much of the implementation. What stays is knowing how to connect the layers into one study. The detailed list is in my <a href="CV_Jiayu_Tang.pdf" target="_blank" rel="noopener">CV (PDF)</a>.</p>
         <div class="method-layers reveal">
           <section class="method-layer wide">
             <h3><i class="fas fa-bacterium"></i> Biological domains</h3>
@@ -154,44 +205,88 @@
         </div>
       </section>
 
-      <!-- ===== 3. RESEARCH FOUNDATIONS ===== -->
-      <section class="r-section" id="foundations">
-        <span class="eyebrow">3 · Research foundations</span>
-        <h2 class="sec-title">Previous research, and what each stage contributed</h2>
-        <p class="sec-intro">These projects studied different biological questions from my current work. They are here because each one changed how I do research now.</p>
+      <!-- ===== 4. TRAJECTORY & PREVIOUS RESEARCH (moved from About, merged with research foundations) ===== -->
+      <section class="r-section" id="trajectory">
+        <span class="eyebrow">4 · Trajectory &amp; previous research</span>
+        <h2 class="sec-title">Breadth first, then depth</h2>
+        <p class="sec-intro">The early years were wide, almost all on the observing and understanding side. My work at UF is adding depth in prediction and design. Each stage below is described by what it taught me, with the projects behind it; the full chronology is in my <a href="CV_Jiayu_Tang.pdf" target="_blank" rel="noopener">CV (PDF)</a>.</p>
 
-        <article class="card foundation reveal" id="pulses-microbiome">
-          <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
-          <div>
-            <span class="pill warm">M.Sc. research</span><span class="pill muted">Jul 2024 – Jul 2026</span>
-            <h3>Human clinical trial and biobank: dietary pulses, the gut microbiome, and cardiometabolic health</h3>
-            <p class="project-where">Deehan Lab · Dept. of Food Science &amp; Technology · University of Nebraska–Lincoln · with Dr. Edward Deehan</p>
-            <p>Coordinated a 12-week, three-phase randomized crossover trial on dry bean market classes, the gut microbiome, and cardiometabolic markers (IRB-approved, ClinicalTrials.gov-registered), plus a human biobank study. Co-developed an NIH-style protocol and consent, authored 4 SOPs and 2 clinical workflows, led 200+ clinic visits, and collected and processed microbiome, blood, 24-hour blood pressure, and dietary data, including bench processing of blood and stool samples for biobanking and PCR. Manuscript in preparation; preliminary results presented at the ASM Missouri Valley Branch meeting and Nebraska Research Days. <a href="cv.html#presentations">See presentations</a>.</p>
-            <p class="contrib"><strong>Contributed:</strong> experimental design, controls, participant variability, wet-lab sample handling, data provenance from consent to analysis, and GCP-level research operations.</p>
-          </div>
-        </article>
+        <div class="stage-hd"><span class="t-tag warm" style="margin:0">Past · breadth</span><h3>Observe and understand</h3></div>
+        <ol class="journey">
+          <li class="stop reveal" id="stage-observe" style="--c:var(--s1);--c-lt:var(--s1-lt)">
+            <span class="stop-dot"><i class="fas fa-microscope"></i></span>
+            <div class="card">
+              <div class="stop-hd"><h3>Observe</h3><span class="stop-when">2022 – 2023</span></div>
+              <div class="stop-where"><img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal"><span>Northwest A&amp;F University · with Dr. Chunxia Xiao</span></div>
+              <ul class="stop-chips" aria-label="Fields"><li>Food science</li><li>Fermentation</li><li>Bioactive compounds</li><li>Assays &amp; controls</li></ul>
+              <p>Food science was where I first watched a biological effect exist only next to its control, and disappear when the assay behind it was not understood. It taught me to distrust a number until I knew what the instrument was actually reporting. That habit of careful measurement, and of asking what a measurement can and cannot claim, has followed me into every project since.</p>
+              <div class="stop-projects">
+                <article class="stop-proj" id="earlier">
+                  <div class="sp-pills"><span class="pill warm">Undergraduate research</span><span class="pill muted">Apr 2022 – Jun 2023</span></div>
+                  <h4>Fermentation and functional foods</h4>
+                  <p class="project-where">Xiao Lab · College of Food Science &amp; Engineering · Northwest A&amp;F University · with Dr. Chunxia Xiao</p>
+                  <p>In vitro fermentation of proso millet with three lactic acid bacteria, measuring phenolic profile, antioxidant activity, and starch digestibility; spectrophotometric colour analysis of gluten-free millet cakes; contribution to a review on coarse grains and type 2 diabetes. Two co-authored publications in <cite>Foods</cite> and the <cite>Journal of the Science of Food and Agriculture</cite> (2023).</p>
+                  <p class="contrib"><strong>Contributed:</strong> measurement discipline; assays, replicates, and controls as the basis of any claimed effect.</p>
+                </article>
+              </div>
+            </div>
+          </li>
 
-        <article class="card foundation reveal" id="systematic-review">
-          <div class="logo-slot"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"></div>
-          <div>
-            <span class="pill warm">M.Sc. research</span><span class="pill muted">2024 – 2026</span>
-            <h3>Systematic review with an LLM agent for data extraction</h3>
-            <p class="project-where">Deehan Lab · University of Nebraska–Lincoln</p>
-            <p>Led a PICOS-based systematic review of pulse intervention trials across 1,800+ references from three databases. A large-language-model agent we built performed data extraction, and every extracted value was verified by two human reviewers before it was relied on. Gave three guest lectures on search strategy, PICOS design, and AI/ML tools for screening and extraction.</p>
-            <p class="contrib"><strong>Contributed:</strong> quantitative reasoning about heterogeneity and bias; my first computational method that had to earn trust the way an assay does; habits for documenting and checking automated steps.</p>
-          </div>
-        </article>
+          <li class="stop reveal" id="stage-understand" style="--c:var(--s2);--c-lt:var(--s2-lt)">
+            <span class="stop-dot"><i class="fas fa-diagram-project"></i></span>
+            <div class="card">
+              <div class="stop-hd"><h3>Understand</h3><span class="stop-when">2023 – 2026</span></div>
+              <div class="stop-where"><img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln"><span>University of Nebraska–Lincoln · with Dr. Edward Deehan</span></div>
+              <ul class="stop-chips" aria-label="Fields"><li>Human nutrition</li><li>Gut microbiome</li><li>Clinical trials</li><li>IRB/GCP protocols</li><li>Wet lab</li><li>Systematic review</li><li>Statistics</li></ul>
+              <p>Human nutrition and the gut microbiome showed me biology as a web of interactions: diet meeting microbes, microbes meeting their host, and context deciding what any single intervention does. The same food produced different responders, and reading hundreds of studies side by side made heterogeneity impossible to ignore. I stopped thinking in ingredients and started thinking in interactions, contexts, and the study designs that make an effect interpretable.</p>
+              <div class="stop-projects">
+                <article class="stop-proj" id="pulses-microbiome">
+                  <div class="sp-pills"><span class="pill warm">M.Sc. research</span><span class="pill muted">Jul 2024 – Jul 2026</span></div>
+                  <h4>Human clinical trial and biobank: dietary pulses, the gut microbiome, and cardiometabolic health</h4>
+                  <p class="project-where">Deehan Lab · Dept. of Food Science &amp; Technology · University of Nebraska–Lincoln · with Dr. Edward Deehan</p>
+                  <p>Coordinated a 12-week, three-phase randomized crossover trial on dry bean market classes, the gut microbiome, and cardiometabolic markers (IRB-approved, ClinicalTrials.gov-registered), plus a human biobank study. Co-developed an NIH-style protocol and consent, authored 4 SOPs and 2 clinical workflows, led 200+ clinic visits, and collected and processed microbiome, blood, 24-hour blood pressure, and dietary data, including bench processing of blood and stool samples for biobanking and PCR. Manuscript in preparation; preliminary results presented at the ASM Missouri Valley Branch meeting and Nebraska Research Days. <a href="CV_Jiayu_Tang.pdf" target="_blank" rel="noopener">See the CV for presentations</a>.</p>
+                  <p class="contrib"><strong>Contributed:</strong> experimental design, controls, participant variability, wet-lab sample handling, data provenance from consent to analysis, and GCP-level research operations.</p>
+                </article>
+                <article class="stop-proj" id="systematic-review">
+                  <div class="sp-pills"><span class="pill warm">M.Sc. research</span><span class="pill muted">2024 – 2026</span></div>
+                  <h4>Systematic review with an LLM agent for data extraction</h4>
+                  <p class="project-where">Deehan Lab · University of Nebraska–Lincoln</p>
+                  <p>Led a PICOS-based systematic review of pulse intervention trials across 1,800+ references from three databases. A large-language-model agent we built performed data extraction, and every extracted value was verified by two human reviewers before it was relied on. Gave three guest lectures on search strategy, PICOS design, and AI/ML tools for screening and extraction.</p>
+                  <p class="contrib"><strong>Contributed:</strong> quantitative reasoning about heterogeneity and bias; my first computational method that had to earn trust the way an assay does; habits for documenting and checking automated steps.</p>
+                </article>
+              </div>
+            </div>
+          </li>
+        </ol>
 
-        <article class="card foundation reveal" id="earlier">
-          <div class="logo-slot"><img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal"></div>
-          <div>
-            <span class="pill warm">Undergraduate research</span><span class="pill muted">Apr 2022 – Jun 2023</span>
-            <h3>Fermentation and functional foods</h3>
-            <p class="project-where">Xiao Lab · College of Food Science &amp; Engineering · Northwest A&amp;F University · with Dr. Chunxia Xiao</p>
-            <p>In vitro fermentation of proso millet with three lactic acid bacteria, measuring phenolic profile, antioxidant activity, and starch digestibility; spectrophotometric colour analysis of gluten-free millet cakes; contribution to a review on coarse grains and type 2 diabetes. Two co-authored publications in <cite>Foods</cite> and the <cite>Journal of the Science of Food and Agriculture</cite> (2023).</p>
-            <p class="contrib"><strong>Contributed:</strong> measurement discipline; assays, replicates, and controls as the basis of any claimed effect.</p>
-          </div>
-        </article>
+        <div class="stage-hd"><span class="t-tag" style="margin:0">Current · depth</span><h3>Predict and design</h3></div>
+        <ol class="journey">
+          <li class="stop now reveal" id="stage-predict" style="--c:var(--s3);--c-lt:var(--s3-lt)">
+            <span class="stop-dot"><i class="fas fa-chart-line"></i></span>
+            <div class="card">
+              <div class="stop-hd"><h3>Model &amp; predict</h3><span class="stop-when">Oct 2026 – now</span></div>
+              <div class="stop-where"><img src="assets/logos/uf.svg" alt="University of Florida"><span>Wang Lab · Dept. of Infectious Diseases &amp; Immunology · with Dr. Yiquan Wang</span></div>
+              <ul class="stop-chips" aria-label="Fields"><li>Computational immunology</li><li>Structure prediction</li><li>Antibody–antigen recognition</li><li>AI-agent workflows</li></ul>
+              <p>Experiments had taught me their own limits: too few people, too few conditions, too little of the design space explored before committing to a measurement. Computation became the way to widen what I could ask, on the condition that a prediction earns trust the way an assay does, with controls, replicates, and provenance. Antibody–antigen recognition is where I am learning that discipline now, because the objects are defined and a prediction can be checked against a known structure.</p>
+              <p class="stop-link"><a class="text-link" href="#current">The current project, in detail <i class="fas fa-arrow-up"></i></a></p>
+            </div>
+          </li>
+
+          <li class="stop now reveal" id="stage-design" style="--c:var(--s5);--c-lt:var(--s5-lt)">
+            <span class="stop-dot"><i class="fas fa-sliders"></i></span>
+            <div class="card">
+              <div class="stop-hd"><h3>Modulate &amp; engineer</h3><span class="stop-when">developing</span></div>
+              <ul class="stop-chips" aria-label="Fields"><li>Antibody engineering</li><li>Protein design</li><li>Generative design</li></ul>
+              <p>A prediction is only worth something if it can change something. Turning validated factors into a redesigned molecule is the stage I have the least experience in, and the one I am now training toward. It closes the loop: a designed molecule, like a changed diet, becomes a new interaction to observe.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="affil-row" style="margin-top:2.5rem" aria-label="Institutions">
+          <img src="assets/logos/uf.svg" alt="University of Florida">
+          <img src="assets/logos/unl.svg" alt="University of Nebraska–Lincoln">
+          <img src="assets/logos/nwafu.png" alt="Northwest A&amp;F University" class="seal">
+        </div>
       </section>
 
       <div class="cta-band reveal" style="margin-top:3rem">
@@ -201,7 +296,7 @@
         </div>
         <div class="btn-row">
           <a href="contact.html" class="btn btn-solid"><i class="fas fa-envelope"></i> Contact</a>
-          <a href="cv.html" class="btn btn-outline"><i class="fas fa-file-lines"></i> Full CV</a>
+          <a href="CV_Jiayu_Tang.pdf" class="btn btn-outline" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Full CV (PDF)</a>
         </div>
       </div>
 
@@ -212,10 +307,9 @@
     <div class="wrap">
       <div>
         <div class="footer-name">Jiayu Tang</div>
-        <div>Wang Lab · University of Florida · Gainesville, FL</div>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <a href="about.html">About</a><a href="research.html">Research</a><a href="notes.html">Collections</a><a href="cv.html#publications">Publications</a><a href="cv.html">CV</a><a href="contact.html">Contact</a><a href="/studio/">Studio</a>
+        <a href="about.html">About</a><a href="research.html">Research</a><a href="contact.html">Contact</a><a href="notes.html">Collections</a>
       </nav>
       <div class="footer-social">
         <a href="mailto:jasper.tang859@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -228,7 +322,7 @@
   </footer>
 
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-  <script src="script.js?v=20261001" defer></script>
+  <script src="script.js?v=20261008" defer></script>
   <!-- Visitor counts: GoatCounter (no cookies, no personal data, so no consent banner). Dashboard: https://jaspertang859.goatcounter.com -->
   <script data-goatcounter="https://jaspertang859.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>

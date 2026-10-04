@@ -7,7 +7,8 @@
               language, note (your own words, shown when present), link (optional)
    films[]    title, originalTitle?, creator, year, type, tags[], poster, note, link?
    thoughts[] date (YYYY-MM-DD), text (a sentence or a short paragraph), tags[]
-   longer[]   longer notes: title, summary, tags[], status ("In draft" or a date), link
+   longer[]   longer notes: title, summary, tags[], status ("In draft" or a date), link,
+              featured? (true = wide card shown above the others)
    photos[]   src, w, h, date, camera, lens, caption, place (leave "" when unknown)
 
    Display caps in notes.js: the shelf shows the first 10 books; the gallery shows
@@ -227,54 +228,15 @@ window.COLLECTIONS = {
 
   longer: [
   {
-    "title": "What a Clinical Trial Taught Me About Computational Biology",
-    "summary": "Controls, confounding, adherence, and data provenance are not administrative details in a human study. This note is about how those habits transfer to structure prediction, and where they need translating.",
+    "title": "From Interaction to Outcome",
+    "summary": "My research philosophy. Functional foods, the gut microbiome, clinical trials, and antibodies kept returning me to one question: why does an interaction produce one outcome rather than another, and can we change it? With the five-stage cycle I use to work on it: observe, understand, model and predict, validate, modulate.",
     "tags": [
-      "Essay",
-      "Research practice"
+      "Research philosophy",
+      "Essay"
     ],
-    "status": "In draft",
-    "link": ""
-  },
-  {
-    "title": "Prediction Is Not Validation: Using AI Tools as Evidence",
-    "summary": "A model output is evidence with uncertainty, not a result. What it takes to treat AI tools as assays: controls, replicates, applicability domains, and knowing when not to automate.",
-    "tags": [
-      "Essay",
-      "Uncertainty"
-    ],
-    "status": "In draft",
-    "link": ""
-  },
-  {
-    "title": "What I Am Learning About Antibody Frameworks and Epitope Geometry",
-    "summary": "A beginner's working notes on why the scaffold around the CDRs might matter more than it seems, and what changes when you hold the loops fixed and swap everything else.",
-    "tags": [
-      "Research note",
-      "Antibody engineering"
-    ],
-    "status": "In draft",
-    "link": ""
-  },
-  {
-    "title": "Notes on Structure Prediction for Biomedical Research",
-    "summary": "What confidence scores do and don't tell you, why native controls matter, and practical lessons from running antibody–antigen predictions at scale.",
-    "tags": [
-      "Research note",
-      "Structure prediction"
-    ],
-    "status": "In draft",
-    "link": ""
-  },
-  {
-    "title": "How I Think About Interdisciplinary Biomedical Science",
-    "summary": "Wet lab, clinical trials, bioinformatics, and AI each have their own standards of evidence. This note is about what I've found transfers between them, and what doesn't.",
-    "tags": [
-      "Essay",
-      "Interdisciplinary science"
-    ],
-    "status": "In draft",
-    "link": ""
+    "status": "Oct 2026",
+    "featured": true,
+    "link": "notes/from-interaction-to-outcome.html"
   }
 ],
 

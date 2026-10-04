@@ -19,7 +19,6 @@ Live at <https://jiayutang859.github.io>.
 | `about.html` | Short "In brief" bio with photo, one Trajectory section (four stage cards, each with field chips and a three-sentence note on what it taught), and a closing "Where it converges" paragraph with the mini loop (non-research interests live on Collections) |
 | `research.html` | Current research (objective + tools & methods only), Methods & tools (four illustrated layers, one small icon per element), research foundations (project anchors used by the Home cards). Publications live on the CV page |
 | `notes.html` | Collections (nav label "Collections"; the URL stays notes.html): thoughts first, then a bookshelf, a cinema shelf, and a photo gallery, all rendered from `assets/notes/collections.js` |
-| `cv.html` | Full CV: education, research, publications, presentations, awards, layered skills with proficiency labels, teaching, service, certifications |
 | `contact.html` | A single list of contact cards: email, LinkedIn, GitHub, Google Scholar, resume, institution |
 | `studio/` | Photography site (separate design, see `studio/README.md`) |
 
@@ -28,7 +27,7 @@ Live at <https://jiayutang859.github.io>.
 | File | Purpose |
 |------|---------|
 | `style.css` | All styles. Colours and fonts are CSS variables at the top (`--accent`, `--warm`, `--paper`, …) |
-| `script.js` | Mobile menu, scroll reveal, CV section highlighting, back-to-top, the 3D antibody inside any `.mol-panel`, and redirects from old single-page links (`/#publications` → `cv.html#publications`) |
+| `script.js` | Mobile menu, scroll reveal, back-to-top, the 3D antibody inside any `.mol-panel`, and redirects from old single-page links (`/#publications` → the CV PDF) |
 | `Resume_Jiayu_Tang.pdf` / `CV_Jiayu_Tang.pdf` | Downloadable resume and full CV |
 | `headshot.jpg` | Portrait (Home hero, social previews) |
 | `assets/graduation-ms.jpg` | Graduation portrait (About page); the full-resolution `Graduation_MS.JPG` is gitignored |

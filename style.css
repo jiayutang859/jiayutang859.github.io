@@ -912,6 +912,7 @@ a.work:hover .work-cta i { transform: translateX(3px); }
 .connect-title .dot { color: var(--accent); }
 .connect .sec-intro { margin-bottom: 2.25rem; }
 .connect-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.connect-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
 .connect-card {
   display: flex; flex-direction: column; gap: 0.35rem; height: 100%;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.4rem 1.3rem;
@@ -1162,3 +1163,225 @@ a.thought:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); tex
   .sr .d.in { fill: var(--accent); }
   .rise { opacity: 1; transform: none; }
 }
+
+
+/* ============================================================
+   HOME — CURRENT RESEARCH FOCUS
+   ============================================================ */
+.focus-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 2.5rem; align-items: center; }
+.focus-statement { font-family: var(--serif); font-size: clamp(1.35rem, 2.3vw, 1.8rem); line-height: 1.42; color: var(--ink); margin-top: 0.6rem; }
+.focus-statement em { font-style: normal; font-weight: 600; color: var(--accent); }
+.focus-fig { margin: 0; }
+.focus-art { width: 100%; height: auto; display: block; overflow: visible; }
+.focus-art text { font-family: var(--sans); }
+.focus-art .fa-glow { fill: var(--accent-lt); opacity: 0.7; }
+.focus-art .fa-lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; }
+.focus-art .fa-lbl.seq { fill: var(--s1); } .focus-art .fa-lbl.str { fill: var(--s3); } .focus-art .fa-lbl.ctx { fill: #7c5cd6; } .focus-art .fa-lbl.ag { fill: #d9573e; }
+.focus-art .fa-cap { font-size: 10.5px; fill: var(--muted); }
+.focus-art .fa-beads circle { fill: #fde4cc; stroke: var(--s1); stroke-width: 1.6; }
+.focus-art .fa-beads .mut { animation: faMut 4s ease-in-out infinite; }
+.focus-art .fa-beads .m2 { animation-delay: -2s; }
+.focus-art .fa-lead { fill: none; stroke-width: 1.6; stroke-dasharray: 3 4; }
+.focus-art .fa-lead.seq { stroke: var(--s1); } .focus-art .fa-lead.str { stroke: var(--s3); } .focus-art .fa-lead.ctx { stroke: #7c5cd6; }
+.focus-art .fa-ctx { fill: rgba(124, 92, 214, 0.1); stroke: #7c5cd6; stroke-width: 1.6; stroke-dasharray: 5 5; animation: faDash 6s linear infinite; }
+.focus-art .fa-ab .hc { fill: none; stroke: #2563eb; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+.focus-art .fa-ab .lc { fill: none; stroke: #f59e0b; stroke-width: 10; stroke-linecap: round; }
+.focus-art .fa-ab .hinge { fill: #fff; stroke: #1b3f8f; stroke-width: 2; }
+.focus-art .fa-ab .cdr { fill: #22a06b; stroke: #fff; stroke-width: 2.5; }
+.focus-art .fa-ag { animation: faDock 4.5s ease-in-out infinite; }
+.focus-art .fa-ag .core { fill: #f6b3a6; stroke: #d9573e; stroke-width: 2.4; }
+.focus-art .fa-ag .sp path { fill: none; stroke: #d9573e; stroke-width: 2.4; stroke-linecap: round; }
+.focus-art .fa-ag .sp circle { fill: #d9573e; }
+.focus-art .fa-ag .epi { fill: #fff; stroke: #d9573e; stroke-width: 2; }
+.focus-art .fa-bind { fill: #22a06b; opacity: 0; transform-box: fill-box; transform-origin: center; animation: faBind 4.5s ease-out infinite; }
+.focus-art .fa-arrow { fill: none; stroke: var(--muted); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.focus-art .fa-arrow.thin { stroke-width: 2; }
+.focus-art .fa-out rect { fill: var(--surface); stroke: var(--accent-bd); stroke-width: 1.5; }
+.focus-art .fa-out text, .focus-art .fa-goal text { font-size: 12.5px; font-weight: 700; }
+.focus-art .fa-out text { fill: var(--ink); }
+.focus-art .fa-out .ok { fill: #22a06b; }
+.focus-art .fa-out .okc { fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.focus-art .fa-goal rect { fill: var(--accent); }
+.focus-art .fa-goal text { fill: #fff; }
+.focus-art .fa-goal .wand { fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; }
+.focus-art .fa-goal .star { fill: #fde68a; transform-box: fill-box; transform-origin: center; animation: twinkle 2.4s ease-in-out infinite; }
+@keyframes faMut { 0%, 35% { fill: #fde4cc; } 50%, 85% { fill: #22a06b; } 100% { fill: #fde4cc; } }
+@keyframes faDash { to { stroke-dashoffset: -40; } }
+@keyframes faDock { 0%, 100% { transform: translate(10px, -10px); } 40%, 80% { transform: translate(0, 0); } }
+@keyframes faBind { 0%, 40% { opacity: 0; transform: scale(0.4); } 50% { opacity: 0.6; } 80%, 100% { opacity: 0; transform: scale(2.4); } }
+
+/* Selected work — the current project, featured large */
+.work.wide.feature { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr); }
+.work.wide.feature .proj-viz { min-height: 580px; }
+.work.wide.feature .work-body { padding: 2.2rem 2.5rem; gap: 0.85rem; justify-content: flex-start; }
+.work.wide.feature .work-body h3 { font-size: 1.7rem; }
+.work.wide.feature .work-body > p { color: var(--text); font-size: 0.98rem; }
+.work.wide.feature .work-body > p.work-role { font-size: 0.86rem; color: var(--muted); font-weight: 600; }
+.work.feature strong { color: var(--ink); }
+.work-steps { counter-reset: ws; display: flex; flex-direction: column; gap: 0.55rem; margin: 0.15rem 0; }
+.work-steps li { counter-increment: ws; position: relative; padding-left: 2.1rem; font-size: 0.92rem; line-height: 1.5; color: var(--text); }
+.work-steps li::before { content: counter(ws); position: absolute; left: 0; top: 0.05rem; width: 1.45rem; height: 1.45rem; border-radius: 50%; background: var(--c-lt); color: var(--c); font-weight: 700; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; }
+.work-steps li span { font-weight: 700; color: var(--ink); margin-right: 0.35rem; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.work-tags li { font-size: 0.74rem; font-weight: 600; color: var(--ink); background: var(--paper); border: 1px solid var(--border); border-radius: 999px; padding: 0.18rem 0.6rem; }
+
+
+/* ============================================================
+   NOTES — essay page (A + B → C) and featured note card
+   ============================================================ */
+.note-prose { font-size: 1.06rem; }
+.note-prose p { line-height: 1.75; }
+.eq { margin: 1.75rem 0 2rem; padding: 1.7rem 1rem 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+.eq-row, .tf-eq { display: flex; align-items: center; justify-content: center; gap: 0.9rem; font-family: var(--serif); }
+.eq-t { font-size: clamp(2rem, 6vw, 2.8rem); font-weight: 700; font-style: italic; color: var(--ink); line-height: 1; }
+.eq-t.c { color: var(--accent); }
+.eq-op { font-size: 1.8rem; color: var(--muted); }
+.eq-arrow { display: inline-flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+.eq-arrow small { font-family: var(--sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.eq-arrow svg { width: 130px; height: 14px; overflow: visible; }
+.eq-arrow path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.eq figcaption { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
+.eq figcaption b { font-family: var(--serif); font-style: italic; color: var(--ink); }
+.prose p.pull { font-family: var(--serif); font-size: 1.35rem; line-height: 1.45; color: var(--ink); border-left: 3px solid var(--accent); padding: 0.2rem 0 0.2rem 1.1rem; margin: 1.6rem 0; }
+.note-cycle { margin: 2.75rem 0; }
+
+#thought-featured { margin-bottom: 1.25rem; }
+.thought-feature { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 2rem; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem 2.2rem; color: var(--text); transition: transform 0.2s, box-shadow 0.2s; }
+a.thought-feature:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; color: var(--text); }
+a.thought-feature:hover .work-cta i { transform: translateX(3px); }
+.thought-feature .stamp { display: inline-block; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm); border: 1.5px solid var(--warm-bd); border-radius: 4px; padding: 0.1rem 0.45rem; transform: rotate(-2deg); }
+.thought-feature h3 { font-size: 1.6rem; margin: 0.55rem 0 0.5rem; }
+.thought-feature p { font-size: 0.98rem; line-height: 1.6; }
+.thought-feature .work-cta { padding-top: 1rem; }
+.tf-eq { background: var(--accent-lt); border-radius: 12px; padding: 2.2rem 1rem; gap: 0.7rem; }
+.tf-eq .eq-t { font-size: 2.3rem; }
+.tf-eq .eq-arrow svg { width: 96px; }
+
+
+/* ============================================================
+   RESEARCH — evolving path through biological interactions
+   (three bubbles: small/green → mid/pink → large/orange)
+   ============================================================ */
+.path-graph { position: relative; aspect-ratio: 1000 / 640; margin-top: 1.25rem; }
+.path-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.path-line path { fill: none; stroke: #d6ccbe; stroke-width: 3; stroke-dasharray: 2 12; stroke-linecap: round; vector-effect: non-scaling-stroke; animation: pathFlow 1.6s linear infinite; }
+@keyframes pathFlow { to { stroke-dashoffset: -28; } }
+.pbub {
+  position: absolute; margin: 0; aspect-ratio: 1; border-radius: 50%;
+  border: 3px solid var(--bc); background: radial-gradient(circle at 50% 36%, #fff 0%, var(--bt) 72%);
+  box-shadow: 0 14px 34px rgba(28, 34, 48, 0.08), 0 0 0 8px color-mix(in srgb, var(--bc) 12%, transparent);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  padding: 0; min-height: 0; container-type: inline-size; animation: bubFloat 7s ease-in-out infinite;
+}
+.pbub.b1 { width: 26%; left: 0; bottom: 0; }
+.pbub.b2 { width: 33%; left: 28%; bottom: 15%; animation-delay: -2.3s; }
+.pbub.b3 { width: 41%; right: 0; top: 0; animation-delay: -4.6s; }
+@keyframes bubFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.pb-art { width: 76%; height: auto; overflow: visible; flex: none; }
+.pbub figcaption { max-width: 76%; display: flex; flex-direction: column; align-items: center; gap: 0.12em; margin-top: 2cqi; font-size: clamp(0.72rem, 5.4cqi, 1rem); line-height: 1.28; }
+.pb-num { position: absolute; top: 7%; left: 7%; width: 2.1em; height: 2.1em; border-radius: 50%; background: var(--bc); color: #fff; font-weight: 700; font-size: 0.95em; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px #fff; }
+.pbub strong { font-family: var(--serif); font-size: 1.15em; color: var(--ink); }
+.pb-out { color: var(--ink); font-weight: 600; }
+.pb-out i { color: var(--bc); font-size: 0.85em; }
+.pbub small { color: var(--muted); font-size: 0.8em; margin-top: 0.2em; }
+
+.pb-art text { font-family: var(--sans); }
+.pb-art .pb-lbl { font-size: 10px; font-weight: 600; fill: var(--muted); text-anchor: middle; }
+.pb-art .pb-op { font-size: 20px; font-weight: 700; fill: var(--muted); text-anchor: middle; }
+.pb-art .pb-arrow, .pb-art .pb-head { fill: none; stroke: var(--bc); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+/* 1 · food – bacteria → nutrients */
+.pb-art .grain circle { fill: #f3cd57; stroke: #c79a1c; stroke-width: 1.5; }
+.pb-art .bact rect { fill: #a8dfb8; stroke: #3d9b62; stroke-width: 1.8; }
+.pb-art .bact .dotin { fill: #3d9b62; }
+.pb-art .bact .flag { fill: none; stroke: #3d9b62; stroke-width: 1.4; stroke-linecap: round; }
+.pb-art .bact { transform-box: fill-box; transform-origin: center; animation: bactWiggle 3s ease-in-out infinite; }
+.pb-art .bact.b-b { animation-delay: -1.5s; }
+.pb-art .ring polygon, .pb-art .ring circle { fill: none; stroke: #2f8f57; stroke-width: 2; }
+.pb-art .ring { transform-box: fill-box; transform-origin: center; animation: ringPop 4s ease-in-out infinite; }
+.pb-art .ring.r-b { animation-delay: -2s; }
+.pb-art .pb-oh { font-size: 9px; font-weight: 700; fill: #2f8f57; }
+.pb-art .spark { fill: #f2b705; transform-box: fill-box; transform-origin: center; animation: twinkle 2.4s ease-in-out infinite; }
+.pb-art .spark.s2 { animation-delay: -1.2s; }
+/* 2 · diet – gut microbiome – host → health */
+.pb-art .bowl { fill: #f5e6d6; stroke: #b9876a; stroke-width: 2; stroke-linejoin: round; }
+.pb-art .bean .pk { fill: #e6a3b8; stroke: #b9607d; stroke-width: 1.2; }
+.pb-art .bean .wh { fill: #f7f2e8; stroke: #a89c8b; stroke-width: 1.2; }
+.pb-art .gut { fill: none; stroke: #e48fb1; stroke-width: 11; stroke-linecap: round; }
+.pb-art .gut-in { fill: none; stroke: #fde3ec; stroke-width: 6; stroke-linecap: round; }
+.pb-art .mic .m1 { fill: #57b77a; } .pb-art .mic .m2 { fill: #8b7be8; } .pb-art .mic .m3 { fill: #f0a35e; }
+.pb-art .mic > * { transform-box: fill-box; transform-origin: center; animation: micDrift 3.6s ease-in-out infinite; }
+.pb-art .mic > :nth-child(2n) { animation-delay: -1.8s; }
+.pb-art .host circle, .pb-art .host path { fill: #c9ced8; }
+.pb-art .heart { fill: #e0566e; transform-box: fill-box; transform-origin: center; animation: beat 1.6s ease-in-out infinite; }
+.pb-art .axis { fill: none; stroke: #b8bec9; stroke-width: 1.5; }
+.pb-art .trend, .pb-art .trend-hd { fill: none; stroke: #2e9a5e; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.pb-art .trend { stroke-dasharray: 60; stroke-dashoffset: 60; animation: trendDraw 4s ease-in-out infinite; }
+.pb-art .trend-hd { animation: trendHead 4s ease-in-out infinite; }
+/* 3 · antibody – antigen → immune response */
+.pb-art .ab .hc { fill: none; stroke: #2563eb; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.pb-art .ab .lc { fill: none; stroke: #f59e0b; stroke-width: 7; stroke-linecap: round; }
+.pb-art .ab .cdr { fill: #fff; stroke: #1b3f8f; stroke-width: 2; }
+.pb-art .virus { animation: dock 4s ease-in-out infinite; }
+.pb-art .virus .core { fill: #f6b3a6; stroke: #d9573e; stroke-width: 2.2; }
+.pb-art .virus .spikes path { fill: none; stroke: #d9573e; stroke-width: 2; stroke-linecap: round; }
+.pb-art .virus .spikes circle { fill: #d9573e; }
+.pb-art .virus .ep { fill: #fff; stroke: #d9573e; stroke-width: 1.6; }
+.pb-art .bind { fill: #ee8a2a; opacity: 0; transform-box: fill-box; transform-origin: center; animation: bindGlow 4s ease-out infinite; }
+.pb-art .shield { fill: #fff3e6; stroke: #ee8a2a; stroke-width: 2.5; stroke-linejoin: round; }
+.pb-art .chk { fill: none; stroke: #2e9a5e; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes bactWiggle { 0%, 100% { transform: rotate(-4deg) translateX(0); } 50% { transform: rotate(4deg) translateX(2px); } }
+@keyframes ringPop { 0%, 100% { transform: scale(0.94); opacity: 0.85; } 50% { transform: scale(1.05); opacity: 1; } }
+@keyframes twinkle { 0%, 100% { transform: scale(0.5); opacity: 0.3; } 50% { transform: scale(1.15); opacity: 1; } }
+@keyframes micDrift { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(1.5px, -1.5px); } }
+@keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.18); } 30% { transform: scale(1); } 45% { transform: scale(1.12); } }
+@keyframes trendDraw { 0%, 10% { stroke-dashoffset: 60; } 50%, 90% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 60; } }
+@keyframes trendHead { 0%, 45% { opacity: 0; } 52%, 90% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes dock { 0%, 100% { transform: translate(8px, -8px); } 45%, 75% { transform: translate(0, 0); } }
+@keyframes bindGlow { 0%, 45% { opacity: 0; transform: scale(0.4); } 55% { opacity: 0.55; } 80%, 100% { opacity: 0; transform: scale(2.2); } }
+
+/* Trajectory stages on the Research page: projects nested under each stage */
+.stop-projects { margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.9rem; }
+.stop-proj { border-top: 1px dashed var(--border); padding-top: 1rem; }
+.sp-pills .pill { margin: 0 0.3rem 0.3rem 0; }
+.stop-proj h4 { font-family: var(--serif); font-size: 1.12rem; line-height: 1.35; color: var(--ink); margin: 0.3rem 0 0.2rem; }
+.stop-proj .project-where { font-size: 0.84rem; margin-bottom: 0.6rem; }
+.stop-proj p { font-size: 0.93rem; }
+.stop-link { margin-top: 0.9rem; }
+
+@media (max-width: 900px) {
+  .focus-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .work.wide.feature { grid-template-columns: 1fr; }
+  .work.wide.feature .proj-viz { min-height: 0; }
+  .work.wide.feature .work-body { padding: 1.5rem 1.6rem 1.7rem; }
+  .work.wide.feature .work-body h3 { font-size: 1.3rem; }
+  .thought-feature { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; }
+  .path-graph { aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 2.4rem; }
+  .path-line { display: none; }
+  .pbub, .pbub.b1, .pbub.b2, .pbub.b3 { position: relative; left: auto; right: auto; top: auto; bottom: auto; }
+  .pbub.b1 { width: min(260px, 80vw); }
+  .pbub.b2 { width: min(300px, 88vw); }
+  .pbub.b3 { width: min(340px, 94vw); }
+  .pbub + .pbub::before { content: ''; position: absolute; top: calc(-2.4rem - 3px); left: 50%; height: 2.4rem; border-left: 3px dotted #d6ccbe; }
+}
+@media (max-width: 560px) {
+  .eq-row { gap: 0.5rem; }
+  .eq-arrow svg { width: 84px; }
+  .tf-eq .eq-t { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pbub, .path-line path, .pb-art *, .focus-art * { animation: none !important; }
+  .pb-art .trend { stroke-dashoffset: 0; }
+  .pb-art .bind { opacity: 0; }
+}
+
+/* Collections: books, films, and photographs stay hidden until their button is pressed */
+.shelf-section[hidden] { display: none; }
+.toc button {
+  font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: 0.86rem; font-weight: 600; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 999px; padding: 0.4rem 0.95rem;
+}
+.toc button:hover { border-color: var(--accent); color: var(--accent); }
+.toc button i { color: var(--warm); font-size: 0.8rem; }
+.toc button[aria-expanded="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.toc button[aria-expanded="true"] i { color: #fff; }

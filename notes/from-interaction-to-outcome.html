@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Interaction to Outcome | Jiayu Tang</title>
+  <meta name="description" content="Jiayu Tang's research philosophy: across functional foods, the gut microbiome, clinical trials, and antibodies, one question keeps returning. Why does an interaction produce one outcome rather than another, and can we change it?">
+  <meta name="author" content="Jiayu Tang">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="From Interaction to Outcome">
+  <meta property="og:description" content="Jiayu Tang's research philosophy: across functional foods, the gut microbiome, clinical trials, and antibodies, one question keeps returning. Why does an interaction produce one outcome rather than another, and can we change it?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jiayutang859.github.io/notes/from-interaction-to-outcome.html">
+  <link rel="canonical" href="https://jiayutang859.github.io/notes/from-interaction-to-outcome.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css?v=20261008">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../">
+        <span class="brand-name">Jiayu Tang</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="siteNav"><i class="fas fa-bars"></i></button>
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../notes.html" aria-current="page">Collections</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="page-hero">
+        <div class="wrap narrow">
+          <p style="margin-bottom:1rem"><a class="text-link" href="../notes.html#thoughts"><i class="fas fa-arrow-left"></i> All collections</a></p>
+          <span class="eyebrow">Research philosophy · October 2026</span>
+          <h1>From Interaction to Outcome</h1>
+          <p class="lede">Functional foods, the gut microbiome, human clinical trials, and now antibodies: the subjects changed, but one question kept returning. Why does an interaction produce one outcome rather than another, and can we change it?</p>
+        </div>
+      </header>
+
+      <div class="wrap narrow prose note-prose">
+        <p>My research has moved through functional foods, the gut microbiome, human clinical trials, and now computational immunology and antibody engineering. On paper, these can look like changes of direction. For a long time, I thought about them that way too. But looking back, I have realized that the biological object itself was rarely what kept me interested. Across these different systems, I kept returning to a similar question: <strong>why does an interaction produce one outcome rather than another?</strong></p>
+        <p>I first encountered this question through food. A seemingly simple question (why are certain foods beneficial to human health?) quickly becomes difficult once we ask what &ldquo;beneficial&rdquo; actually means. A food contains many components, those components encounter a complex gut microbial community, microbes transform them into other molecules, and those changes occur inside a host with a particular physiology, genetics, lifestyle, and environment. During my work with the gut microbiome and human clinical research, an even more interesting question emerged: why can two people receive the same dietary intervention and respond differently? At that point, the food itself was no longer enough to explain the outcome. The interaction between intervention, microbiome, host, and context became part of the explanation.</p>
+        <p>Years later, I find myself asking surprisingly similar questions in immunology. Why can people infected by the same virus develop very different immune responses? At a much smaller scale, why does one antibody recognize an antigen successfully while another does not? Why can changing the framework surrounding the same antigen-recognizing regions alter the predicted behavior of an antibody? The objects have changed, and the scale has changed dramatically, but the structure of the question feels familiar.</p>
+        <p>I have gradually come to think about many of these problems through a simple abstraction:</p>
+        <figure class="eq" role="img" aria-label="A plus B, through an interaction in a given context, gives C">
+          <div class="eq-row">
+            <span class="eq-t">A</span><span class="eq-op">+</span><span class="eq-t">B</span>
+            <span class="eq-arrow"><small>interaction</small><svg viewBox="0 0 160 14" aria-hidden="true"><path d="M2 7 H152"/><path d="M144 1.5 L154 7 L144 12.5"/></svg><small>context</small></span>
+            <span class="eq-t c">C</span>
+          </div>
+          <figcaption><b>A</b>, <b>B</b>: the interacting partners &nbsp;·&nbsp; <b>C</b>: the outcome</figcaption>
+        </figure>
+        <p>A and B may be a dietary component and a microorganism, a microbial community and its host, an antigen and an antibody, or more complicated collections of biological entities. The context may be molecular structure, environment, physiology, genetics, or the state of the larger biological system. Understanding A and B and how they interact is essential, but I have realized that what interests me most is C.</p>
+        <p class="pull">What is C? Why does C emerge? Can we predict C? Can we change C?</p>
+        <p>This distinction has gradually reshaped how I think about research. An antibody binding an antigen is an interaction; neutralization is an outcome, an altered immune response is another, and a clinical effect lies further downstream. A dietary molecule being metabolized by a bacterium is an interaction; changes in microbial ecology, host physiology, and eventually health are outcomes at progressively higher levels. The scientific challenge that fascinates me is therefore not simply identifying interactions, but tracing how interactions and context give rise to outcomes across these levels.</p>
+        <p>It also shapes what I want from computation and AI. I am excited by our growing ability to predict biological behavior, but prediction alone does not completely satisfy me. A black-box model may tell us that C will happen without telling us why. I am more interested in causal and interpretable prediction: identifying which factors actually drive C, how they work together, and whether those explanations survive experimental testing. To me, prediction is partly a test of understanding. If we believe we understand why an outcome occurs, that understanding should eventually help us anticipate what will happen in a new system.</p>
+        <p>And if we understand C well enough to predict it, the next question becomes almost unavoidable: can we move it? If a particular molecular feature, microbial state, environmental context, or biological mechanism causally contributes to an outcome, it becomes more than an explanation; it becomes a possible point of intervention. We might redesign a molecule, alter an interaction, change the context, or choose an intervention appropriate for a particular biological state. This is where my interest in interaction connects to causality, and where causality connects to translation.</p>
+      </div>
+
+      <section class="band alt vision note-cycle" aria-labelledby="cycle-title">
+        <div class="wrap">
+          <span class="eyebrow">My research philosophy, in practice</span>
+          <h2 class="vision-statement" id="cycle-title">To understand, predict, and modulate biological interactions in humans.</h2>
+          <p class="sec-intro">Not one biological object, but one reusable way of working: a five-stage cycle that takes an interaction from observation to a changed outcome, and that can be applied at any scale.</p>
+        <ol class="flow reveal" aria-label="Five-stage research workflow">
+
+          <!-- 01 OBSERVE: an interaction seen through a lens -->
+          <li class="stage" style="--c:var(--s1);--c-lt:var(--s1-lt)">
+            <svg class="stage-art" viewBox="0 0 160 160" role="img" aria-label="Observe: two biological partners in contact, seen through a lens">
+              <circle class="bg" cx="80" cy="80" r="76"/>
+              <circle class="ln" cx="78" cy="76" r="42"/>
+              <line class="ln thick" x1="108" y1="106" x2="132" y2="130"/>
+              <path class="ln thin" d="M50 52 h9 M50 60 h5 M50 68 h9"/>
+              <circle class="soft" cx="68" cy="78" r="15"/>
+              <circle class="ln" cx="68" cy="78" r="15"/>
+              <circle class="fill" cx="87" cy="78" r="7"/>
+              <path class="ln thick" d="M85.2 59.2 A20 20 0 1 1 85.2 96.8"/>
+              <circle class="ln thin pulse" cx="86" cy="78" r="12"/>
+            </svg>
+            <div class="stage-txt"><span class="stage-num">01 · Observe</span>
+            <h3>Observe</h3>
+            <p>Observe an interaction</p></div>
+          </li>
+
+          <!-- 02 UNDERSTAND: objects, context ring, environment boundary -->
+          <li class="stage" style="--c:var(--s2);--c-lt:var(--s2-lt)">
+            <svg class="stage-art" viewBox="0 0 160 160" role="img" aria-label="Understand: the interacting objects inside their context and environment">
+              <circle class="bg" cx="80" cy="80" r="76"/>
+              <path class="ln thin" d="M80 26 a54 54 0 0 1 46 27"/>
+              <path class="ln thin" d="M132 92 a54 54 0 0 1 -38 40"/>
+              <path class="ln thin" d="M66 132 a54 54 0 0 1 -38 -40"/>
+              <path class="ln thin" d="M28 66 a54 54 0 0 1 38 -38"/>
+              <circle class="ln dash ctx" cx="80" cy="80" r="34"/>
+              <path class="ln thin" d="M80 50 v13 M106 95 l-11 -8 M54 95 l11 -8"/>
+              <circle class="fill" cx="80" cy="46" r="4"/>
+              <circle class="fill" cx="109.4" cy="97" r="4"/>
+              <circle class="fill" cx="50.6" cy="97" r="4"/>
+              <circle class="soft" cx="70" cy="80" r="11"/>
+              <circle class="ln" cx="70" cy="80" r="11"/>
+              <circle class="fill" cx="86" cy="80" r="5"/>
+              <path class="ln thick" d="M87.2 66.8 A14 14 0 1 1 87.2 93.2"/>
+            </svg>
+            <div class="stage-txt"><span class="stage-num">02 · Understand</span>
+            <h3>Understand</h3>
+            <p>Understand the objects, context, and environment</p></div>
+          </li>
+
+          <!-- 03 MODEL & PREDICT: network representation → predicted response with uncertainty -->
+          <li class="stage" style="--c:var(--s3);--c-lt:var(--s3-lt)">
+            <svg class="stage-art" viewBox="0 0 160 160" role="img" aria-label="Model and predict: a network model feeding a predicted response curve with an uncertainty band">
+              <circle class="bg" cx="80" cy="80" r="76"/>
+              <path class="ln thin" d="M34 60 L56 44 L70 70 Z M56 44 L84 54 M70 70 L84 54 M70 70 L50 98 M34 60 L50 98 M50 98 L74 106 M84 54 L74 106"/>
+              <circle class="fill n" style="--k:0" cx="34" cy="60" r="4.5"/>
+              <circle class="fill n" style="--k:1" cx="56" cy="44" r="4.5"/>
+              <circle class="fill n" style="--k:2" cx="70" cy="70" r="4.5"/>
+              <circle class="fill n" style="--k:3" cx="84" cy="54" r="4.5"/>
+              <circle class="fill n" style="--k:4" cx="50" cy="98" r="4.5"/>
+              <circle class="fill n" style="--k:5" cx="74" cy="106" r="4.5"/>
+              <circle class="ln thin" cx="70" cy="70" r="9"/>
+              <path class="ln thin dash" d="M92 80 h10"/>
+              <path class="ln thin" d="M106 44 v74 h34"/>
+              <path class="soft" d="M110 106 C120 98 126 92 136 78 L136 60 C126 74 120 84 110 100 Z"/>
+              <path class="ln curve" pathLength="1" d="M110 104 C 120 98, 126 90, 136 70"/>
+              <circle class="fill pt" cx="136" cy="70" r="4"/>
+              <circle class="ln thin ring" cx="136" cy="70" r="8"/>
+            </svg>
+            <div class="stage-txt"><span class="stage-num">03 · Model &amp; predict</span>
+            <h3>Model &amp; Predict</h3>
+            <p>Model the interaction and predict influential factors</p></div>
+          </li>
+
+          <!-- 04 VALIDATE: assay plate, pipette, check -->
+          <li class="stage" style="--c:var(--s4);--c-lt:var(--s4-lt)">
+            <svg class="stage-art" viewBox="0 0 160 160" role="img" aria-label="Validate: an assay plate being filled, with a confirmation mark">
+              <circle class="bg" cx="80" cy="80" r="76"/>
+              <rect class="ln white" x="30" y="64" width="100" height="68" rx="9"/>
+              <circle class="ln thin w on" style="--k:0" cx="48" cy="82" r="6.5"/>
+              <circle class="ln thin w on" style="--k:1" cx="70" cy="82" r="6.5"/>
+              <circle class="ln thin w" cx="92" cy="82" r="6.5"/>
+              <circle class="ln thin w on" style="--k:3" cx="114" cy="82" r="6.5"/>
+              <circle class="ln thin w" cx="48" cy="99" r="6.5"/>
+              <circle class="ln thin w on" style="--k:2" cx="70" cy="99" r="6.5"/>
+              <circle class="ln thin w on" style="--k:4" cx="92" cy="99" r="6.5"/>
+              <circle class="ln thin w" cx="114" cy="99" r="6.5"/>
+              <circle class="ln thin w on" style="--k:5" cx="48" cy="116" r="6.5"/>
+              <circle class="ln thin w" cx="70" cy="116" r="6.5"/>
+              <circle class="ln thin w on" style="--k:6" cx="92" cy="116" r="6.5"/>
+              <circle class="ln thin w" cx="114" cy="116" r="6.5"/>
+              <path class="ln" d="M114 22 v18"/>
+              <path class="fill" d="M109 40 h10 l-5 14 z"/>
+              <circle class="fill drop" cx="114" cy="60" r="2.8"/>
+              <circle class="fill" cx="132" cy="128" r="14"/>
+              <path class="chk" d="M125 128 l5 5 l9 -10"/>
+            </svg>
+            <div class="stage-txt"><span class="stage-num">04 · Validate</span>
+            <h3>Validate</h3>
+            <p>Validate predicted factors experimentally</p></div>
+          </li>
+
+          <!-- 05 MODULATE / ENGINEER: a redesigned partner, a control being tuned -->
+          <li class="stage" style="--c:var(--s5);--c-lt:var(--s5-lt)">
+            <svg class="stage-art" viewBox="0 0 160 160" role="img" aria-label="Modulate and engineer: a redesigned partner fitted into the binding site, with a control being tuned">
+              <circle class="bg" cx="80" cy="80" r="76"/>
+              <circle class="soft" cx="64" cy="70" r="15"/>
+              <circle class="ln" cx="64" cy="70" r="15"/>
+              <path class="ln thick" d="M89.2 51.2 A20 20 0 1 1 89.2 88.8"/>
+              <circle class="ln thin dash" cx="88" cy="70" r="7"/>
+              <polygon class="fill eng" points="88,60 96.7,65 96.7,75 88,80 79.3,75 79.3,65"/>
+              <path class="ln thin" d="M104 40 l12 -12 m0 0 h-9 m9 0 v9"/>
+              <line class="ln thin" x1="40" y1="122" x2="120" y2="122"/>
+              <path class="ln thin" d="M40 117 v10 M80 117 v10 M120 117 v10"/>
+              <circle class="fill knob" cx="60" cy="122" r="6"/>
+            </svg>
+            <div class="stage-txt"><span class="stage-num">05 · Modulate / Engineer</span>
+            <h3>Modulate &amp; Engineer</h3>
+            <p>Improve the interaction by modulating or engineering those factors</p></div>
+          </li>
+        </ol>
+
+        <div class="flow-foot reveal">
+          <strong>Same cycle, different scales.</strong>
+          <ul class="scales" aria-label="Scales of biological interaction">
+            <li>antibody · antigen</li>
+            <li>molecule · cell</li>
+            <li>diet · gut microbiome · host</li>
+            <li>intervention · human physiology</li>
+          </ul>
+        </div>
+        </div>
+      </section>
+
+      <div class="wrap narrow prose note-prose">
+        <p>I now see my research trajectory as a movement through <strong>interaction &rarr; causality &rarr; translation</strong>. My earlier work exposed me to the complexity of real human outcomes, where the same intervention does not necessarily produce the same response. My current work with antibodies takes me toward the other end of the scale, where interactions can be decomposed into structures, sequences, models, hypotheses, and experimentally testable perturbations. Rather than seeing these experiences as disconnected, I increasingly see them as complementary: one taught me how complicated C can be; the other is teaching me how to take C apart.</p>
+        <p>I do not yet have a universal framework for connecting molecules to human outcomes, and I do not expect biology to collapse into a simple equation. But this is the direction in which I want to grow as a scientist. I want to understand why biological exposures and interventions produce different outcomes, identify the interactions and causal determinants behind that variation, build models that can predict it, and ultimately use that knowledge to design interventions.</p>
+        <p>The biological objects I study may change. The question I want to keep asking is much more stable:</p>
+        <p class="pull">What creates C, and can understanding C well enough eventually allow us to change it in ways that benefit human health?</p>
+      </div>
+
+      <div class="wrap narrow">
+        <div class="tip" style="margin-top:2.5rem">
+          <i class="fas fa-comments"></i>
+          <p>Thoughts, corrections, or disagreements? I'd love to hear them. <a href="mailto:jasper.tang859@gmail.com">Email me</a> or find me on <a href="https://www.linkedin.com/in/jiayu-tang-04597628a/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <div class="footer-name">Jiayu Tang</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="../about.html">About</a><a href="../research.html">Research</a><a href="../contact.html">Contact</a><a href="../notes.html">Collections</a>
+      </nav>
+      <div class="footer-social">
+        <a href="mailto:jasper.tang859@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/jiayu-tang-04597628a/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://scholar.google.com/citations?user=CdDGp14AAAAJ&amp;hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fab fa-google-scholar"></i></a>
+        <a href="https://github.com/jiayutang859" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="footer-note">© 2026 Jiayu Tang · Last updated October 2026</p>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="../script.js?v=20261008" defer></script>
+  <!-- Visitor counts: GoatCounter (no cookies, no personal data, so no consent banner). Dashboard: https://jaspertang859.goatcounter.com -->
+  <script data-goatcounter="https://jaspertang859.goatcounter.com/count"
+          async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
