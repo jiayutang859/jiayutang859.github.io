@@ -1385,3 +1385,12 @@ a.thought-feature:hover .work-cta i { transform: translateX(3px); }
 .toc button i { color: var(--warm); font-size: 0.8rem; }
 .toc button[aria-expanded="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .toc button[aria-expanded="true"] i { color: #fff; }
+
+/* Home contact: quick links above the resume / CV downloads */
+.connect-btns { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.4rem 0 1.25rem; }
+.cbtn { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 0.95rem; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.6rem 1.15rem; box-shadow: var(--shadow); transition: transform 0.2s, border-color 0.2s, color 0.2s; }
+.cbtn:hover { text-decoration: none; color: var(--accent); border-color: var(--accent-bd); transform: translateY(-2px); }
+.cbtn i { font-size: 1rem; color: var(--accent); }
+.cbtn .fa-envelope { color: #ea4335; }
+.cbtn .fa-linkedin-in { color: #0a66c2; }
+.cbtn .fa-google-scholar { color: #4285f4; }
