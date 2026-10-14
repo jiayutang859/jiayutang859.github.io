@@ -8,7 +8,8 @@
    films[]    title, originalTitle?, creator, year, type, tags[], poster, note, link?
    thoughts[] date (YYYY-MM-DD), text (a sentence or a short paragraph), tags[]
    longer[]   longer notes: title, summary, tags[], status ("In draft" or a date), link,
-              featured? (true = wide card shown above the others)
+              featured? (true = wide card shown above the others),
+              art? ("pipeline" = four-stage chips; default is the A + B → C equation), cta?
    photos[]   src, w, h, date, camera, lens, caption, place (leave "" when unknown)
 
    Display caps in notes.js: the shelf shows the first 10 books; the gallery shows
@@ -237,6 +238,20 @@ window.COLLECTIONS = {
     "status": "Oct 2026",
     "featured": true,
     "link": "notes/from-interaction-to-outcome.html"
+  },
+  {
+    "title": "AI-Designed Antibodies in 2026: The Hard Parts, the Pipelines, and the Path to Patients",
+    "summary": "My map of the industry around my research: where AI drug discovery and antibody design are still hard, what the newest methods can do, how far AI-made drugs have travelled, the milestones that would mark real translation, and how companies and patients benefit.",
+    "tags": [
+      "AI drug discovery",
+      "Antibody design",
+      "Industry notes"
+    ],
+    "status": "Oct 2026",
+    "featured": true,
+    "art": "pipeline",
+    "cta": "Read the post",
+    "link": "notes/ai-drug-discovery.html"
   }
 ],
 

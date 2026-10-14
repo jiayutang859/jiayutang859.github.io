@@ -1245,7 +1245,7 @@ a.thought:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); tex
 .prose p.pull { font-family: var(--serif); font-size: 1.35rem; line-height: 1.45; color: var(--ink); border-left: 3px solid var(--accent); padding: 0.2rem 0 0.2rem 1.1rem; margin: 1.6rem 0; }
 .note-cycle { margin: 2.75rem 0; }
 
-#thought-featured { margin-bottom: 1.25rem; }
+#thought-featured { margin-bottom: 1.25rem; display: grid; gap: 1.25rem; }
 .thought-feature { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 2rem; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem 2.2rem; color: var(--text); transition: transform 0.2s, box-shadow 0.2s; }
 a.thought-feature:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; color: var(--text); }
 a.thought-feature:hover .work-cta i { transform: translateX(3px); }
@@ -1394,3 +1394,34 @@ a.thought-feature:hover .work-cta i { transform: translateX(3px); }
 .cbtn .fa-envelope { color: #ea4335; }
 .cbtn .fa-linkedin-in { color: #0a66c2; }
 .cbtn .fa-google-scholar { color: #4285f4; }
+
+/* ============================================================
+   NOTE — AI in drug discovery (long-form blog post)
+   ============================================================ */
+.blog-meta { margin-top: 0.9rem; font-size: 0.85rem; color: var(--muted); }
+.prose.blog h2 { font-size: 1.6rem; margin: 2.8rem 0 0.8rem; scroll-margin-top: calc(var(--header-h) + 1rem); }
+.prose.blog h3 { font-size: 1.18rem; margin: 1.8rem 0 0.5rem; }
+.prose.blog ul, .prose.blog ol { padding-left: 1.3rem; }
+.prose.blog li { margin: 0.55rem 0; line-height: 1.7; }
+sup.cite { font-size: 0.68em; line-height: 0; margin-left: 0.1em; }
+sup.cite a { color: var(--accent); text-decoration: none; font-weight: 600; }
+sup.cite a:hover { text-decoration: underline; }
+.blog-table-wrap { margin: 1.4rem 0 1.6rem; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+.blog-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; line-height: 1.45; min-width: 640px; }
+.blog-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); padding: 0.7rem 0.8rem; }
+.blog-table td { padding: 0.75rem 0.8rem; border-top: 1px solid var(--border); vertical-align: top; }
+.blog-table td:first-child { font-weight: 600; color: var(--ink); }
+.blog-refs { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.prose.blog .blog-refs h2 { margin-top: 0; font-size: 1.3rem; }
+.blog-note { font-size: 0.88rem; color: var(--muted); }
+.blog-refs ol { font-size: 0.84rem; color: var(--text); }
+.prose.blog .blog-refs li { margin: 0.4rem 0; line-height: 1.5; scroll-margin-top: calc(var(--header-h) + 1rem); }
+.blog-refs li:target { background: var(--accent-lt); border-radius: 6px; }
+.blog-refs li a { font-size: 0.78rem; font-weight: 600; }
+
+/* Collections card art for this note: the four stages as chips */
+.tf-pipe { list-style: none; margin: 0; padding: 1.6rem 1.2rem; background: var(--accent-lt); border-radius: 12px; display: flex; flex-direction: column; gap: 0.5rem; }
+.tf-pipe li { display: flex; align-items: center; gap: 0.6rem; background: var(--surface); border-left: 4px solid var(--c); border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.86rem; font-weight: 600; color: var(--ink); box-shadow: var(--shadow); }
+.tf-pipe li i { color: var(--c); width: 1.1rem; text-align: center; }
+.tf-pipe li.mine::after { content: "my work"; margin-left: auto; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c); }
+

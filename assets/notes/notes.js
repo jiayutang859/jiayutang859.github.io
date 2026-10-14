@@ -60,6 +60,13 @@
     }
   }
   /* Featured notes (e.g. the research philosophy) get a wide card above the rest */
+  const ART = {
+    eq: '<div class="tf-eq" aria-hidden="true"><span class="eq-t">A</span><span class="eq-op">+</span><span class="eq-t">B</span><span class="eq-arrow"><small>interaction</small><svg viewBox="0 0 160 14"><path d="M2 7 H152"/><path d="M144 1.5 L154 7 L144 12.5"/></svg><small>context</small></span><span class="eq-t c">C</span></div>',
+    pipeline: '<ol class="tf-pipe" aria-hidden="true">' + [
+      ['s1', 'crosshairs', 'Target discovery'], ['s3', 'atom', 'Molecule design', 'mine'],
+      ['s4', 'sliders', 'Lead optimization'], ['s5', 'people-group', 'Clinical development']
+    ].map(([c, i, t, me]) => `<li${me ? ' class="mine"' : ''} style="--c:var(--${c})"><i class="fas fa-${i}"></i>${t}</li>`).join('') + '</ol>'
+  };
   const featured = $('thought-featured');
   if (featured) {
     const fs = C.longer.filter(n => n.featured);
@@ -71,9 +78,9 @@
             <h3>${esc(n.title)}</h3>
             <p>${esc(n.summary)}</p>
             ${(n.tags || []).length ? `<div class="thought-tags">${n.tags.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
-            ${n.link ? '<span class="work-cta">Read the essay <i class="fas fa-arrow-right"></i></span>' : ''}
+            ${n.link ? `<span class="work-cta">${esc(n.cta || 'Read the essay')} <i class="fas fa-arrow-right"></i></span>` : ''}
           </div>
-          <div class="tf-eq" aria-hidden="true"><span class="eq-t">A</span><span class="eq-op">+</span><span class="eq-t">B</span><span class="eq-arrow"><small>interaction</small><svg viewBox="0 0 160 14"><path d="M2 7 H152"/><path d="M144 1.5 L154 7 L144 12.5"/></svg><small>context</small></span><span class="eq-t c">C</span></div>
+          ${ART[n.art] || ART.eq}
         </${n.link ? 'a' : 'article'}>`).join('');
     } else {
       featured.remove();
