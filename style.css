@@ -1425,3 +1425,17 @@ sup.cite a:hover { text-decoration: underline; }
 .tf-pipe li i { color: var(--c); width: 1.1rem; text-align: center; }
 .tf-pipe li.mine::after { content: "my work"; margin-left: auto; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c); }
 
+
+/* Home: current project box (animation above, one-line summary below) */
+.focus-card { display: block; padding: 0; overflow: hidden; color: var(--text); transition: transform 0.2s, box-shadow 0.2s; }
+a.focus-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; color: var(--text); }
+.focus-card .focus-fig { padding: 1.4rem 1.4rem 0.6rem; background: linear-gradient(180deg, var(--accent-lt), var(--surface)); }
+.fc-body { padding: 1rem 1.4rem 1.3rem; border-top: 1px solid var(--border); }
+.fc-top { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.6rem; }
+.fc-top .pill { margin: 0; }
+.fc-org { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.82rem; font-weight: 600; color: var(--ink); }
+.fc-org img { height: 26px; width: auto; }
+.fc-go { margin-left: auto; color: var(--accent); transition: transform 0.2s; }
+a.focus-card:hover .fc-go { transform: translateX(3px); }
+.fc-body p { font-size: 0.98rem; line-height: 1.6; margin: 0; }
+@media (prefers-reduced-motion: reduce) { .focus-card, .fc-go { transition: none; } }

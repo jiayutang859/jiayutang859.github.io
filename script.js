@@ -9,9 +9,9 @@
   if (!isHome || !location.hash) return;
   const map = {
     '#about':        'about.html',
-    '#background':   'research.html#trajectory',
+    '#background':   'research.html#previous',
     '#publications': 'CV_Jiayu_Tang.pdf',
-    '#experience':   'research.html#methods',
+    '#experience':   'research.html',
     '#contact':      'contact.html',
   };
   const target = map[location.hash];
