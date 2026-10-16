@@ -65,7 +65,11 @@
     pipeline: '<ol class="tf-pipe" aria-hidden="true">' + [
       ['s1', 'crosshairs', 'Target discovery'], ['s3', 'atom', 'Molecule design', 'mine'],
       ['s4', 'sliders', 'Lead optimization'], ['s5', 'people-group', 'Clinical development']
-    ].map(([c, i, t, me]) => `<li${me ? ' class="mine"' : ''} style="--c:var(--${c})"><i class="fas fa-${i}"></i>${t}</li>`).join('') + '</ol>'
+    ].map(([c, i, t, me]) => `<li${me ? ' class="mine"' : ''} style="--c:var(--${c})"><i class="fas fa-${i}"></i>${t}</li>`).join('') + '</ol>',
+    hybrid: '<ol class="tf-pipe" aria-hidden="true">' + [
+      ['s5', 'compass', 'Human sets the direction'], ['s3', 'diagram-project', 'Break the work into modules'],
+      ['s1', 'robot', 'AI executes the modules'], ['s4', 'magnifying-glass', 'Human integrates and checks']
+    ].map(([c, i, t]) => `<li style="--c:var(--${c})"><i class="fas fa-${i}"></i>${t}</li>`).join('') + '</ol>'
   };
   const featured = $('thought-featured');
   if (featured) {

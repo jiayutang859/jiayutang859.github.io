@@ -9,7 +9,7 @@
    thoughts[] date (YYYY-MM-DD), text (a sentence or a short paragraph), tags[]
    longer[]   longer notes: title, summary, tags[], status ("In draft" or a date), link,
               featured? (true = wide card shown above the others),
-              art? ("pipeline" = four-stage chips; default is the A + B → C equation), cta?
+              art? ("pipeline" = four-stage chips; "hybrid" = human/AI division of labor; default is the A + B → C equation), cta?
    photos[]   src, w, h, date, camera, lens, caption, place (leave "" when unknown)
 
    Display caps in notes.js: the shelf shows the first 10 books; the gallery shows
@@ -252,6 +252,20 @@ window.COLLECTIONS = {
     "art": "pipeline",
     "cta": "Read the post",
     "link": "notes/ai-drug-discovery.html"
+  },
+  {
+    "title": "What AI Is, and How I Use It: Thoughts on Terence Tao’s “Slightly Drunk Collaborator”",
+    "summary": "Three years of using AI, from shock and speed to anxiety and a loss of meaning. Why I reject push-button autonomy, keep AI to either proposing or executing but never both, and keep the thinking for myself.",
+    "tags": [
+      "AI",
+      "Ways of working",
+      "Essay"
+    ],
+    "status": "Oct 2026",
+    "featured": true,
+    "art": "hybrid",
+    "cta": "Read the essay",
+    "link": "notes/ai-slightly-drunk-collaborator.html"
   }
 ],
 
