@@ -147,6 +147,7 @@ cite { font-style: italic; }
 .sec-intro { color: var(--muted); max-width: 680px; margin-bottom: 2rem; font-size: 1.02rem; }
 .sec-hd-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
 .sec-hd-row .sec-intro { margin-bottom: 0; }
+.competence strong { color: var(--ink); font-weight: 600; }
 
 .text-link { font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
 .text-link i { font-size: 0.8em; transition: transform 0.2s; }
