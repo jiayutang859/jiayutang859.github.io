@@ -8,7 +8,6 @@
   const isHome = /(^\/$|\/index\.html$)/.test(location.pathname);
   if (!isHome || !location.hash) return;
   const map = {
-    '#about':        'about.html',
     '#background':   'research.html#previous',
     '#publications': 'CV_Jiayu_Tang.pdf',
     '#experience':   'research.html',

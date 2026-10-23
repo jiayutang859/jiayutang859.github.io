@@ -15,10 +15,9 @@ Live at <https://jiayutang859.github.io>.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home: two-column hero with portrait; Selected Work split into Current (wide 3D-antibody card) and Previous (animated crossover-trial diagram, systematic-review diagram, both "Manuscript in prep"); five-stage research-philosophy workflow (observe → understand → model & predict → validate → modulate/engineer); contact actions |
-| `about.html` | Short "In brief" bio with photo, one Trajectory section (four stage cards, each with field chips and a three-sentence note on what it taught), and a closing "Where it converges" paragraph with the mini loop (non-research interests live on Collections) |
-| `research.html` | Current research (objective + tools & methods only), Methods & tools (four illustrated layers, one small icon per element), research foundations (project anchors used by the Home cards). Publications live on the CV page |
-| `notes.html` | Collections (nav label "Collections"; the URL stays notes.html): thoughts first, then a bookshelf, a cinema shelf, and a photo gallery, all rendered from `assets/notes/collections.js` |
+| `index.html` | Home: hero with portrait (Now · Path · Skills), Current Research Focus card, contact section |
+| `research.html` | Research path (three-field timeline + a competence paragraph), current research, previous M.Sc. projects (trial and systematic review, with registry links), contact section |
+| `notes.html` | Collections, with the M.S. graduation photo beside the title (nav label "Collections"; the URL stays notes.html): thoughts first, then a bookshelf, a cinema shelf, and a photo gallery, all rendered from `assets/notes/collections.js` |
 | `contact.html` | A single list of contact cards: email, LinkedIn, GitHub, Google Scholar, resume, institution |
 | `studio/` | Photography site (separate design, see `studio/README.md`) |
 

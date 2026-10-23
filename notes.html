@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css?v=20261016">
+  <link rel="stylesheet" href="style.css?v=20261023">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -35,7 +35,6 @@
       <nav class="site-nav" id="siteNav" aria-label="Main">
         <ul>
           <li><a href="./">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="notes.html" aria-current="page">Collections</a></li>
@@ -48,7 +47,8 @@
 
     <!-- ===== HEADER ===== -->
     <section class="page-hero shelf-hero">
-      <div class="wrap">
+      <div class="wrap hero-with-photo">
+        <div>
         <span class="eyebrow rise" style="--d:0">Collections</span>
         <h1 class="rise" style="--d:1">Collections</h1>
         <p class="lede rise" style="--d:2">Research is not my only way of understanding the world.</p>
@@ -58,6 +58,11 @@
           <button type="button" data-shelf="films" aria-expanded="false" aria-controls="films"><i class="fas fa-clapperboard"></i> Movies &amp; Shows</button>
           <button type="button" data-shelf="photography" aria-expanded="false" aria-controls="photography"><i class="fas fa-camera-retro"></i> Photography</button>
         </nav>
+        </div>
+        <figure class="about-photo rise" style="--d:2">
+          <img src="assets/graduation-ms.jpg" alt="Jiayu Tang in a graduation gown holding a mortarboard" width="1066" height="1600">
+          <figcaption><i class="fas fa-graduation-cap"></i> Master's graduation · University of Nebraska–Lincoln</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -131,7 +136,7 @@
         <div class="footer-name">Jiayu Tang</div>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <a href="about.html">About</a><a href="research.html">Research</a><a href="contact.html">Contact</a><a href="notes.html">Collections</a>
+        <a href="research.html">Research</a><a href="contact.html">Contact</a><a href="notes.html">Collections</a>
       </nav>
       <div class="footer-social">
         <a href="mailto:jasper.tang859@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -146,7 +151,7 @@
   <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="assets/notes/collections.js?v=20261016"></script>
   <script src="assets/notes/notes.js?v=20261016"></script>
-  <script src="script.js?v=20261016" defer></script>
+  <script src="script.js?v=20261023" defer></script>
   <!-- Visitor counts: GoatCounter (no cookies, no personal data, so no consent banner). Dashboard: https://jaspertang859.goatcounter.com -->
   <script data-goatcounter="https://jaspertang859.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
