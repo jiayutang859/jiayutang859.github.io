@@ -1479,3 +1479,19 @@ a.focus-card:hover .fc-go { transform: translateX(3px); }
 .fv-legend .mol-src a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
 .swatch-cdr { background: #c3c9d4; }
 @media (max-width: 600px) { .fv-panel { height: 260px; } }
+/* Current project card: text left, rotating Fv right */
+.project-split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
+.project-split .project-hd { flex-direction: column; align-items: flex-start; gap: 1rem; margin: 0; padding: 0; border-bottom: 0; }
+.project-split .project-hd .logo-slot { order: -1; justify-content: flex-start; }
+.project-split .fv-panel { height: 320px; }
+@media (max-width: 800px) {
+  .project-split { grid-template-columns: 1fr; gap: 1.25rem; }
+  .project-split .fv-panel { height: 260px; }
+}
+
+/* Publications: title line, then "authors et al. · Journal, Year" */
+.pub-list li { display: flex; flex-direction: column; gap: 0.15rem; }
+.pub-title { color: var(--ink); font-weight: 500; }
+.pub-meta { font-size: 0.86rem; color: var(--muted); }
+.pub-meta .me { font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.pub-list { padding-left: 0; gap: 0.8rem; }
