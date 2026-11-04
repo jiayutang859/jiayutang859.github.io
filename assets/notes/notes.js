@@ -1,4 +1,4 @@
-/* Renders window.COLLECTIONS (assets/notes/collections.js) into the Notes page. */
+/* Renders window.COLLECTIONS (assets/notes/collections.js) into the About page (notes.html). */
 (function () {
   const C = window.COLLECTIONS;
   if (!C) return;
@@ -44,62 +44,27 @@
     }).join('');
   }
 
-  /* ---- Thoughts: short fragments, then longer notes ---- */
+  /* ---- Thoughts: title + two-sentence abstract, newest first ---- */
   const fmt = d => { const t = new Date(d + 'T00:00:00'); return isNaN(t) ? esc(d) : t.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); };
+  const newestFirst = (a, b) => String(b.date || '').localeCompare(String(a.date || ''));
   const frag = $('thought-fragments');
   if (frag) {
-    if (C.thoughts.length) {
-      frag.innerHTML = C.thoughts.map(t => `
+    if ((C.thoughts || []).length) {
+      frag.innerHTML = [...C.thoughts].sort(newestFirst).map(t => `
         <article class="thought">
           <time datetime="${esc(t.date)}">${fmt(t.date)}</time>
           <p>${esc(t.text)}</p>
-          ${(t.tags || []).length ? `<div class="thought-tags">${t.tags.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
         </article>`).join('');
     } else {
       frag.remove();
     }
   }
-  /* Featured notes (e.g. the research philosophy) get a wide card above the rest */
-  const ART = {
-    eq: '<div class="tf-eq" aria-hidden="true"><span class="eq-t">A</span><span class="eq-op">+</span><span class="eq-t">B</span><span class="eq-arrow"><small>interaction</small><svg viewBox="0 0 160 14"><path d="M2 7 H152"/><path d="M144 1.5 L154 7 L144 12.5"/></svg><small>context</small></span><span class="eq-t c">C</span></div>',
-    pipeline: '<ol class="tf-pipe" aria-hidden="true">' + [
-      ['s1', 'crosshairs', 'Target discovery'], ['s3', 'atom', 'Molecule design', 'mine'],
-      ['s4', 'sliders', 'Lead optimization'], ['s5', 'people-group', 'Clinical development']
-    ].map(([c, i, t, me]) => `<li${me ? ' class="mine"' : ''} style="--c:var(--${c})"><i class="fas fa-${i}"></i>${t}</li>`).join('') + '</ol>',
-    hybrid: '<ol class="tf-pipe" aria-hidden="true">' + [
-      ['s5', 'compass', 'Human sets the direction'], ['s3', 'diagram-project', 'Break the work into modules'],
-      ['s1', 'robot', 'AI executes the modules'], ['s4', 'magnifying-glass', 'Human integrates and checks']
-    ].map(([c, i, t]) => `<li style="--c:var(--${c})"><i class="fas fa-${i}"></i>${t}</li>`).join('') + '</ol>'
-  };
-  const featured = $('thought-featured');
-  if (featured) {
-    const fs = C.longer.filter(n => n.featured);
-    if (fs.length) {
-      featured.innerHTML = fs.map(n => `
-        <${n.link ? `a href="${esc(n.link)}"` : 'article'} class="thought-feature">
-          <div class="tf-txt">
-            <span class="stamp">${esc(n.status)}</span>
-            <h3>${esc(n.title)}</h3>
-            <p>${esc(n.summary)}</p>
-            ${(n.tags || []).length ? `<div class="thought-tags">${n.tags.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
-            ${n.link ? `<span class="work-cta">${esc(n.cta || 'Read the essay')} <i class="fas fa-arrow-right"></i></span>` : ''}
-          </div>
-          ${ART[n.art] || ART.eq}
-        </${n.link ? 'a' : 'article'}>`).join('');
-    } else {
-      featured.remove();
-    }
-  }
   const longer = $('thought-longer');
   if (longer) {
-    const rest = C.longer.filter(n => !n.featured);
-    if (!rest.length) longer.remove();
-    else longer.innerHTML = rest.map(n => {
-      const body = `
-        <span class="stamp">${esc(n.status)}</span>
-        <h3>${esc(n.title)}</h3>
-        <p>${esc(n.summary)}</p>
-        ${(n.tags || []).length ? `<div class="thought-tags">${n.tags.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}`;
+    const notes = [...(C.longer || [])].sort(newestFirst);
+    if (!notes.length) longer.remove();
+    else longer.innerHTML = notes.map(n => {
+      const body = `<h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p>`;
       return n.link ? `<a class="thought long" href="${esc(n.link)}">${body}</a>` : `<article class="thought long">${body}</article>`;
     }).join('');
   }

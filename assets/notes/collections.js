@@ -6,10 +6,9 @@
    books[]    title, originalTitle?, subtitle?, author, year, edition?, cover,
               language, note (your own words, shown when present), link (optional)
    films[]    title, originalTitle?, creator, year, type, tags[], poster, note, link?
-   thoughts[] date (YYYY-MM-DD), text (a sentence or a short paragraph), tags[]
-   longer[]   longer notes: title, summary, tags[], status ("In draft" or a date), link,
-              featured? (true = wide card shown above the others),
-              art? ("pipeline" = four-stage chips; "hybrid" = human/AI division of labor; default is the A + B → C equation), cta?
+   thoughts[] date (YYYY-MM-DD), text (a sentence or a short paragraph)
+   longer[]   longer notes: title, date (YYYY-MM-DD, used only for newest-first order),
+              summary (two sentences), link
    photos[]   src, w, h, date, camera, lens, caption, place (leave "" when unknown)
 
    Display caps in notes.js: the shelf shows the first 10 books; the gallery shows
@@ -230,41 +229,20 @@ window.COLLECTIONS = {
   longer: [
   {
     "title": "From Interaction to Outcome",
-    "summary": "My research philosophy. Functional foods, the gut microbiome, clinical trials, and antibodies kept returning me to one question: why does an interaction produce one outcome rather than another, and can we change it? With the five-stage cycle I use to work on it: observe, understand, model and predict, validate, modulate.",
-    "tags": [
-      "Research philosophy",
-      "Essay"
-    ],
-    "status": "Oct 2026",
-    "featured": true,
+    "date": "2026-10-04",
+    "summary": "Functional foods, the gut microbiome, clinical trials, and antibodies kept returning me to one question: why does an interaction produce one outcome rather than another, and can we change it? This is my research philosophy, and the five-stage cycle I use to work on it: observe, understand, model and predict, validate, modulate.",
     "link": "notes/from-interaction-to-outcome.html"
   },
   {
     "title": "AI-Designed Antibodies in 2026: The Hard Parts, the Pipelines, and the Path to Patients",
-    "summary": "My map of the industry around my research: where AI drug discovery and antibody design are still hard, what the newest methods can do, how far AI-made drugs have travelled, the milestones that would mark real translation, and how companies and patients benefit.",
-    "tags": [
-      "AI drug discovery",
-      "Antibody design",
-      "Industry notes"
-    ],
-    "status": "Oct 2026",
-    "featured": true,
-    "art": "pipeline",
-    "cta": "Read the post",
+    "date": "2026-10-14",
+    "summary": "My map of the industry around my research: where AI antibody design is still hard, what the newest methods can do, and how far AI-made drugs have travelled. It ends with the milestones that would mark real translation and who stands to benefit.",
     "link": "notes/ai-drug-discovery.html"
   },
   {
     "title": "What AI Is, and How I Use It: Thoughts on Terence Tao’s “Slightly Drunk Collaborator”",
-    "summary": "Three years of using AI, from shock and speed to anxiety and a loss of meaning. Why I reject push-button autonomy, keep AI to either proposing or executing but never both, and keep the thinking for myself.",
-    "tags": [
-      "AI",
-      "Ways of working",
-      "Essay"
-    ],
-    "status": "Oct 2026",
-    "featured": true,
-    "art": "hybrid",
-    "cta": "Read the essay",
+    "date": "2026-10-16",
+    "summary": "Three years of using AI, from shock and speed to anxiety and a loss of meaning. Why I reject push-button autonomy, let AI either propose or execute but never both, and keep the thinking for myself.",
     "link": "notes/ai-slightly-drunk-collaborator.html"
   }
 ],

@@ -16,9 +16,8 @@ Live at <https://jiayutang859.github.io>.
 | File | Purpose |
 |------|---------|
 | `index.html` | Home: hero with portrait (Now · Path · Skills), Current Research Focus card, contact section |
-| `research.html` | Research path (three-field timeline + a competence paragraph), current research, previous M.Sc. projects (trial and systematic review, with registry links), contact section |
-| `notes.html` | Collections, with the M.S. graduation photo beside the title (nav label "Collections"; the URL stays notes.html): thoughts first, then a bookshelf, a cinema shelf, and a photo gallery, all rendered from `assets/notes/collections.js` |
-| `contact.html` | A single list of contact cards: email, LinkedIn, GitHub, Google Scholar, resume, institution |
+| `research.html` | Research path (three-field timeline + a competence paragraph), current research (with a rotating IGHV3-23/IGKV1-39 germline Fv, PDB 5I19), previous M.Sc. projects (trial and systematic review, with registry links), contact section |
+| `notes.html` | About (nav label "About"; the URL stays notes.html): publications and awards beside the M.S. graduation photo, then thoughts (newest first, rendered from `assets/notes/collections.js`), then buttons that open a bookshelf, a cinema shelf, and a photo gallery |
 | `studio/` | Photography site (separate design, see `studio/README.md`) |
 
 ## Shared files

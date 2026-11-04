@@ -11,7 +11,7 @@
     '#background':   'research.html#previous',
     '#publications': 'CV_Jiayu_Tang.pdf',
     '#experience':   'research.html',
-    '#contact':      'contact.html',
+    '#contact':      'research.html#contact',
   };
   const target = map[location.hash];
   if (target) location.replace(target);
@@ -105,7 +105,28 @@ document.querySelectorAll('[data-shelf]').forEach(btn => {
   if (location.hash === '#' + shelf.id) setOpen(true);   // deep links still work
 });
 
-// --- Rotating 3D antibody (human IgG1, PDB 1HZH) inside any .mol-panel ---
+// --- Rotating 3D antibody inside a .mol-panel ---
+// <div id="molViewer" data-pdb="..." data-scheme="fv|igg">: "fv" = germline Fv (PDB 5I19),
+// "igg" = whole human IgG1 (PDB 1HZH, the default).
+const MOL_HEAVY = '#2563eb', MOL_LIGHT = '#f59e0b', MOL_CDR = '#c3c9d4';
+
+// Colours the 5I19 Fv: frameworks by chain, CDRs muted so the frameworks read first.
+// CDR spans are IMGT definitions mapped onto 5I19's sequential residue numbers.
+function colorFv(viewer) {
+  const CDR = { H: ['26-33', '51-58', '97-108'], L: ['27-32', '50-52', '89-97'] };
+  viewer.setStyle({ chain: 'H' }, { cartoon: { color: MOL_HEAVY } });
+  viewer.setStyle({ chain: 'L' }, { cartoon: { color: MOL_LIGHT } });
+  viewer.setStyle({ chain: 'H', resi: CDR.H }, { cartoon: { color: MOL_CDR } });
+  viewer.setStyle({ chain: 'L', resi: CDR.L }, { cartoon: { color: MOL_CDR } });
+}
+
+function colorIgg(viewer) {
+  viewer.setStyle({ chain: 'H' }, { cartoon: { color: MOL_HEAVY } });
+  viewer.setStyle({ chain: 'K' }, { cartoon: { color: '#3b82f6' } });
+  viewer.setStyle({ chain: 'L' }, { cartoon: { color: MOL_LIGHT } });
+  viewer.setStyle({ chain: 'M' }, { cartoon: { color: '#fbbf24' } });
+}
+
 (function initMolecule() {
   const el     = document.getElementById('molViewer');
   const panel  = el && el.closest('.mol-panel');
@@ -121,21 +142,18 @@ document.querySelectorAll('[data-shelf]').forEach(btn => {
   } catch (e) { fail(); return; }
   if (!viewer) { fail(); return; }
 
-  fetch('assets/data/1hzh-backbone.pdb')
+  const isFv = el.dataset.scheme === 'fv';
+  fetch(el.dataset.pdb || 'assets/data/1hzh-backbone.pdb')
     .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(pdb => {
       viewer.addModel(pdb, 'pdb');
-      // Heavy chains blue, light chains amber
-      viewer.setStyle({ chain: 'H' }, { cartoon: { color: '#2563eb' } });
-      viewer.setStyle({ chain: 'K' }, { cartoon: { color: '#3b82f6' } });
-      viewer.setStyle({ chain: 'L' }, { cartoon: { color: '#f59e0b' } });
-      viewer.setStyle({ chain: 'M' }, { cartoon: { color: '#fbbf24' } });
+      (isFv ? colorFv : colorIgg)(viewer);
       viewer.zoomTo();
       // Tall panels (the featured card) need a little more room around the molecule
-      viewer.zoom(el.clientHeight > el.clientWidth * 1.1 ? 0.6 : 0.95);
+      viewer.zoom(isFv ? 1.05 : el.clientHeight > el.clientWidth * 1.1 ? 0.6 : 0.95);
       viewer.render();
 
-      if (!reduceMotion) viewer.spin('y', 0.5);
+      if (!reduceMotion) viewer.spin('y', isFv ? 0.6 : 0.5);
 
       window.addEventListener('resize', () => viewer.resize(), { passive: true });
     })

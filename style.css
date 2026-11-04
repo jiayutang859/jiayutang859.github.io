@@ -302,7 +302,7 @@ a.card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: v
 .swatch-heavy { background: #2563eb; }
 .swatch-light { background: var(--amber); }
 .mol-panel.failed .mol-viewer, .mol-panel.failed .mol-glow { display: none; }
-.mol-panel.failed::before { content: 'Human IgG1 antibody · 3D view unavailable'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--muted); }
+.mol-panel.failed::before { content: '3D view unavailable'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--muted); }
 
 
 /* ============================================================
@@ -1443,3 +1443,39 @@ a.focus-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); 
 a.focus-card:hover .fc-go { transform: translateX(3px); }
 .fc-body p { font-size: 0.98rem; line-height: 1.6; margin: 0; }
 @media (prefers-reduced-motion: reduce) { .focus-card, .fc-go { transition: none; } }
+
+/* About page (notes.html): publications and awards beside the photo */
+.shelf-hero h1 { margin-bottom: 1.5rem; }
+.pub-block + .pub-block { margin-top: 2.25rem; }
+.pub-hd { font-size: 1.35rem; margin-bottom: 0.35rem; }
+.pub-key { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.9rem; }
+.pub-sub { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm); margin: 1.1rem 0 0.5rem; }
+.pub-list { list-style: decimal; padding-left: 1.35rem; display: grid; gap: 0.6rem; }
+.pub-list li { font-size: 0.93rem; line-height: 1.55; color: var(--text); padding-left: 0.2rem; }
+.pub-list li::marker { color: var(--muted); font-size: 0.85rem; }
+.pub-list strong { color: var(--ink); }
+.pub-list a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent-bd); text-underline-offset: 3px; }
+.pub-list a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.award-lines { display: grid; gap: 0.45rem; }
+.award-lines li { font-size: 0.95rem; line-height: 1.5; color: var(--text); }
+.award-lines span { color: var(--muted); white-space: nowrap; }
+
+/* Thoughts: compact cards, title + two-sentence abstract */
+#thought-longer, #thought-fragments { columns: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 1rem; align-items: stretch; }
+#thought-fragments { margin-bottom: 1rem; }
+#thought-longer .thought, #thought-fragments .thought { margin: 0; padding: 0.95rem 1.1rem 1rem; }
+#thought-longer .thought h3 { font-size: 0.98rem; line-height: 1.32; margin-bottom: 0.4rem; }
+#thought-longer .thought p { font-size: 0.84rem; line-height: 1.5; color: var(--muted); }
+
+/* Shelf buttons sit at the bottom; their sections open underneath */
+.shelf-buttons { padding: 2.5rem 0; }
+.shelf-buttons .toc { margin-top: 0; justify-content: center; }
+
+/* Research · current project: rotating germline Fv (PDB 5I19) */
+.fv-figure { margin: 0; }
+.fv-panel { height: 340px; }
+.fv-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.25rem; margin-top: 0.75rem; font-size: 0.82rem; color: var(--muted); }
+.fv-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.fv-legend .mol-src a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+.swatch-cdr { background: #c3c9d4; }
+@media (max-width: 600px) { .fv-panel { height: 260px; } }
