@@ -1495,3 +1495,4 @@ a.focus-card:hover .fc-go { transform: translateX(3px); }
 .pub-meta { font-size: 0.86rem; color: var(--muted); }
 .pub-meta .me { font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .pub-list { padding-left: 0; gap: 0.8rem; }
+.pub-meta sup, .pub-key sup { font-size: 0.72em; font-weight: 600; margin-left: 1px; color: var(--warm); }
