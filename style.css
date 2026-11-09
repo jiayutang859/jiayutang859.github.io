@@ -1456,6 +1456,7 @@ a.focus-card:hover .fc-go { transform: translateX(3px); }
 .pub-list strong { color: var(--ink); }
 .pub-list a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent-bd); text-underline-offset: 3px; }
 .pub-list a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.interest-text { font-size: 0.95rem; line-height: 1.65; color: var(--text); }
 .award-lines { display: grid; gap: 0.45rem; }
 .award-lines li { font-size: 0.95rem; line-height: 1.5; color: var(--text); }
 .award-lines span { color: var(--muted); white-space: nowrap; }
