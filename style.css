@@ -1460,6 +1460,8 @@ a.focus-card:hover .fc-go { transform: translateX(3px); }
 .award-lines { display: grid; gap: 0.45rem; }
 .award-lines li { font-size: 0.95rem; line-height: 1.5; color: var(--text); }
 .award-lines span { color: var(--muted); white-space: nowrap; }
+.fund-lines { gap: 0.85rem; }
+.award-lines .fund-detail { display: block; white-space: normal; font-size: 0.85rem; line-height: 1.45; margin-top: 0.15rem; }
 
 /* Thoughts: compact cards, title + two-sentence abstract */
 #thought-longer, #thought-fragments { columns: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 1rem; align-items: stretch; }
